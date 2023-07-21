@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelRecs - Movie Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>ReelRecs</h1>
+        <p>Your source for top movie recommendations</p>
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <h2 class="heading-label">{{title}}</h2>
+                <div id="movie-list">
+                    <div id="json-data" style="display: none;">{{ movies | tojson | safe }}</div>
+                    <!-- Movie data will be inserted here dynamically -->
+                </div>
+            </div>
+            <div>
+                <div class="genre-links">
+                    <h3>Genres</h3>
+                    <div class="genre-divider">
+                        <ul>
+                            <li><a href="cooking-movies">Cooking</a></li>
+                            <li><a href="action-movies">Action</a></li>
+                            <li><a href="adventure-movies">Adventure</a></li>
+                            <li><a href="comedy-movies">Comedy</a></li>
+                            <li><a href="horror-movies">Horror</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="cooking-movies">Cooking</a></li>
+                            <li><a href="action-movies">Action</a></li>
+                            <li><a href="adventure-movies">Adventure</a></li>
+                            <li><a href="comedy-movies">Comedy</a></li>
+                            <li><a href="horror-movies">Horror</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <footer>
+        <p>© 2023 ReelRecs</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/movie_display.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* styles.css */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #D5CABD;
+    color: #000;
+}
+
+header {
+    background-color: #0d0d0d;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+main h2{
+    text-align: center;
+    font-weight: 100;
+}
+
+.container{
+    display: flex;
+    max-width: 1200;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: space-between;
+}
+
+.genre-divider{
+    display: flex;
+}
+
+.genre-links, .movie-card{
+    border: 1px solid rgba(0,0,0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255, 0.1);
+}
+
+.genre-links{
+    margin-left: 50px;
+}
+
+.genre-links h3{
+    font-size: 1.75em;
+    text-align: center;
+}
+
+.genre-links ul{
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.genre-links li{
+    list-style: none;
+    padding: 5px;
+}
+
+.genre-links a{
+    color: #000;
+    text-decoration-color: rgba(0, 0, 0, 0);
+    transition: color 0.1s ease, text-decoration-color 0.1s ease;
+    padding: 5px;
+}
+
+.genre-links a:hover{
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration-color: rgba(0, 0, 0, 0.5);
+}
+
+.heading-label{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#movie-list {
+    width: 100%;
+}
+
+.movie-card {
+    margin: 10px auto;  /* Center the movie cards and add vertical margin */
+    transition: all 0.2s ease;
+    max-width: 900px;  /* Set a maximum width for the movie cards */
+    box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+    display: flex;  /* Use Flexbox for layout */
+    align-items: center;  /* Vertically center the content */
+}
+
+.movie-poster {
+    width: 200px;  /* Set a fixed width for the movie posters */
+    margin-right: 20px;  /* Add some space between the poster and the text */
+}
+
+.movie-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.movie-info h2{
+    margin: 20px 0;
+}
+
+.movie-description {
+    padding: 0px 30px;
+}
+
+footer {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
+}
