@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const releaseYear = movie.release_date ? "("+movie.release_date.slice(0,4)+")" : '';
 
-            const movieName = document.createElement('h2');
+            const movieName = document.createElement('h3');
             movieName.classList.add('movie-name');
             movieName.textContent = movie.title + " " + releaseYear;
 

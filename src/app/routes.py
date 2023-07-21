@@ -38,3 +38,33 @@ def set_up_routes(app):
         return render_movies(
             GENRE_SEARCH_URL, title="Popular Horror Movies", genres=27
         )
+
+    @app.route("/animation-movies")
+    def animation_movies():
+        return render_movies(
+            GENRE_SEARCH_URL, title="Popular Animation Movies", genres=16
+        )
+
+    @app.route("/crime-movies")
+    def crime_movies():
+        return render_movies(
+            GENRE_SEARCH_URL, title="Popular Crime Movies", genres=80
+        )
+
+    @app.route("/documentary-movies")
+    def documentary_movies():
+        return render_movies(
+            GENRE_SEARCH_URL, title="Popular Documentary Movies", genres=99
+        )
+
+    @app.route("/drama-movies")
+    def drama_movies():
+        return render_movies(
+            GENRE_SEARCH_URL, title="Popular Drama Movies", genres=18
+        )
+
+    @app.route("/family-movies")
+    def family_movies():
+        return render_movies(
+            GENRE_SEARCH_URL, title="Popular Family Movies", genres=10751
+        )
