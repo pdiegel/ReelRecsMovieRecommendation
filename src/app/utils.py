@@ -1,7 +1,7 @@
-from helpers.misc_funcs import get_aggregate_requests
+from ..services.movie_service import get_aggregate_requests
 from flask import render_template
-from main import app
-from constants import API_HEADERS
+from ..app.app_instance import app
+from ..constants.api_constants import API_HEADERS
 
 
 def render_movies(

@@ -1,0 +1,236 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/3/movie/popular?page={page}: index.html
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:44:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:44:16] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:44:16] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:44:16] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:44:16] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/3/movie/popular?page={page}: index.html
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:45:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:45:09] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:45:09] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:45:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:45:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/3/movie/popular?page={page}: index.html
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:46:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:46:40] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:46:40] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:46:40] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:46:40] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/3/movie/popular?page={page}: index.html
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:11] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:11] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:11] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:11] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/3/movie/popular?page={page}: index.html
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:21] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:21] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:21] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:21] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:21] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:39] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:39] "[33mGET /static/js/movie_display.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:50] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:50] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:53] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:53] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 28}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:55] "GET /action-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:55] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:56] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:49:56] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:50:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:50:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:50:00] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\constants\\api_constants.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\constants\\api_constants.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\app_instance.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:38] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:41] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:41] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 28}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:44] "GET /action-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:44] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:48] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:48] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:51:53] "[33mGET /adventure-movies HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 12}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:26] "GET /adventure-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:26] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:28] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:28] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 28}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:29] "GET /action-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:29] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 12}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:30] "GET /adventure-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:30] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 12}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:58] "GET /adventure-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:58] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:53:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 27}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:10] "GET /horror-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:10] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 35}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:16] "GET /comedy-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:16] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 27}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:19] "GET /horror-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:19] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 12}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:20] "GET /adventure-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:20] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 28}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:21] "GET /action-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:22] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:23] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:23] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 12}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:24] "GET /adventure-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:24] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 35}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:26] "GET /comedy-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 14:54:26] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -

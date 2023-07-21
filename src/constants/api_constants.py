@@ -1,6 +1,10 @@
 from dotenv import load_dotenv
 import os
 
+# PATHS ================================================================
+STATIC_FOLDER = os.path.abspath("./src/static")
+TEMPLATES_FOLDER = os.path.abspath("./src/templates")
+
 # ENVIRONMENT VARIABLES ================================================
 load_dotenv()
 
@@ -11,8 +15,6 @@ if not API_ACCESS_TOKEN:
 ACCOUNT_OBJECT_ID = os.getenv("ACCOUNT_OBJECT_ID")
 if not ACCOUNT_OBJECT_ID:
     raise ValueError("ACCOUNT_OBJECT_ID is not set in .env file")
-
-FLASK_DEBUG = os.getenv("FLASK_DEBUG", False).lower() == "true"
 
 # API ENDPOINTS ========================================================
 API_BASE_URL = "https://api.themoviedb.org/3/"
