@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -17,7 +19,7 @@ header{
 }
 
 header, footer {
-    background-color: #0D47A1;
+    background-color: #4b4a54;
     color: #FFFFFF;
     text-align: center;
 }
@@ -46,7 +48,6 @@ main h2, main h3, .genre-links h3{
 
 main h3, .genre-links h3{
     font-weight: 600;
-    color: #1A237E;
 }
 
 .container{
@@ -64,7 +65,7 @@ main h3, .genre-links h3{
 .genre-links, .movie-card{
     padding: 20px;
     border-radius: 5px;
-    background-color: rgba(255,255,255, 0.1);
+    background-color: rgba(75, 74, 84, 0.1);
     border: 1px solid rgba(0,0,0, 0.1);
 }
 
@@ -96,12 +97,12 @@ main h3, .genre-links h3{
 }
 
 .genre-links a:hover{
-    color: #0D47A1;
-    text-decoration-color: #0D47A1;
+    color: #6663c0;
+    text-decoration-color: #6663c0;
 }
 
 .genre-links a:active{
-    color: #0D47A1;
+    color: #6663c0;
 }
 
 .heading-label{
@@ -133,13 +134,13 @@ main h3, .genre-links h3{
 }
 
 .movie-card:hover {
-    color: #1A237E;
+    color: #454463;
     transform: scale(1.02);
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .movie-card:hover .movie-name{
-    color: #0D47A1;
+    color: #454463;
 }
 
 .movie-info{
