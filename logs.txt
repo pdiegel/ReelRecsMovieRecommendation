@@ -718,3 +718,100 @@ INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.
 INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:00:48] "GET /documentary-movies HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:00:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:00:48] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:45:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:45:59] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:45:59] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:46:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:46:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:46:43] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:46:43] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:46:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:46:56] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:46:56] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:11] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:11] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:21] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:21] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:41] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:41] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:47:46] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:48:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:48:35] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:48:35] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:49:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:49:30] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:49:30] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:50:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:50:11] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:50:11] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:50:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:50:43] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:50:43] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:51:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:51:59] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:51:59] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:52:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:52:29] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:52:29] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:30] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:30] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:39] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:39] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:40] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:40] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 10751}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:45] "GET /family-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:45] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page} with parameters {'genres': 18}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:56] "GET /drama-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jul/2023 16:53:56] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
