@@ -8,8 +8,20 @@
 </head>
 <body>
     <header>
+        <div id="logo">
         <h1>ReelRecs</h1>
         <p>Your source for top movie recommendations</p>
+        </div>
+        <nav>
+            {% if current_user.is_authenticated %}
+                <!-- If user is logged in, display their username -->
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <!-- If user is not logged in, display sign in and sign up links -->
+                <a href="{{ url_for('login') }}">Log In</a>
+                <a href="{{ url_for('login') }}">Sign Up</a>
+            {% endif %}
+        </nav>
     </header>
     <main>
         <div class="container">
@@ -17,6 +29,7 @@
                 <h2 class="heading-label">{{title}}</h2>
                 <div id="movie-list">
                     <div id="json-data" style="display: none;">{{ movies | tojson | safe }}</div>
+                    <div id="rated-movies" style="display: none;">{{ rated_movies | tojson | safe }}</div>
                     <!-- Movie data will be inserted here dynamically -->
                 </div>
             </div>

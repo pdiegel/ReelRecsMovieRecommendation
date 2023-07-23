@@ -8,6 +8,10 @@ TEMPLATES_FOLDER = os.path.abspath("./src/templates")
 # ENVIRONMENT VARIABLES ================================================
 load_dotenv()
 
+API_KEY = os.getenv("API_KEY")
+if not API_KEY:
+    raise ValueError("API_KEY is not set in .env file")
+
 API_ACCESS_TOKEN = os.getenv("API_ACCESS_TOKEN")
 if not API_ACCESS_TOKEN:
     raise ValueError("API_ACCESS_TOKEN is not set in .env file")
@@ -18,8 +22,10 @@ if not ACCOUNT_OBJECT_ID:
 
 # API ENDPOINTS ========================================================
 API_BASE_URL = "https://api.themoviedb.org/3/"
+API_BASE_URL_V4 = "https://api.themoviedb.org/4/"
 API_HEADERS = {
     "accept": "application/json",
+    "content-type": "application/json",
     "Authorization": f"Bearer {API_ACCESS_TOKEN}",
 }
 GENRE_SEARCH_URL = (
@@ -55,4 +61,14 @@ COOKING_MOVIES_URL = generate_api_url(
 COOKING_TV_URL = generate_api_url(
     "discover/tv?sort_by=popularity.desc&\
 with_keywords=18293%7C6808%7C10637&page={page}"
+)
+
+RECOMMENDED_MOVIES_URL = generate_api_url(
+    "account/{session_id}/movie/\
+recommendations?page={page}",
+    API_BASE_URL_V4,
+)
+
+RATED_MOVIES_URL = generate_api_url(
+    "account/{session_id}/movie/rated", API_BASE_URL_V4
 )

@@ -1,6 +1,8 @@
 import requests
 from typing import Any, Dict, List, Union
 import logging
+import json
+
 
 logging.basicConfig(filename="logs.txt", level=logging.INFO)
 
@@ -55,3 +57,22 @@ def get_aggregate_requests(
         except ValueError as e:
             logging.error(f"Failed to parse JSON data from {url}: {e}")
     return results
+
+
+def rate_movie(movie_id, rating, session_id, headers, api_key):
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}/rating?\
+api_key={api_key}"
+    headers = {"Content-Type": "application/json;charset=utf-8"}
+    data = {"value": rating}  # rating value should be between 0.5 and 10
+
+    query_params = {"session_id": session_id}
+
+    response = requests.post(
+        url, headers=headers, params=query_params, data=json.dumps(data)
+    )
+    print(response.json())
+
+    if response.status_code == 201:
+        print(f"Movie {movie_id} rated successfully")
+    else:
+        print(f"Failed to rate movie: {response.status_code}, {response.text}")
