@@ -25,6 +25,13 @@
             </nav>
         </div>  
     </header>
+    <nav id="authenticated-nav">
+    {% if current_user.is_authenticated %}
+        <!-- If user is logged in, display their username -->
+        <a href="{{ url_for('rated') }}" class="{{ 'active' if request.path == url_for('rated') else '' }}">My Ratings</a>
+        <a href="{{ url_for('recommended_movies') }}" class="{{ 'active' if request.path == url_for('recommended_movies') else '' }}">Recommended Movies</a>
+    {% endif %}
+    </nav>
     <main>
         <div class="container">
             <div>

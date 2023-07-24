@@ -28,9 +28,6 @@ API_HEADERS = {
     "content-type": "application/json",
     "Authorization": f"Bearer {API_ACCESS_TOKEN}",
 }
-GENRE_SEARCH_URL = (
-    API_BASE_URL + "discover/movie?with_genres={genres}&page={page}"
-)
 
 
 def generate_api_url(url, base_url=API_BASE_URL):
@@ -48,10 +45,16 @@ def generate_api_url(url, base_url=API_BASE_URL):
     return base_url + url
 
 
-MOVIE_RECOMMENDATIONS_URL = (
-    f"{API_BASE_URL}account/{ACCOUNT_OBJECT_ID}/movie/recommendations"
+GENRE_SEARCH_URL = generate_api_url(
+    "discover/movie?with_genres={genres}&page={page}&include_adult=false"
 )
-POPULAR_MOVIES_URL = generate_api_url("movie/popular?page={page}")
+
+MOVIE_RECOMMENDATIONS_URL = generate_api_url(
+    f"account/{ACCOUNT_OBJECT_ID}/movie/recommendations"
+)
+POPULAR_MOVIES_URL = generate_api_url(
+    "movie/popular?page={page}&include_adult=false"
+)
 
 COOKING_MOVIES_URL = generate_api_url(
     "discover/movie?sort_by=popularity\
@@ -70,5 +73,5 @@ recommendations?page={page}",
 )
 
 RATED_MOVIES_URL = generate_api_url(
-    "account/{session_id}/movie/rated", API_BASE_URL_V4
+    "account/{session_id}/movie/rated?page={page}", API_BASE_URL_V4
 )

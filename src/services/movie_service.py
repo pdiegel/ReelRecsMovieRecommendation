@@ -42,6 +42,10 @@ def get_aggregate_requests(
     Returns:
         List[Dict[str, Any]]: The aggregated data.
     """
+    if pages == -1:
+        response = requests.get(url.format(page=1, **kwargs), headers=headers)
+        data = clean_data(response.json())
+        pages = data["total_pages"]
 
     results = []
     for page in range(1, pages + 1):
