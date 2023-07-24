@@ -2,7 +2,6 @@ from ..services.movie_service import get_aggregate_requests, clean_data
 from flask import render_template
 from ..app.app_instance import app
 from ..constants.api_constants import API_HEADERS
-import requests
 
 
 def render_movies(
@@ -56,11 +55,30 @@ def render_movies(
         return render_template("error.html", message="Failed to get data")
 
 
-def get_user_rated_movies(api_url: str, headers: dict, session_id: str):
-    rated_movies = get_aggregate_requests(
-        api_url,
-        headers,
-        session_id=session_id,
-        pages=5,
-    )
-    return rated_movies
+def get_user_rated_movies(
+    api_url: str,
+    headers: dict,
+    session_id: str,
+) -> list:
+    """
+    Fetches the movies rated by the user from the API.
+
+    Args:
+        api_url (str): The API URL to fetch data from.
+        headers (dict): The headers to include in the request.
+        session_id (str): The session ID of the user.
+
+    Returns:
+        list: The movies rated by the user.
+    """
+    try:
+        rated_movies = get_aggregate_requests(
+            api_url,
+            headers,
+            session_id=session_id,
+            pages=5,
+        )
+        return rated_movies
+    except Exception as e:
+        app.logger.error(f"Failed to get rated movies from {api_url}: {e}")
+        return []

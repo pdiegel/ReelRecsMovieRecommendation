@@ -3,7 +3,7 @@ from flask import redirect
 from flask_login import UserMixin, current_user
 
 
-def get_response_token(headers: str = "", api_key: str = ""):
+def get_response_token(headers: str = "", api_key: str = "", next=""):
     response = requests.get(
         f"https://api.themoviedb.org/3/authentication/token/new?api_key={api_key}",
         headers=headers,
@@ -13,7 +13,7 @@ def get_response_token(headers: str = "", api_key: str = ""):
     data = response.json()
     request_token = data.get("request_token", "")
     direct = redirect(
-        f"https://www.themoviedb.org/authenticate/{request_token}?redirect_to=http://127.0.0.1:5000/create_session",
+        f"https://www.themoviedb.org/authenticate/{request_token}?redirect_to=http://127.0.0.1:5000/create_session?next={next}",
     )  # replace with the API's actual login URL
     return request_token, direct
 

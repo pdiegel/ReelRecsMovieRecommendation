@@ -8,20 +8,22 @@
 </head>
 <body>
     <header>
-        <div id="logo">
-        <h1>ReelRecs</h1>
-        <p>Your source for top movie recommendations</p>
-        </div>
-        <nav>
-            {% if current_user.is_authenticated %}
-                <!-- If user is logged in, display their username -->
-                <a href="{{ url_for('logout') }}">Logout</a>
-            {% else %}
-                <!-- If user is not logged in, display sign in and sign up links -->
-                <a href="{{ url_for('login') }}">Log In</a>
-                <a href="{{ url_for('login') }}">Sign Up</a>
-            {% endif %}
-        </nav>
+        <div id="header-content">
+            <div>
+                <h1>ReelRecs</h1>
+                <p>Your source for top movie recommendations</p>
+            </div>
+            <nav>
+                {% if current_user.is_authenticated %}
+                    <!-- If user is logged in, display their username -->
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                {% else %}
+                    <!-- If user is not logged in, display sign in and sign up links -->
+                    <a href="{{ url_for('login', next=request.url) }}">Log In</a>
+                    <a href="{{ url_for('login', next=request.url) }}">Sign Up</a>
+                {% endif %}
+            </nav>
+        </div>  
     </header>
     <main>
         <div class="container">

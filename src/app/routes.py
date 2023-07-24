@@ -1,33 +1,46 @@
+from flask import jsonify, redirect, request, session, url_for
+from flask_login import (
+    LoginManager,
+    current_user,
+    login_required,
+    login_user,
+    logout_user,
+)
+
 from ..app.utils import render_movies
 from ..constants.api_constants import (
-    POPULAR_MOVIES_URL,
-    COOKING_MOVIES_URL,
-    GENRE_SEARCH_URL,
     API_HEADERS,
     API_KEY,
-    RECOMMENDED_MOVIES_URL,
+    COOKING_MOVIES_URL,
+    GENRE_SEARCH_URL,
+    POPULAR_MOVIES_URL,
     RATED_MOVIES_URL,
+    RECOMMENDED_MOVIES_URL,
 )
 from ..services.login_service import (
+    User,
     create_session,
     get_response_token,
-    User,
     get_session_id,
 )
 from ..services.movie_service import rate_movie
-from flask_login import (
-    login_user,
-    LoginManager,
-    logout_user,
-    login_required,
-    current_user,
-)
-from flask import request, redirect, jsonify
+
+GENRE_IDS = {
+    "action": 28,
+    "adventure": 12,
+    "animation": 16,
+    "comedy": 35,
+    "crime": 80,
+    "documentary": 99,
+    "drama": 18,
+    "family": 10751,
+    "horror": 27,
+}
 
 
 def set_up_routes(app, login_manager: LoginManager):
     @app.route("/")
-    def home():
+    def home() -> str:
         return render_movies(
             POPULAR_MOVIES_URL,
             user_api_url=RATED_MOVIES_URL,
@@ -35,97 +48,95 @@ def set_up_routes(app, login_manager: LoginManager):
         )
 
     @app.route("/cooking-movies")
-    def cooking_movies():
+    def cooking_movies() -> str:
         return render_movies(COOKING_MOVIES_URL, title="Popular Cooking Movies")
 
-    @app.route("/action-movies")
-    def action_movies():
-        return render_movies(
-            GENRE_SEARCH_URL, title="Popular Action Movies", genres=28
-        )
+    @app.route("/<genre>-movies")
+    def genre_movies(genre: str) -> str:
+        """
+        Route for displaying movies of a specific genre.
 
-    @app.route("/adventure-movies")
-    def adventure_movies():
-        return render_movies(
-            GENRE_SEARCH_URL, title="Popular Adventure Movies", genres=12
-        )
+        Args:
+            genre (str): The genre of movies to display. This is taken
+                from the URL.
 
-    @app.route("/comedy-movies")
-    def comedy_movies():
+        Returns:
+            A rendered template displaying the movies of the specified
+            genre. If the genre is not found, the user is redirected
+            to an error page.
+        """
+        genre_id = GENRE_IDS.get(genre)
+        if genre_id is None:
+            return redirect("/error")
         return render_movies(
-            GENRE_SEARCH_URL, title="Popular Comedy Movies", genres=35
-        )
-
-    @app.route("/horror-movies")
-    def horror_movies():
-        return render_movies(
-            GENRE_SEARCH_URL, title="Popular Horror Movies", genres=27
-        )
-
-    @app.route("/animation-movies")
-    def animation_movies():
-        return render_movies(
-            GENRE_SEARCH_URL, title="Popular Animation Movies", genres=16
-        )
-
-    @app.route("/crime-movies")
-    def crime_movies():
-        return render_movies(
-            GENRE_SEARCH_URL, title="Popular Crime Movies", genres=80
-        )
-
-    @app.route("/documentary-movies")
-    def documentary_movies():
-        return render_movies(
-            GENRE_SEARCH_URL, title="Popular Documentary Movies", genres=99
-        )
-
-    @app.route("/drama-movies")
-    def drama_movies():
-        return render_movies(
-            GENRE_SEARCH_URL, title="Popular Drama Movies", genres=18
-        )
-
-    @app.route("/family-movies")
-    def family_movies():
-        return render_movies(
-            GENRE_SEARCH_URL, title="Popular Family Movies", genres=10751
+            GENRE_SEARCH_URL,
+            title=f"Popular {genre.capitalize()} Movies",
+            genres=genre_id,
+            user_api_url=RATED_MOVIES_URL,
+            session_id=get_session_id(),
         )
 
     @app.route("/login")
-    def login():
-        token, redirect = get_response_token(API_HEADERS, API_KEY)
-        print("token = " + token)
+    def login() -> str:
+        """
+        Route for handling user login.
+
+        The route accepts an optional 'next' parameter in the URL,
+        which is the URL of the page the user was trying to access
+        before being redirected to the login page.
+
+        After the user logs in, they are redirected back to this
+        original page. If no 'next' parameter was provided, they are
+        redirected to the homepage.
+        """
+        session["next"] = request.args.get("next")
+        token, redirect = get_response_token(
+            API_HEADERS, API_KEY, next=session["next"]
+        )
         return redirect
 
     @app.route("/create_session")
-    def session():
+    def create_user_session() -> str:
+        """
+        Route for creating a user session.
+
+        The route accepts a 'request_token' parameter in the URL, which
+        is used to create the session. The route also accepts an
+        optional 'next' parameter, which is the URL of the page the user
+        was trying to access before being redirected to the login page.
+
+        After the session is created, the user is redirected back to the
+        original page. If no 'next' parameter was provided, they are
+        redirected to the homepage.
+        """
         request_token = request.args.get("request_token")
-        session = create_session(request_token, API_HEADERS, API_KEY)
-        session_id = session.get("session_id")
+        next_page = request.args.get("next")
+        user_session = create_session(request_token, API_HEADERS, API_KEY)
+        session_id = user_session.get("session_id")
         if session_id is not None:
             user = User(session_id)
             login_user(user, remember=True)
-            print(user)
-            print("session_id = " + session_id)
-        return redirect("/")
+
+        if not next_page:
+            next_page = url_for("home")
+        return redirect(next_page)
 
     @login_manager.user_loader
-    def load_user(session_id):
+    def load_user(session_id) -> User:
         return User(session_id)
 
     @app.route("/logout")
-    def logout():
+    def logout() -> str:
         logout_user()
         return redirect("/")
 
     @app.route("/error")
-    def error():
+    def error() -> str:
         return redirect("/")
 
     @app.route("/rate_movie/", methods=["POST"])
     @login_required
-    def rate():
+    def rate() -> str:
         print("rate_movie")
         data = request.get_json()
         movie_id = data["movie_id"]
@@ -139,17 +150,23 @@ def set_up_routes(app, login_manager: LoginManager):
             return jsonify(success=False, error=str(e))
 
     @app.route("/api/logged_in", methods=["GET"])
-    def logged_in():
+    def logged_in() -> str:
         print(current_user.is_authenticated)
         return {"logged_in": current_user.is_authenticated}
 
     @app.route("/recommended-movies")
     @login_required
-    def recommended_movies():
-        session_id = get_session_id()
-        print(session_id)
+    def recommended_movies() -> str:
         return render_movies(
             RECOMMENDED_MOVIES_URL,
             title="Recommended Movies",
-            session_id=session_id,
+            session_id=get_session_id(),
         )
+
+    @login_manager.unauthorized_handler
+    def unauthorized() -> str:
+        # If the user is not authorized, redirect them to the login
+        # page and include the next parameter
+        next_url = request.url
+        login_url = url_for("login", next=next_url)
+        return redirect(login_url)
