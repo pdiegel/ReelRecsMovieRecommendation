@@ -206,6 +206,7 @@ def set_up_routes(app, login_manager: LoginManager):
         return {"logged_in": current_user.is_authenticated}
 
     @app.route("/api/session_id", methods=["GET"])
+    @login_required
     def current_session() -> str:
         session_id = get_session_id()
         return {"session_id": session_id}

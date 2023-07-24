@@ -56,7 +56,6 @@ function createMovieCard(movie, isLoggedIn, ratedMovies) {
     // If the user is logged in and the movie isn't rated, create and append the Rate Movie button
     if (isLoggedIn) {
         const userRating = ratedMovies.find(ratedMovie => ratedMovie.id === movie.id)?.account_rating.value;
-        console.log('User rating:', userRating)
         const starContainer = createStarContainer(movie, userRating);
         
 
@@ -64,14 +63,13 @@ function createMovieCard(movie, isLoggedIn, ratedMovies) {
         if (window.location.pathname === '/rated-movies') {
             // Only append the stars if the movie has been rated by the user
             if (userRating) {
-                movieCard.append(starContainer);
+                movieInfo.append(starContainer);
                 displayDeleteRatingButton(movie.id, movieCard);
             }
 
         } else if (!userRating) {
             // On other pages, always append the stars
-            movieCard.append(starContainer);
-            console.info('Movie not rated:', movie.title);
+            movieInfo.append(starContainer);
         }
 
         
