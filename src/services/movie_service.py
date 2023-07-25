@@ -63,7 +63,22 @@ def get_aggregate_requests(
     return results
 
 
-def rate_movie(movie_id, rating, session_id, headers, api_key):
+def rate_movie(
+    movie_id: str,
+    rating: str,
+    session_id: str,
+    headers: dict,
+    api_key: str,
+) -> None:
+    """Rates a movie. The rating value should be between 0.5 and 10.
+
+    Args:
+        movie_id (str): Id of the movie to rate.
+        rating (str): Rating to give the movie.
+        session_id (str): Id of the user's session.
+        headers (dict): The headers to send with the request.
+        api_key (str): The API key to use.
+    """
     url = f"https://api.themoviedb.org/3/movie/{movie_id}/rating?\
 api_key={api_key}"
     headers = {"Content-Type": "application/json;charset=utf-8"}
@@ -74,7 +89,6 @@ api_key={api_key}"
     response = requests.post(
         url, headers=headers, params=query_params, data=json.dumps(data)
     )
-    print(response.json())
 
     if response.status_code == 201:
         print(f"Movie {movie_id} rated successfully")

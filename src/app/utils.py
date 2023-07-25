@@ -113,3 +113,27 @@ def fetch_rated_movies(
                 f"Failed to get rated movies from {user_api_url}: {e}"
             )
     return []
+
+
+def handle_movie_route(
+    url: str,
+    page_title: str,
+    rated_movies_url: str,
+    session_id: str,
+    **kwargs,
+) -> str:
+    """Handles a movie route. If the page title is not provided, the
+    user is redirected to the homepage.
+
+    Args:
+        url (str): The API URL to fetch data from.
+        page_title (str): The title to display on the page.
+        rated_movies_url (str): The API URL to fetch rated movies from.
+        session_id (str): The session ID of the user.
+
+    Returns:
+        str: The rendered template.
+    """
+    movies = fetch_movies(url, session_id=session_id, **kwargs)
+    rated_movies = fetch_rated_movies(rated_movies_url, API_HEADERS, session_id)
+    return render_movies_page(movies, page_title, rated_movies)

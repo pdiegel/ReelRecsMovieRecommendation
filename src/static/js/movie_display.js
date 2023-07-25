@@ -1,26 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const movies = JSON.parse(document.getElementById('json-data').textContent);
     const ratedMovies = JSON.parse(document.getElementById('rated-movies').textContent);
 
-    fetch('http://127.0.0.1:5000/api/logged_in')
-        .then(response => response.json())
-        .then(data => {
-            const isLoggedIn = data.logged_in;
-            console.info('User logged in:', isLoggedIn);
-
-            if (Array.isArray(movies)) {
-                movies.forEach((movie) => {
-                    const movieCard = createMovieCard(movie, isLoggedIn, ratedMovies);
-                    document.getElementById('movie-list').append(movieCard);
-                });
-            } else {
-                console.error('Error fetching movies:', "movies is not an array");
-            }
-        })
+    fetchLoggedInStatus()
+        .then(isLoggedIn => displayMovies(movies, isLoggedIn, ratedMovies))
         .catch(error => console.error('Error with fetch call:', error));
-
-    console.log('Rated movies:', ratedMovies);
 });
+
+async function fetchLoggedInStatus() {
+    const response = await fetch('http://127.0.0.1:5000/api/logged_in');
+    const data = await response.json();
+    return data.logged_in;
+}
+
+function displayMovies(movies, isLoggedIn, ratedMovies) {
+    if (Array.isArray(movies)) {
+        movies.forEach((movie) => {
+            const movieCard = createMovieCard(movie, isLoggedIn, ratedMovies);
+            document.getElementById('movie-list').append(movieCard);
+        });
+    } else {
+        console.error('Error fetching movies:', "movies is not an array");
+    }
+}
+
 
 function createMovieCard(movie, isLoggedIn, ratedMovies) {
     const movieCard = document.createElement('div');
@@ -28,12 +31,12 @@ function createMovieCard(movie, isLoggedIn, ratedMovies) {
 
     const moviePoster = document.createElement('img');
     moviePoster.classList.add('movie-poster');
-    moviePoster.src = "https://image.tmdb.org/t/p/original/"+movie.poster_path;
+    moviePoster.src = "https://image.tmdb.org/t/p/original/" + movie.poster_path;
 
     const movieInfo = document.createElement('div');
     movieInfo.classList.add('movie-info');
 
-    const releaseYear = movie.release_date ? "("+movie.release_date.slice(0,4)+")" : '';
+    const releaseYear = movie.release_date ? "(" + movie.release_date.slice(0, 4) + ")" : '';
 
     const movieName = document.createElement('h3');
     movieName.classList.add('movie-name');
@@ -56,29 +59,22 @@ function createMovieCard(movie, isLoggedIn, ratedMovies) {
     // If the user is logged in and the movie isn't rated, create and append the Rate Movie button
     if (isLoggedIn) {
         const userRating = ratedMovies.find(ratedMovie => ratedMovie.id === movie.id)?.account_rating.value;
-        const starContainer = createStarContainer(movie, userRating);
-        
+        const starContainer = createStarContainer(movie, userRating, movieCard, window.location.pathname);
 
-        // Check if the current page is the "My Ratings" page
-        if (window.location.pathname === '/rated-movies') {
-            // Only append the stars if the movie has been rated by the user
-            if (userRating) {
-                movieInfo.append(starContainer);
-                displayDeleteRatingButton(movie.id, movieCard);
-            }
-
-        } else if (!userRating) {
+        if (userRating) {
+            movieInfo.append(starContainer);
+            displayDeleteRatingButton(movie.id, movieCard, window.location.pathname);
+        }
+        else {
             // On other pages, always append the stars
             movieInfo.append(starContainer);
         }
-
-        
     }
 
     return movieCard;
 }
 
-function createStarContainer(movie, userRating) {
+function createStarContainer(movieData, userRating, movieCard, pathname) {
     const starContainer = document.createElement('div');
     starContainer.classList.add('stars');
 
@@ -95,15 +91,15 @@ function createStarContainer(movie, userRating) {
 
         starContainer.appendChild(star);
 
-        star.addEventListener('click', function() {
-            rateMovie(this, movie);
+        star.addEventListener('click', function () {
+            rateMovie(this, movieData, movieCard, pathname);
         });
     }
 
     return starContainer;
 }
 
-function rateMovie(event, movie) {
+function rateMovie(event, movieData, movieCard, pathname) {
     const clickedStar = event;
     console.info('Clicked star:', clickedStar)
     const stars = Array.from(clickedStar.parentElement.children).reverse();
@@ -118,7 +114,7 @@ function rateMovie(event, movie) {
     });
 
     // Send the rating to the server
-    const movieId = movie.id;
+    const movieId = movieData.id;
     const rating = (clickedStarIndex + 1) * 2;  // Multiply by 2 because ratings are from 0.0 to 10.0 in increments of 0.5
 
     fetch('http://127.0.0.1:5000/rate_movie/', {
@@ -131,19 +127,20 @@ function rateMovie(event, movie) {
             rating: rating
         })
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            console.info('Successfully rated movie:', movieId);
-        } else {
-            console.error('Error rating movie:', data.error);
-        }
-    })
-    .catch(error => console.error('Error with fetch call:', error));
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.info('Successfully rated movie:', movieId);
+                displayDeleteRatingButton(movieId, movieCard, pathname)
+            } else {
+                console.error('Error rating movie:', data.error);
+            }
+        })
+        .catch(error => console.error('Error with fetch call:', error));
 }
 
 
-function formatDate(movie_release_date){
+function formatDate(movie_release_date) {
     let date = new Date(movie_release_date);
 
     let day = date.getDate();
@@ -151,16 +148,16 @@ function formatDate(movie_release_date){
     let year = date.getFullYear();
 
     let monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+        "July", "August", "September", "October", "November", "December"
     ];
 
     let suffix;
     if (day > 3 && day < 21) suffix = 'th';
     else switch (day % 10) {
-    case 1:  suffix = "st"; break;
-    case 2:  suffix = "nd"; break;
-    case 3:  suffix = "rd"; break;
-    default: suffix = "th"; break;
+        case 1: suffix = "st"; break;
+        case 2: suffix = "nd"; break;
+        case 3: suffix = "rd"; break;
+        default: suffix = "th"; break;
     }
 
     let formattedDate = `${monthNames[monthIndex]} ${day}${suffix}, ${year}`;
@@ -168,41 +165,45 @@ function formatDate(movie_release_date){
     return formattedDate;
 }
 
-function displayDeleteRatingButton(movieId, movieCard) {
+function displayDeleteRatingButton(movieId, movieCard, pathname) {
     const deleteRatingButton = document.createElement('button');
     deleteRatingButton.classList.add('delete-rating-button');
     deleteRatingButton.textContent = 'Delete Rating';
     movieCard.append(deleteRatingButton);
 
-    deleteRatingButton.addEventListener('click', function() {
+    deleteRatingButton.addEventListener('click', function () {
         deleteRating(movieId, movieCard);
+        if (pathname === '/rated-movies') {
+            movieCard.remove();
+        }
     });
 
     return deleteRatingButton;
 }
 
 async function deleteRating(movieId, movieCard) {
-    const sessionId = await getSessionId();
-    const auth = await getAuth();
-
-    fetch('https://api.themoviedb.org/3/movie/' + movieId + '/rating?session_id=' + sessionId, {
-        method: 'DELETE',
-        headers: {
-            'accept': 'application/json',
-            'Authorization': 'Bearer ' + auth
-        },
-    })
-    .then(response => response.json())
-    .then(data => {
+    try {
+        const [sessionId, auth] = await Promise.all([getSessionId(), getAuth()]);
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/rating?session_id=${sessionId}`, {
+            method: 'DELETE',
+            headers: {
+                'accept': 'application/json',
+                'Authorization': `Bearer ${auth}`
+            },
+        });
+        const data = await response.json();
         if (data.success) {
             console.info('Successfully deleted movie rating:', movieId);
-            movieCard.remove();
+            resetStarColor(movieCard);
+            removeDeleteRatingButton(movieCard);
         } else {
             console.error('Error deleting movie rating:', data.error);
         }
-    })
-    .catch(error => console.error('Error with fetch call:', error));
+    } catch (error) {
+        return console.error('Error with fetch call:', error);
+    }
 }
+
 
 async function getSessionId() {
     const response = await fetch('http://127.0.0.1:5000/api/session_id');
@@ -226,4 +227,14 @@ async function getAuth() {
     } else {
         console.error('Error fetching access token:', "access token is empty");
     }
+}
+
+function resetStarColor(movieCard) {
+    const stars = movieCard.querySelectorAll('.star');
+    stars.forEach(star => star.style.color = "gray");
+}
+
+function removeDeleteRatingButton(movieCard) {
+    const deleteRatingButton = movieCard.querySelector('.delete-rating-button');
+    deleteRatingButton.remove();
 }

@@ -7,21 +7,25 @@ from flask_login import (
     logout_user,
 )
 
-from ..app.utils import fetch_movies, fetch_rated_movies, render_movies_page
+from ..app.utils import handle_movie_route
 from ..constants.api_constants import (
+    API_ACCESS_TOKEN,
     API_HEADERS,
     API_KEY,
     COOKING_MOVIES_URL,
     GENRE_SEARCH_URL,
+    IN_THEATERS_URL,
     POPULAR_MOVIES_URL,
     RATED_MOVIES_URL,
     RECOMMENDED_MOVIES_URL,
-    API_ACCESS_TOKEN,
+    SEARCH_URL,
+    TOP_RATED_URL,
+    UPCOMING_URL,
 )
 from ..services.login_service import (
     User,
     create_session,
-    get_response_token,
+    login_to_tmdb,
     get_session_id,
 )
 from ..services.movie_service import rate_movie
@@ -42,22 +46,20 @@ GENRE_IDS = {
 def set_up_routes(app, login_manager: LoginManager):
     @app.route("/")
     def home() -> str:
-        session_id = get_session_id()
-        movies = fetch_movies(POPULAR_MOVIES_URL, session_id=session_id)
-        rated_movies = fetch_rated_movies(
-            RATED_MOVIES_URL, API_HEADERS, session_id
+        return handle_movie_route(
+            POPULAR_MOVIES_URL,
+            "Popular Movies",
+            RATED_MOVIES_URL,
+            get_session_id(),
         )
-        return render_movies_page(movies, "Popular Movies", rated_movies)
 
     @app.route("/cooking-movies")
     def cooking_movies() -> str:
-        session_id = get_session_id()
-        movies = fetch_movies(COOKING_MOVIES_URL, session_id=session_id)
-        rated_movies = fetch_rated_movies(
-            RATED_MOVIES_URL, API_HEADERS, session_id
-        )
-        return render_movies_page(
-            movies, "Popular Cooking Movies", rated_movies
+        return handle_movie_route(
+            COOKING_MOVIES_URL,
+            "Popular Cooking Movies",
+            RATED_MOVIES_URL,
+            get_session_id(),
         )
 
     @app.route("/<genre>-movies")
@@ -77,17 +79,13 @@ def set_up_routes(app, login_manager: LoginManager):
         genre_id = GENRE_IDS.get(genre)
         if genre_id is None:
             return redirect("/error")
-        session_id = get_session_id()
-        movies = fetch_movies(
+
+        return handle_movie_route(
             GENRE_SEARCH_URL,
-            session_id=session_id,
+            f"Popular {genre.capitalize()} Movies",
+            RATED_MOVIES_URL,
+            get_session_id(),
             genres=genre_id,
-        )
-        rated_movies = fetch_rated_movies(
-            RATED_MOVIES_URL, API_HEADERS, session_id
-        )
-        return render_movies_page(
-            movies, f"Popular {genre.capitalize()} Movies", rated_movies
         )
 
     @app.route("/login")
@@ -104,9 +102,7 @@ def set_up_routes(app, login_manager: LoginManager):
         redirected to the homepage.
         """
         session["next"] = request.args.get("next")
-        token, redirect = get_response_token(
-            API_HEADERS, API_KEY, next=session["next"]
-        )
+        redirect = login_to_tmdb(API_HEADERS, API_KEY, next=session["next"])
         return redirect
 
     @app.route("/create_session")
@@ -151,12 +147,9 @@ def set_up_routes(app, login_manager: LoginManager):
     @app.route("/rate_movie/", methods=["POST"])
     @login_required
     def rate() -> str:
-        print("rate_movie")
         data = request.get_json()
         movie_id = data["movie_id"]
         rating = data["rating"]
-        print(f"movie_id = {movie_id}")
-        print(f"rating = {rating}")
 
         try:
             rate_movie(movie_id, rating, current_user.id, API_HEADERS, API_KEY)
@@ -169,28 +162,22 @@ def set_up_routes(app, login_manager: LoginManager):
     @app.route("/recommendations")
     @login_required
     def recommended_movies() -> str:
-        session_id = get_session_id()
-        movies = fetch_movies(
+        return handle_movie_route(
             RECOMMENDED_MOVIES_URL,
-            session_id=session_id,
+            "Recommended Movies",
+            RATED_MOVIES_URL,
+            get_session_id(),
         )
-        rated_movies = fetch_rated_movies(
-            RATED_MOVIES_URL, API_HEADERS, session_id
-        )
-        return render_movies_page(movies, "Recommended Movies", rated_movies)
 
     @app.route("/rated-movies")
     @login_required
     def rated() -> str:
-        session_id = get_session_id()
-        movies = fetch_movies(
+        return handle_movie_route(
             RATED_MOVIES_URL,
-            session_id=session_id,
+            "My Ratings",
+            RATED_MOVIES_URL,
+            get_session_id(),
         )
-        rated_movies = fetch_rated_movies(
-            RATED_MOVIES_URL, API_HEADERS, session_id
-        )
-        return render_movies_page(movies, "My Ratings", rated_movies)
 
     @login_manager.unauthorized_handler
     def unauthorized() -> str:
@@ -214,3 +201,41 @@ def set_up_routes(app, login_manager: LoginManager):
     @app.route("/api/token", methods=["GET"])
     def access_token() -> str:
         return {"access_token": API_ACCESS_TOKEN}
+
+    @app.route("/search", methods=["GET"])
+    def search() -> str:
+        query = request.args.get("query")
+        return handle_movie_route(
+            SEARCH_URL,
+            f'Results for "{query}"',
+            RATED_MOVIES_URL,
+            get_session_id(),
+            query=query,
+        )
+
+    @app.route("/in-theaters")
+    def in_theaters():
+        return handle_movie_route(
+            IN_THEATERS_URL,
+            "In Theaters",
+            RATED_MOVIES_URL,
+            get_session_id(),
+        )
+
+    @app.route("/top-rated")
+    def top_rated():
+        return handle_movie_route(
+            TOP_RATED_URL,
+            "Top Rated Movies",
+            RATED_MOVIES_URL,
+            get_session_id(),
+        )
+
+    @app.route("/upcoming-movies")
+    def upcoming_movies():
+        return handle_movie_route(
+            UPCOMING_URL,
+            "Upcoming Movies",
+            RATED_MOVIES_URL,
+            get_session_id(),
+        )

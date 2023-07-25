@@ -23,13 +23,16 @@
                     <a href="{{ url_for('logout') }}">Logout</a>
                 {% else %}
                     <!-- If user is not logged in, display sign in and sign up links -->
-                    <a href="{{ url_for('login', next=request.url) }}">Log In</a>
-                    <a href="{{ url_for('login', next=request.url) }}">Sign Up</a>
+                    <a href="{{ url_for('login', next=request.url + '?search=' + request.args.get('search', ''))}}">Log In</a>
+                    <a href="{{ url_for('login', next=request.url + '?search=' + request.args.get('search', ''))}}">Sign Up</a>
                 {% endif %}
             </nav>
         </div>  
     </header>
     <nav id="authenticated-nav">
+        <a href="{{ url_for('in_theaters') }}" class="{{ 'active' if request.path == url_for('in_theaters') else '' }}">Now Playing</a>
+        <a href="{{ url_for('top_rated') }}" class="{{ 'active' if request.path == url_for('top_rated') else '' }}">Top Rated</a>
+        <a href="{{ url_for('upcoming_movies') }}" class="{{ 'active' if request.path == url_for('upcoming_movies') else '' }}">Upcoming</a>
     {% if current_user.is_authenticated %}
         <!-- If user is logged in, display their username -->
         <a href="{{ url_for('rated') }}" class="{{ 'active' if request.path == url_for('rated') else '' }}">My Ratings</a>
@@ -47,6 +50,13 @@
                 </div>
             </div>
             <div>
+                <div id="search-bar">
+                    <h3>Search</h3>
+                    <form action="{{ url_for('search') }}" method="GET">
+                        <input class="form-field" type="text" name="query" placeholder="Search for a movie">
+                        <input class="submit-button" type="submit" value="Search">
+                    </form>
+                </div>
                 <div class="genre-links">
                     <h3>Genres</h3>
                     <div class="genre-divider">

@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     font-weight: 400;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 body {
-    font-family: 'Noto Sans', sans-serif;
     margin: 0 auto;
     padding: 0;
     background-color: #F5F5F5;
@@ -13,7 +13,6 @@ body {
 }
 
 header{
-    
     padding: 20px;
 }
 
@@ -40,18 +39,23 @@ header p {
     font-size: 1.2em;
 }
 
-header nav a {
+header nav a, .submit-button {
     color: #FFFFFF;
     text-decoration: none;
     background-color: #6663c0;
     padding: 10px 20px;
     border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0);
     margin: 0 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-header nav a:hover {
+header nav a:hover, .submit-button:hover {
     background-color: #454463;
+}
+
+header nav a:hover{
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 1);
 }
 
 main {
@@ -82,6 +86,28 @@ h5{
     align-items: space-between;
 }
 
+#search-bar{
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+#search-bar h3{
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.form-field, .submit-button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    border: none;
+}
+
+.submit-button{
+    cursor: pointer;
+}
+
 .genre-divider{
     display: flex;
 }
@@ -93,7 +119,7 @@ h5{
     border: 1px solid rgba(0,0,0, 0.1);
 }
 
-.genre-links{
+.genre-links, #search-bar{
     margin-left: 50px;
     
 }
@@ -183,14 +209,14 @@ h5{
     padding: 0px 30px;
 }
 
-button {
+button  {
     color: #FFFFFF;
     background-color: #6663c0;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 button:hover {
