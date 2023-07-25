@@ -2009,3 +2009,19 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitH
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\utils.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/top_rated?page={page} with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/top_rated?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:05:46] "GET /top-rated HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:05:46] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:05:46] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:05:46] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/top_rated?page={page} with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/top_rated?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:14:27] "GET /top-rated HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:14:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:14:27] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:14:27] "GET /api/logged_in HTTP/1.1" 200 -

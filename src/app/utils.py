@@ -58,35 +58,6 @@ def render_movies_page(
         )
 
 
-def get_user_rated_movies(
-    api_url: str,
-    headers: dict,
-    session_id: str,
-) -> list:
-    """
-    Fetches the movies rated by the user from the API.
-
-    Args:
-        api_url (str): The API URL to fetch data from.
-        headers (dict): The headers to include in the request.
-        session_id (str): The session ID of the user.
-
-    Returns:
-        list: The movies rated by the user.
-    """
-    try:
-        rated_movies = get_aggregate_requests(
-            api_url,
-            headers,
-            session_id=session_id,
-            pages=-1,
-        )
-        return rated_movies
-    except Exception as e:
-        app.logger.error(f"Failed to get rated movies from {api_url}: {e}")
-        return []
-
-
 def fetch_rated_movies(
     user_api_url: str, headers: dict, session_id: str
 ) -> list:
@@ -103,8 +74,8 @@ def fetch_rated_movies(
     """
     if session_id:
         try:
-            rated_movies = get_user_rated_movies(
-                user_api_url, headers, session_id
+            rated_movies = get_aggregate_requests(
+                user_api_url, headers, session_id, pages=-1
             )
             app.logger.info("Successfully fetched rated movies")
             return rated_movies
