@@ -50,8 +50,13 @@ function createMovieCard(movie, isLoggedIn, ratedMovies) {
     movieDescription.classList.add('movie-description');
     movieDescription.textContent = movie.overview;
 
+    const similarMoviesButton = document.createElement('button');
+    similarMoviesButton.classList.add('similar-movies-button');
+    similarMoviesButton.textContent = 'Similar Movies';
+    similarMoviesButton.addEventListener('click', similarMovieRedirect.bind(null, movie.id, movie.title)); 
+
     movieInfo.append(movieName, movieStats, movieDescription);
-    movieCard.append(moviePoster, movieInfo);
+    movieCard.append(moviePoster, movieInfo, similarMoviesButton);
 
     movieCard.dataset.movieId = movie.id;  // Add movie ID as a data attribute for later reference
     movieCard.id = 'movie-card-' + movie.id;  // Add unique ID to each movie card
@@ -241,4 +246,8 @@ function resetStarColor(movieCard) {
 function removeDeleteRatingButton(movieCard) {
     const deleteRatingButton = movieCard.querySelector('.delete-rating-button');
     deleteRatingButton.remove();
+}
+
+function similarMovieRedirect(movieId) {
+    window.location.href = `/similar-movies/${movieId}`;
 }

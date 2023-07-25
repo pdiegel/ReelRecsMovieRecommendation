@@ -96,3 +96,6 @@ SEARCH_URL = generate_api_url(
 IN_THEATERS_URL = generate_api_url("movie/now_playing?page={page}")
 TOP_RATED_URL = generate_api_url("movie/top_rated?page={page}")
 UPCOMING_URL = generate_api_url("movie/upcoming?page={page}")
+SIMILAR_TO_MOVIE_ID_URL = generate_api_url(
+    "movie/{movie_id}/recommendations?page={page}"
+)

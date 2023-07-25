@@ -21,6 +21,7 @@ from ..constants.api_constants import (
     SEARCH_URL,
     TOP_RATED_URL,
     UPCOMING_URL,
+    SIMILAR_TO_MOVIE_ID_URL,
 )
 from ..services.login_service import (
     User,
@@ -238,4 +239,15 @@ def set_up_routes(app, login_manager: LoginManager):
             "Upcoming Movies",
             RATED_MOVIES_URL,
             get_session_id(),
+        )
+
+    @app.route("/similar-movies/<movie_id>")
+    def similar_movies(movie_id: str) -> str:
+        return handle_movie_route(
+            SIMILAR_TO_MOVIE_ID_URL,
+            "Similar Movies",
+            RATED_MOVIES_URL,
+            get_session_id(),
+            movie_id=movie_id,
+            include_adult="false",
         )
