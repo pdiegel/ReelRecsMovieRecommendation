@@ -2005,3 +2005,7 @@ INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 14:35:25] "GET /in-theaters HTTP/1.1" 2
 INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 14:35:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 14:35:25] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 14:35:25] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647

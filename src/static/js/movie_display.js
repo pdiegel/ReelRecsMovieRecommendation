@@ -81,10 +81,14 @@ function createStarContainer(movieData, userRating, movieCard, pathname) {
     for (let i = 0; i < 5; i++) {
         const star = document.createElement('span');
         star.classList.add('star');
-        star.dataset.value = 12 - (i + 1) * 2;  // 2, 4, 6, 8, 10
-        star.innerHTML = '&#9733;';  // Unicode character for a star
+        // 2, 4, 6, 8, 10
+        // Subtracting 12 because the stars are in reverse order
+        star.dataset.value = 12 - (i + 1) * 2;  
+        // Unicode character for a star
+        star.innerHTML = '&#9733;';  
 
-        // If the user has rated the movie and the rating is greater than or equal to the star's value, color the star gold
+        // If the user has rated the movie and the rating is greater than 
+        // or equal to the star's value, color the star gold
         if (userRating && userRating >= (star.dataset.value)) {
             star.style.color = "gold";
         }

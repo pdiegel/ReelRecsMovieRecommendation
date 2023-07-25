@@ -265,15 +265,15 @@ button:hover {
 
 #authenticated-nav {
     display: flex;
-    justify-content: center; /* evenly space the links */
+    justify-content: center;
     align-items: center;
-    background-color: #6663c0; /* match the header color */
-    color: #FFFFFF; /* match the header text color */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* match the header shadow */
+    background-color: #6663c0;
+    color: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 #authenticated-nav a {
-    color: #FFFFFF; /* match the header link color */
+    color: #FFFFFF;
     text-decoration: none;
     transition: color 0.2s ease, background-color 0.2s ease;
     padding: 10px;
@@ -281,7 +281,7 @@ button:hover {
 }
 
 #authenticated-nav a:hover, #authenticated-nav a.active {
-    color: rgba(255, 255, 255, 0.8); /* change color on hover */
+    color: rgba(255, 255, 255, 0.8);
     background-color: #4b4a54;
 }
 

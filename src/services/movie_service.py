@@ -82,7 +82,7 @@ def rate_movie(
     url = f"https://api.themoviedb.org/3/movie/{movie_id}/rating?\
 api_key={api_key}"
     headers = {"Content-Type": "application/json;charset=utf-8"}
-    data = {"value": rating}  # rating value should be between 0.5 and 10
+    data = {"value": rating}  # rating value should be between 0.5 and 10.0
 
     query_params = {"session_id": session_id}
 
