@@ -1,90 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReelRecs</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    
-</head>
-<body>
-    <header>
-        <div id="header-content">
-            <div>
-                <h1>ReelRecs</h1>
-                <p>Your source for top movie recommendations</p>
-            </div>
-            <nav>
-                {% if current_user.is_authenticated %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ReelRecs</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='styles.css') }}">
+
+    </head>
+    <body>
+        <header>
+            <div id="header-content">
+                <div>
+                    <h1>ReelRecs</h1>
+                    <p>Your source for top movie recommendations</p>
+                </div>
+                <nav>
+                    {% if current_user.is_authenticated %}
                     <!-- If user is logged in, display their username -->
                     <a href="{{ url_for('logout') }}">Logout</a>
-                {% else %}
+                    {% else %}
                     <!-- If user is not logged in, display sign in and sign up links -->
-                    <a href="{{ url_for('login', next=request.url + '?search=' + request.args.get('search', ''))}}">Log In</a>
-                    <a href="{{ url_for('login', next=request.url + '?search=' + request.args.get('search', ''))}}">Sign Up</a>
-                {% endif %}
-            </nav>
-        </div>  
-    </header>
-    <nav id="authenticated-nav">
-        <a href="{{ url_for('in_theaters') }}" class="{{ 'active' if request.path == url_for('in_theaters') else '' }}">Now Playing</a>
-        <a href="{{ url_for('top_rated') }}" class="{{ 'active' if request.path == url_for('top_rated') else '' }}">Top Rated</a>
-        <a href="{{ url_for('upcoming_movies') }}" class="{{ 'active' if request.path == url_for('upcoming_movies') else '' }}">Upcoming</a>
-    {% if current_user.is_authenticated %}
-        <!-- If user is logged in, display their username -->
-        <a href="{{ url_for('rated') }}" class="{{ 'active' if request.path == url_for('rated') else '' }}">My Ratings</a>
-        <a href="{{ url_for('recommended_movies') }}" class="{{ 'active' if request.path == url_for('recommended_movies') else '' }}">Recommended Movies</a>
-    {% endif %}
-    </nav>
-    <main>
-        <div class="container">
-            <div>
-                <h2 class="heading-label">{{title}}</h2>
-                <div id="movie-list">
-                    <div id="json-data" style="display: none;">{{ movies | tojson | safe }}</div>
-                    <div id="rated-movies" style="display: none;">{{ rated_movies | tojson | safe }}</div>
-                    <!-- Movie data will be inserted here dynamically -->
-                </div>
+                    <a
+                        href="{{ url_for('login', next=request.url, search=request.args.get('search', ''), title=request.args.get('title', '')) }}">Log
+                        In</a>
+                    <a
+                        href="{{ url_for('login', next=request.url, search=request.args.get('search', ''), title=request.args.get('title', '')) }}">Sign
+                        Up</a>
+                    {% endif %}
+                </nav>
             </div>
-            <div>
-                <div id="search-bar">
-                    <h3>Search</h3>
-                    <form action="{{ url_for('search') }}" method="GET">
-                        <input class="form-field" type="text" name="query" placeholder="Search for a movie">
-                        <input class="submit-button" type="submit" value="Search">
-                    </form>
+        </header>
+        <nav id="authenticated-nav">
+            <a href="{{ url_for('in_theaters') }}"
+                class="{{ 'active' if request.path == url_for('in_theaters') else '' }}">Now
+                Playing</a>
+            <a href="{{ url_for('top_rated') }}"
+                class="{{ 'active' if request.path == url_for('top_rated') else '' }}">Top
+                Rated</a>
+            <a href="{{ url_for('upcoming_movies') }}"
+                class="{{ 'active' if request.path == url_for('upcoming_movies') else '' }}">Upcoming</a>
+            {% if current_user.is_authenticated %}
+            <!-- If user is logged in, display their username -->
+            <a href="{{ url_for('rated') }}"
+                class="{{ 'active' if request.path == url_for('rated') else '' }}">My
+                Ratings</a>
+            <a href="{{ url_for('recommended_movies') }}"
+                class="{{ 'active' if request.path == url_for('recommended_movies') else '' }}">Recommended
+                Movies</a>
+            {% endif %}
+        </nav>
+        <main>
+            <div class="container">
+                <div>
+                    <h2 class="heading-label">{{title}}</h2>
+                    <div id="movie-list">
+                        <div id="json-data" style="display: none;">{{ movies |
+                            tojson | safe }}</div>
+                        <div id="rated-movies" style="display: none;">{{
+                            rated_movies | tojson | safe }}</div>
+                        <!-- Movie data will be inserted here dynamically -->
+                    </div>
                 </div>
-                <div class="genre-links">
-                    <h3>Genres</h3>
-                    <div class="genre-divider">
-                        <ul>
-                            <li><a href="cooking-movies">Cooking</a></li>
-                            <li><a href="action-movies">Action</a></li>
-                            <li><a href="adventure-movies">Adventure</a></li>
-                            <li><a href="comedy-movies">Comedy</a></li>
-                            <li><a href="horror-movies">Horror</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="animation-movies">Animation</a></li>
-                            <li><a href="crime-movies">Crime</a></li>
-                            <li><a href="documentary-movies">Documentary</a></li>
-                            <li><a href="drama-movies">Drama</a></li>
-                            <li><a href="family-movies">Family</a></li>
-                        </ul>
+                <div>
+                    <div id="search-bar">
+                        <h3>Search</h3>
+                        <form action="{{ url_for('search') }}" method="GET">
+                            <input class="form-field" type="text" name="query"
+                                placeholder="Search for a movie">
+                            <input class="submit-button" type="submit"
+                                value="Search">
+                        </form>
+                    </div>
+                    <div class="genre-links">
+                        <h3>Genres</h3>
+                        <div class="genre-divider">
+                            <ul>
+                                <li><a href="/cooking-movies">Cooking</a></li>
+                                <li><a href="/action-movies">Action</a></li>
+                                <li><a href="/adventure-movies">Adventure</a></li>
+                                <li><a href="/comedy-movies">Comedy</a></li>
+                                <li><a href="/horror-movies">Horror</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="/animation-movies">Animation</a></li>
+                                <li><a href="/crime-movies">Crime</a></li>
+                                <li><a href="/documentary-movies">Documentary</a></li>
+                                <li><a href="/drama-movies">Drama</a></li>
+                                <li><a href="/family-movies">Family</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    
+        </main>
 
-    <footer>
-        <p>© 2023 ReelRecs</p>
-    </footer>
+        <footer>
+            <p>© 2023 ReelRecs</p>
+        </footer>
 
-    <script src="{{ url_for('static', filename='js/movie_display.js') }}"></script>
-</body>
+        <script src="{{ url_for('static', filename='js/movie_display.js') }}"></script>
+    </body>
 </html>

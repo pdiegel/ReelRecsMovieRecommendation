@@ -61,7 +61,7 @@ function createMovieCard(movie, isLoggedIn, ratedMovies) {
     movieCard.dataset.movieId = movie.id;  // Add movie ID as a data attribute for later reference
     movieCard.id = 'movie-card-' + movie.id;  // Add unique ID to each movie card
 
-    // If the user is logged in and the movie isn't rated, create and append the Rate Movie button
+    // If the user is logged in, create and append the Rate Movie button
     if (isLoggedIn) {
         const userRating = ratedMovies.find(ratedMovie => ratedMovie.id === movie.id)?.account_rating.value;
         const starContainer = createStarContainer(movie, userRating, movieCard, window.location.pathname);
@@ -248,6 +248,6 @@ function removeDeleteRatingButton(movieCard) {
     deleteRatingButton.remove();
 }
 
-function similarMovieRedirect(movieId) {
-    window.location.href = `/similar-movies/${movieId}`;
+function similarMovieRedirect(movieId, movieTitle) {
+    window.location.href = `/similar-movies/${movieId}/?title=${movieTitle}`;
 }

@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -12,11 +12,11 @@ body {
     color: #212121;
 }
 
-header{
+header {
     padding: 20px;
 }
 
-#header-content{
+#header-content {
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,8 @@ header{
     margin: 0 auto;
 }
 
-header, footer {
+header,
+footer {
     background-color: #4b4a54;
     color: #FFFFFF;
 }
@@ -39,7 +40,8 @@ header p {
     font-size: 1.2em;
 }
 
-header nav a, .submit-button {
+header nav a,
+.submit-button {
     color: #FFFFFF;
     text-decoration: none;
     background-color: #6663c0;
@@ -50,11 +52,12 @@ header nav a, .submit-button {
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-header nav a:hover, .submit-button:hover {
+header nav a:hover,
+.submit-button:hover {
     background-color: #454463;
 }
 
-header nav a:hover{
+header nav a:hover {
     box-shadow: 0 0 5px 1px rgba(255, 255, 255, 1);
 }
 
@@ -62,23 +65,27 @@ main {
     padding: 20px;
 }
 
-main h2{
+main h2 {
     margin-bottom: 40px;
 }
 
-main h2, main h3, .genre-links h3, h5{
+main h2,
+main h3,
+.genre-links h3,
+h5 {
     text-align: center;
 }
 
-main h3, .genre-links h3{
+main h3,
+.genre-links h3 {
     font-weight: 400;
 }
 
-h5{
+h5 {
     font-weight: 400;
 }
 
-.container{
+.container {
     display: flex;
     max-width: 1200px;
     margin: 50px auto;
@@ -86,76 +93,79 @@ h5{
     align-items: space-between;
 }
 
-#search-bar{
+#search-bar {
     width: 100%;
     margin-bottom: 35px;
 }
 
-#search-bar h3{
+#search-bar h3 {
     text-align: left;
     margin-bottom: 10px;
     font-size: 1.5em;
 }
 
-.form-field, .submit-button{
+.form-field,
+.submit-button {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1em;
     border: none;
 }
 
-.submit-button{
+.submit-button {
     cursor: pointer;
 }
 
-.genre-divider{
+.genre-divider {
     display: flex;
 }
 
-.genre-links, .movie-card{
+.genre-links,
+.movie-card {
     padding: 20px;
     border-radius: 5px;
     background-color: rgba(75, 74, 84, 0.1);
-    border: 1px solid rgba(0,0,0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.genre-links, #search-bar{
+.genre-links,
+#search-bar {
     margin-left: 50px;
-    
+
 }
 
-.genre-links h3{
+.genre-links h3 {
     font-size: 1.75em;
     text-align: center;
 }
 
-.genre-links ul{
+.genre-links ul {
     margin-top: 20px;
     padding: 0px 20px;
 }
 
-.genre-links li{
+.genre-links li {
     list-style: none;
     padding: 5px;
 }
 
-.genre-links a{
+.genre-links a {
     color: #424242;
     text-decoration-color: rgba(0, 0, 0, 0);
     transition: color 0.1s ease, text-decoration-color 0.1s ease;
     padding: 5px;
 }
 
-.genre-links a:hover{
+.genre-links a:hover {
     color: #6663c0;
     text-decoration-color: #6663c0;
 }
 
-.genre-links a:active{
+.genre-links a:active {
     color: #6663c0;
 }
 
-.heading-label{
+.heading-label {
     font-size: 2em;
 }
 
@@ -185,22 +195,22 @@ h5{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.movie-card:hover .movie-name{
+.movie-card:hover .movie-name {
     color: #454463;
 }
 
-.movie-info{
+.movie-info {
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.movie-info h3{
+.movie-info h3 {
     margin-bottom: 10px;
     font-size: 1.5em;
 }
 
-.movie-info h5{
+.movie-info h5 {
     margin-bottom: 20px;
     font-size: 1em;
 }
@@ -209,7 +219,7 @@ h5{
     padding: 0px 30px;
 }
 
-button  {
+button {
     color: #FFFFFF;
     background-color: #6663c0;
     border: none;
@@ -227,7 +237,7 @@ button:hover {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    margin: 15px 15px 0;
+    margin: 10px 15px 15px;
     padding: 0;
 }
 
@@ -241,26 +251,39 @@ button:hover {
 }
 
 .star:hover,
-.star:hover ~ .star {
+.star:hover~.star {
     color: gold;
 }
 
-.delete-rating-button {
+.delete-rating-button,
+.similar-movies-button {
     position: absolute;
     bottom: 10px;
-    right: 10px;
     background-color: #FFFFFF;
     color: #212121;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-    padding: 15px 20px;
+    padding: 5px 10px;
     cursor: pointer;
     transition: color 0.2s ease, background-color 0.2s ease;
+
+}
+
+.similar-movies-button {
+    right: 10px;
+}
+
+.delete-rating-button {
+    right: 130px;
+}
+
+.delete-rating-button:hover,
+.similar-movies-button:hover {
+    color: #FFFFFF;
 }
 
 .delete-rating-button:hover {
-    background-color: red;
-    color: #FFFFFF;
+    background-color: #e53935;
 }
 
 #authenticated-nav {
@@ -280,7 +303,8 @@ button:hover {
     margin: 0 50px;
 }
 
-#authenticated-nav a:hover, #authenticated-nav a.active {
+#authenticated-nav a:hover,
+#authenticated-nav a.active {
     color: rgba(255, 255, 255, 0.8);
     background-color: #4b4a54;
 }

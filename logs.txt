@@ -2154,3 +2154,934 @@ INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:39:18] "GET /similar-movies/667538 H
 INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:39:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:39:18] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 15:39:18] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:07:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:07:54] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:07:54] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:07:54] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:07:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:01] "[32mGET /login?next=http://127.0.0.1:5000/?search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:03] "[32mGET /create_session?next=http://127.0.0.1:5000/&search=&request_token=e77362d4ac7642a0857de1a9670a639781c0ecb9&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:04] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:04] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:07] "GET /rated-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:07] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:07] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:14] "GET /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:14] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:14] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:19] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:19] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:19] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3', 'movie_id': '2062', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:23] "GET /similar-movies/2062 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:23] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:23] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3', 'movie_id': 'cooking-movies', 'include_adult': 'false'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:28] "GET /similar-movies/cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:28] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:29] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3', 'movie_id': 'cooking-movies', 'include_adult': 'false'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:32] "GET /similar-movies/cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:32] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:32] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:36] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:36] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:36] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:40] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:43] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:43] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:43] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:48] "GET /rated-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:48] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:48] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:56] "GET /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:56] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:08:56] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3', 'movie_id': '558', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:34] "GET /similar-movies/558 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:34] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:34] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3', 'movie_id': '559', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:39] "GET /similar-movies/559 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:39] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:39] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3', 'movie_id': 'cooking-movies', 'include_adult': 'false'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:42] "GET /similar-movies/cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:42] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:09:42] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3', 'movie_id': '559', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+ERROR:src.app.app_instance:Failed to render template: Could not build url for endpoint 'cooking-movies'. Did you mean 'cooking_movies' instead?
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:12:55] "GET /similar-movies/559 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:12:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:12:55] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+ERROR:src.app.app_instance:Failed to render template: Could not build url for endpoint 'cooking-movies'. Did you mean 'cooking_movies' instead?
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:13:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:13:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 19:13:00] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:52:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:52:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:52:06] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:52:06] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:52:25] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:52:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:52:25] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:52:25] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:55:14] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:55:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:55:14] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:55:14] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:55:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:55:52] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:55:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:55:52] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:55:52] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:57:20] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:57:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:57:20] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:57:20] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:57:33] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:57:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:57:33] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 22:57:33] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/top_rated?page={page} with parameters {'session_id': '47a45f7e5677a9573b7b5672f508fa15aac0e9a3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/top_rated?page={page}
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:06] "GET /top-rated HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:06] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:06] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:08] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:10] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:10] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:10] "[32mGET /login?next=http://127.0.0.1:5000/?search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:12] "[32mGET /create_session?next=http://127.0.0.1:5000/&search=&request_token=95dcffd34914226931499f392c88aac6bcdd1c62&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '5116a7ea2b7703deeda4b8b05d1d74f22932eee5'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:13] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:05:13] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '5116a7ea2b7703deeda4b8b05d1d74f22932eee5'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:06:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:06:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:06:19] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:06:19] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '5116a7ea2b7703deeda4b8b05d1d74f22932eee5'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:07:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:07:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:07:06] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:07:06] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\utils.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:08:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:08:11] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:08:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:08:11] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\utils.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:09:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:09:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:09:16] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:09:16] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\utils.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:10:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:10:52] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:10:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:10:52] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:05] "[32mGET /login?next=http://127.0.0.1:5000/?search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:07] "[32mGET /create_session?next=http://127.0.0.1:5000/&search=&request_token=58fe6bd09850cb644a2b4cf10469b2745a748aa5&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': 'b0923db348177f71b3931fe3393fbabf8ed5cd6c'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:08] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:09] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:29] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:29] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:31] "[32mGET /login?next=http://127.0.0.1:5000/?search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:33] "[32mGET /create_session?next=http://127.0.0.1:5000/&search=&request_token=866c8c33899441204623ca2b9521545381dbf26c&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '609a240403ae7fc68639e8c657e35af0615da206'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:34] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:11:34] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\utils.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:12:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:12:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:12:41] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:12:41] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:12:43] "[32mGET /login?next=http://127.0.0.1:5000/?search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:12:45] "[32mGET /create_session?next=http://127.0.0.1:5000/&search=&request_token=bab2f216fb58fb1fb87c85bc53c3c64846c1f62a&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '624fdf82d548553f67d9be0f7b367a176664ae8d'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:12:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:12:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:12:46] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:12:46] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\utils.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:08] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:08] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:09] "[32mGET /login?next=http://127.0.0.1:5000/?search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:10] "[32mGET /create_session?next=http://127.0.0.1:5000/&search=&request_token=9b3583342a9f31ad2e12f6a2a5dcffd28898192c&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': 'bd20243f9bdbfce3c6e366f85d7f7d62cda007de'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+ERROR:src.app.app_instance:Failed to get rated movies from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: get_aggregate_requests() got multiple values for argument 'pages'
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:11] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:12] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\utils.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:38] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:38] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:40] "[32mGET /login?next=http://127.0.0.1:5000/?search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:41] "[32mGET /create_session?next=http://127.0.0.1:5000/&search=&request_token=06120fcfe5b682d907544eb5e9eac3516cf7b2c1&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '1cd10aee9d0a9ace3c231bcd2e00e47a5f3a3965'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:43] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:13:43] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\utils.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '', 'movie_id': '346698', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:18] "GET /similar-movies/346698 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:18] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:18] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:31] "[32mGET /login?next=http://127.0.0.1:5000/similar-movies/346698?search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:33] "[32mGET /create_session?next=http://127.0.0.1:5000/similar-movies/346698&search=&request_token=f81c4d22b73c6cc64380c7ff3a8af870218b9bae&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '346698', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:35] "GET /similar-movies/346698 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:35] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:35] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/now_playing?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/now_playing?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:39] "GET /in-theaters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:39] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:39] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '346698', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:44] "GET /similar-movies/346698 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:44] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:44] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': 'cooking-movies', 'include_adult': 'false'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:48] "GET /similar-movies/cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:48] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:14:48] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/now_playing?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/now_playing?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:25:16] "GET /in-theaters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:25:16] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:25:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:25:16] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/now_playing?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/now_playing?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:17] "GET /in-theaters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:17] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:17] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '346698', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:55] "GET /similar-movies/346698 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:55] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:55] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/now_playing?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/now_playing?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:59] "GET /in-theaters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:59] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:26:59] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:03] "GET /similar-movies/298618 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:03] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:03] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '447277', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:34] "GET /similar-movies/447277 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:34] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:34] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '447365', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:48] "GET /similar-movies/447365 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:48] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:27:48] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/now_playing?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/now_playing?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:28:15] "GET /in-theaters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:28:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:28:15] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:28:15] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:28:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': 'cooking-movies', 'include_adult': 'false'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/cooking-movies/recommendations?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:28:31] "GET /similar-movies/cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:28:31] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:28:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:28:31] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/now_playing?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/now_playing?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:08] "GET /in-theaters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:08] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:08] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '667538', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:16] "GET /similar-movies/667538 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:16] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:17] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': 'action-movies', 'include_adult': 'false'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/action-movies/recommendations?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:20] "GET /similar-movies/action-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:20] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:20] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:29:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '667538', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+ERROR:src.app.app_instance:Failed to render template: 'cooking' is undefined
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:11] "GET /similar-movies/667538 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:11] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:29] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:29] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}&include_adult=false with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'genres': 28}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}&include_adult=false
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:33] "GET /action-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:33] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:33] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:37] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:37] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:37] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '2062', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:44] "GET /similar-movies/2062 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:44] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:44] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '2062', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:56] "GET /similar-movies/2062 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:56] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:56] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:59] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:59] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:30:59] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '2062', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:04] "GET /similar-movies/2062 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:04] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:04] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:07] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:07] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:07] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:14] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:14] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:14] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/search/multi?include_adult=false&query={query}&page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'query': 'pure acetone'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/search/multi?include_adult=false&query={query}&page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:30] "GET /search?query=pure+acetone HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:30] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:30] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}&include_adult=false with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'genres': 16}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?with_genres={genres}&page={page}&include_adult=false
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:34] "GET /animation-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:34] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:34] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&vote_count.gte=15&with_keywords=18293%7C6808%7C10637&page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:40] "GET /cooking-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:40] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:40] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '2062', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:50] "GET /similar-movies/2062 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:50] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:50] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:57] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:57] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:31:57] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:32:16] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:32:20] "GET /api/session_id HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:32:20] "GET /api/token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:32:22] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:00] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:00] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:00] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:00] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:11] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:11] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:11] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:11] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:37] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:37] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:37] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:37] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:57] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:57] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:57] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:34:57] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:17] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:17] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:17] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:17] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:32] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:32] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:32] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:32] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:50] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:50] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:50] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:35:50] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:36:36] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:36:36] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:36:36] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:36:36] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:16] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:16] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:16] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:16] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:30] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:30] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:30] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:30] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:52] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:52] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:52] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:37:52] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:38:48] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:38:48] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:38:48] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:38:48] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027', 'movie_id': '12', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:38:57] "GET /similar-movies/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:38:57] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:38:57] "GET /static/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:38:57] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/top_rated?page={page} with parameters {'session_id': '6984239a0a85c1bb88cd216015221d58a1c9c027'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/top_rated?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:39:43] "GET /top-rated HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:39:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:39:43] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:39:43] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/top_rated?page={page} with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/top_rated?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:41:44] "GET /top-rated HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:41:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:41:44] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:41:44] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:41:46] "[33mGET /similar-movies/238/?title=The%20Godfather HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:21] "[32mGET /login?next=http://127.0.0.1:5000/top-rated?search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:22] "[32mGET /create_session?next=http://127.0.0.1:5000/top-rated&search=&request_token=dea6377eef349398169bf631597c771a6ae7fc1a&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/top_rated?page={page} with parameters {'session_id': 'feb59e29238d7e4bd1268eb309b02dfd7b913e69'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/top_rated?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:24] "GET /top-rated HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:24] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:24] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:26] "[33mGET /similar-movies/278/?title=The%20Shawshank%20Redemption HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:31] "[35m[1mGET /similar-movies/278 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:31] "GET /similar-movies/278?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:31] "GET /similar-movies/278?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:32] "GET /similar-movies/278?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:42:32] "[36mGET /similar-movies/278?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:43:55] "[35m[1mGET /similar-movies/278 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:43:55] "[36mGET /similar-movies/278?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:43:55] "[36mGET /similar-movies/278?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:43:55] "[36mGET /similar-movies/278?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:43:55] "[36mGET /similar-movies/278?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': 'feb59e29238d7e4bd1268eb309b02dfd7b913e69'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:43:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:43:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:43:59] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:43:59] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:01] "[33mGET /similar-movies/346698/?title=Barbie HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '', 'movie_id': '346698', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:49] "GET /similar-movies/346698/?title=Barbie HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:49] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:49] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/now_playing?page={page} with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/now_playing?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:53] "GET /in-theaters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:53] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:53] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:57] "GET /similar-movies/298618/?title=The%20Flash HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:57] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:44:57] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:45:14] "[32mGET /login?next=http://127.0.0.1:5000/similar-movies/298618/?title%3DThe%2520Flash?search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:45:16] "[32mGET /create_session?next=http://127.0.0.1:5000/similar-movies/298618/&title=The%20Flash&search=&request_token=c369f190c14e0477daff473640de4b701518a909&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:45:16] "[35m[1mGET /similar-movies/298618/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:45:17] "GET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:45:17] "GET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:45:17] "GET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:45:17] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '7ce987af943bce7ac6b61df1f9c7ed252e3f0387', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:04] "GET /similar-movies/298618/?title=The%20Flash HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:04] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:04] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:07] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:07] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:11] "GET /similar-movies/298618/?title=The%20Flash HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:11] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:11] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:13] "[32mGET /login?next=http://127.0.0.1:5000/similar-movies/298618/?title%3DThe%2520Flash?search%3DThe+Flash HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:15] "[32mGET /create_session?next=http://127.0.0.1:5000/similar-movies/298618/&title=The%20Flash&search=The%20Flash&request_token=f8c891d2c88bc1bffb08d54c400ecd469f1a10fa&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:15] "[35m[1mGET /similar-movies/298618/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:15] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:15] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:46:15] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '4d2e9f00a6fe0d2b3f7dc9ee7bca02c733acf07c', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:52] "GET /similar-movies/298618/?title=The%20Flash HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:52] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:52] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:53] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:54] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:54] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:59] "GET /similar-movies/298618/?title=The%20Flash HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:59] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:47:59] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:03] "[32mGET /login?next=http://127.0.0.1:5000/similar-movies/298618/?title%3DThe%2520Flash?search%3D?title%3DThe+Flash HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:04] "[32mGET /create_session?next=http://127.0.0.1:5000/similar-movies/298618/&title=The%20Flash&search=&title=The%20Flash&request_token=b2409fe95ca24411baba9f1ad9503f3bb49eae1f&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:04] "[35m[1mGET /similar-movies/298618/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:04] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:04] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:05] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': 'd342aecfa9ebc5602239a44a732e05fdbbd67c0f', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:38] "GET /similar-movies/298618/?title=The%20Flash HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:38] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:38] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:40] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:41] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:41] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:44] "GET /similar-movies/298618/?title=The%20Flash HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:44] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:44] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:45] "[32mGET /login?next=http://127.0.0.1:5000/similar-movies/298618/?title%3DThe%2520Flash?search%3D%26title%3DThe+Flash HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:46] "[32mGET /create_session?next=http://127.0.0.1:5000/similar-movies/298618/&title=The%20Flash&search=&request_token=f22d55929e4b5eb90f82a15ce2f48a75e8f9ca0b&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:46] "[35m[1mGET /similar-movies/298618/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:47] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:47] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:48:47] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '7d3cee3cf14b267d225c2d7926485b0b9e9e29ae', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:49:28] "GET /similar-movies/298618/?title=The%20Flash HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:49:28] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '7d3cee3cf14b267d225c2d7926485b0b9e9e29ae', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Successfully fetched rated movies
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:50:58] "GET /similar-movies/298618/?title=The%20Flash HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:50:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:50:58] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:50:58] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:50:59] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:00] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:00] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '', 'movie_id': '298618', 'include_adult': 'false'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/{movie_id}/recommendations?page={page}
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:03] "GET /similar-movies/298618/?title=The%20Flash HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:03] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:03] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:05] "[32mGET /login?next=http://127.0.0.1:5000/similar-movies/298618/?title%3DThe%2520Flash&search=&title=The+Flash HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:06] "[32mGET /create_session?next=http://127.0.0.1:5000/similar-movies/298618/&title=The%20Flash&request_token=5eb7cc2c89dbc246d64fb89a41c3dda4f35060d1&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:06] "[35m[1mGET /similar-movies/298618/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:06] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:06] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2023 23:51:06] "[36mGET /similar-movies/298618/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -

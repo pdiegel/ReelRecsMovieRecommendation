@@ -73,9 +73,10 @@ def fetch_rated_movies(
         is not logged in.
     """
     if session_id:
+        print("Fetching rated movies")
         try:
             rated_movies = get_aggregate_requests(
-                user_api_url, headers, session_id, pages=-1
+                user_api_url, headers, pages=-1, session_id=session_id
             )
             app.logger.info("Successfully fetched rated movies")
             return rated_movies

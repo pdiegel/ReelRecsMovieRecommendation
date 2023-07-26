@@ -47,6 +47,7 @@ GENRE_IDS = {
 def set_up_routes(app, login_manager: LoginManager):
     @app.route("/")
     def home() -> str:
+        print("session id:" + get_session_id())
         return handle_movie_route(
             POPULAR_MOVIES_URL,
             "Popular Movies",
@@ -241,11 +242,12 @@ def set_up_routes(app, login_manager: LoginManager):
             get_session_id(),
         )
 
-    @app.route("/similar-movies/<movie_id>")
+    @app.route("/similar-movies/<movie_id>/")
     def similar_movies(movie_id: str) -> str:
+        movie_title = request.args.get("title")
         return handle_movie_route(
             SIMILAR_TO_MOVIE_ID_URL,
-            "Similar Movies",
+            "Movies Similar to " + movie_title,
             RATED_MOVIES_URL,
             get_session_id(),
             movie_id=movie_id,
