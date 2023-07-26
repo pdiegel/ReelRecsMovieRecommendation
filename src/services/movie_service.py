@@ -102,7 +102,6 @@ def watchlist_movie(
     session_id: str,
     headers: dict,
     access_token: str,
-    **kwargs,
 ):
     """Adds a movie to the user's watchlist.
 
@@ -115,22 +114,21 @@ def watchlist_movie(
         api_key (str): The API key to use.
     """
     url = MODIFY_WATCHLIST_URL.format(
-        session_id=session_id, account_id=ACCOUNT_ID
+        account_id=ACCOUNT_ID, session_id=session_id
     )
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
         "Authorization": f"Bearer {access_token}",
     }
-    data = {"watchlist": watchlist, "movie_id": movie_id}
+    data = {"media_type": "movie", "media_id": movie_id, "watchlist": watchlist}
     response = requests.post(url, headers=headers, data=json.dumps(data))
     print(url)
 
-    if response.status_code == 201:
-        if watchlist == "false":
-            print(f"Movie {movie_id} removed from watchlist successfully")
-        else:
-            print(f"Movie {movie_id} added to watchlist successfully")
+    if response.status_code == 200:
+        print(f"Movie {movie_id} removed from watchlist successfully")
+    elif response.status_code == 201:
+        print(f"Movie {movie_id} added to watchlist successfully")
     else:
         print(
             f"Failed to add movie to watchlist: {response.status_code},\

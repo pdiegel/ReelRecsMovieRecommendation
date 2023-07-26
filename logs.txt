@@ -4152,3 +4152,421 @@ INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 11:05:53] "[36mGET /static/js/movie_di
 INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 11:05:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 11:05:53] "GET /api/logged_in HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 11:05:54] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}: 'total_pages'
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}: 'total_pages'
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:30] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:30] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:33] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:34] "[32mGET /create_session?next=http://127.0.0.1:5000/&request_token=807d997d17539916abec66431a9751f543329ed7&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3/movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:35] "GET /?title=&search= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:36] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:36] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:38] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:51] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:51] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:51] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:54] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:57] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:57] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:45:57] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:47:26] "GET /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:47:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:47:26] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:47:26] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '8ca7c59b71f8d4447d8eeb8fde7e7475ab1e28c3'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:47:31] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:47:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:47:31] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:47:31] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:48:13] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:48:59] "[32mGET /watchlist-movies HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:48:59] "[32mGET /login?next=http://127.0.0.1:5000/watchlist-movies HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:49:01] "[32mGET /create_session?next=http://127.0.0.1:5000/watchlist-movies&request_token=01460e45b953d950c0d3ecd068c239e9fc145aa8&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '43a68248885544105cccd3ed4002bb107ce1b70d'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '43a68248885544105cccd3ed4002bb107ce1b70d'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '43a68248885544105cccd3ed4002bb107ce1b70d'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:49:09] "GET /watchlist-movies?title=&search= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:49:09] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:49:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:49:09] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:49:11] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:05] "[32mGET /watchlist-movies?title=&search= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:05] "[32mGET /login?next=http://127.0.0.1:5000/watchlist-movies?title%3D%26search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:07] "[32mGET /create_session?next=http://127.0.0.1:5000/watchlist-movies&title=&request_token=6f2b5e3cc8c5a82a25435dfadf03438c13a808fc&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '8e3bcf7d7caff1e47129517e6864d35e6433377f'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '8e3bcf7d7caff1e47129517e6864d35e6433377f'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '8e3bcf7d7caff1e47129517e6864d35e6433377f'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:10] "GET /watchlist-movies?title=&search= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:10] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:10] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:12] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:25] "[32mGET /watchlist-movies?title=&search= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:25] "[32mGET /login?next=http://127.0.0.1:5000/watchlist-movies?title%3D%26search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:26] "[32mGET /create_session?next=http://127.0.0.1:5000/watchlist-movies&title=&request_token=b20c6e806bc9155b363878b58dec6ecf9ff0117e&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '47ee0690a83c94e6fc09997dead150edebc73f24'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '47ee0690a83c94e6fc09997dead150edebc73f24'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '47ee0690a83c94e6fc09997dead150edebc73f24'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:28] "GET /watchlist-movies?title=&search= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:28] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:28] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:52:30] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:55:52] "[32mGET /watchlist-movies?title=&search= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:55:52] "[32mGET /login?next=http://127.0.0.1:5000/watchlist-movies?title%3D%26search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:55:53] "[32mGET /create_session?next=http://127.0.0.1:5000/watchlist-movies&title=&request_token=8aad8b7390bc84eaa6a5fcbd5c03526cb5e6c9c5&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:55:56] "GET /watchlist-movies?title=&search= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:55:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:55:56] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:55:56] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:55:57] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:03] "GET /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:03] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:03] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:06] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:06] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:06] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:11] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:11] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:11] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:40] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:40] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:40] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:42] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:48] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:48] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:56:48] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:00] "GET /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:00] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:00] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:02] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'f85d5690567d32fe3dafbdfc823ac17331f04318'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:06] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:06] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:06] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:09] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:19] "[32mGET /recommendations HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:19] "[32mGET /login?next=http://127.0.0.1:5000/recommendations HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:21] "[32mGET /create_session?next=http://127.0.0.1:5000/recommendations&request_token=4ab9c45d4bbe2e5593dcc7b939cf44c66edf44d0&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:23] "GET /recommendations?title=&search= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:23] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:23] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:26] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:26] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:26] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:35] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:40] "GET /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:40] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:40] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'a6ee300b8275eb947a59de61f8ea0e3549b8c2b1'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:43] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:43] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:57:43] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:58:38] "[32mGET /watchlist-movies HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:58:38] "[32mGET /login?next=http://127.0.0.1:5000/watchlist-movies HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:58:40] "[32mGET /create_session?next=http://127.0.0.1:5000/watchlist-movies&request_token=fc8fa4bb4af6f480a81e13f1181292528a1567ce&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '92aeab33e35cb345935fd2a060bdc37b74301bf8'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '92aeab33e35cb345935fd2a060bdc37b74301bf8'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '92aeab33e35cb345935fd2a060bdc37b74301bf8'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:58:48] "GET /watchlist-movies?title=&search= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:58:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:58:48] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:58:48] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:58:51] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:11] "[32mGET /watchlist-movies?title=&search= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:12] "[32mGET /login?next=http://127.0.0.1:5000/watchlist-movies?title%3D%26search%3D HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:14] "[32mGET /create_session?next=http://127.0.0.1:5000/watchlist-movies&title=&request_token=27bba4d40ebbc2a4d366b859e1122aa86fb67c0b&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '066e6079908677078daf036dcd60833982c549c7'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '066e6079908677078daf036dcd60833982c549c7'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '066e6079908677078daf036dcd60833982c549c7'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:22] "GET /watchlist-movies?title=&search= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:22] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:22] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:24] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false with parameters {'session_id': '066e6079908677078daf036dcd60833982c549c7'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/recommendations?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '066e6079908677078daf036dcd60833982c549c7'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '066e6079908677078daf036dcd60833982c549c7'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:33] "GET /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:33] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:33] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:35] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '066e6079908677078daf036dcd60833982c549c7'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page} with parameters {'session_id': '066e6079908677078daf036dcd60833982c549c7'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '066e6079908677078daf036dcd60833982c549c7'}
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4/account/{session_id}/movie/watchlist?page={page}
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:40] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:40] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 14:59:40] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\tmdb_API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\tmdb_API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\tmdb_API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\tmdb_API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\tmdb_API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\tmdb_API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\tmdb_API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\tmdb_API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movies.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movies.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movies.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movies.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movies.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movies.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movies.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movies.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movies.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movies.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-765-647

@@ -33,18 +33,6 @@ from ..services.login_service import (
 )
 from ..services.movie_service import rate_movie, watchlist_movie
 
-GENRE_IDS = {
-    "action": 28,
-    "adventure": 12,
-    "animation": 16,
-    "comedy": 35,
-    "crime": 80,
-    "documentary": 99,
-    "drama": 18,
-    "family": 10751,
-    "horror": 27,
-}
-
 
 def set_up_routes(app, login_manager: LoginManager):
     @app.route("/")

@@ -25,8 +25,8 @@ if not ACCOUNT_ID:
     raise ValueError("ACCOUNT_ID is not set in .env file")
 
 # API ENDPOINTS ========================================================
-API_BASE_URL = "https://api.themoviedb.org/3/"
-API_BASE_URL_V4 = "https://api.themoviedb.org/4/"
+API_BASE_URL = "https://api.themoviedb.org/3"
+API_BASE_URL_V4 = "https://api.themoviedb.org/4"
 API_HEADERS = {
     "accept": "application/json",
     "content-type": "application/json",

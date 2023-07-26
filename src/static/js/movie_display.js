@@ -277,10 +277,10 @@ function displayWatchlistButton(movieId, movieCard, inWatchlist) {
 }
 
 async function modifyWatchlist(movieId, watchlistButton, inWatchlist) {
-    let watchlistContents = 'true';
+    let watchlistContents = true;
     if (inWatchlist) {
         watchlistButton.textContent = 'Add to Watchlist';
-        watchlistContents = 'false';
+        watchlistContents = false;
     }
     else {
         watchlistButton.textContent = 'Remove from Watchlist';
