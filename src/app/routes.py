@@ -16,12 +16,14 @@ from ..constants.api_constants import (
     GENRE_SEARCH_URL,
     IN_THEATERS_URL,
     POPULAR_MOVIES_URL,
-    RATED_MOVIES_URL,
     RECOMMENDED_MOVIES_URL,
     SEARCH_URL,
     TOP_RATED_URL,
     UPCOMING_URL,
     SIMILAR_TO_MOVIE_ID_URL,
+    RATED_MOVIES_URL,
+    ACCOUNT_OBJECT_ID,
+    WATCHLIST_URL,
 )
 from ..services.login_service import (
     User,
@@ -29,7 +31,7 @@ from ..services.login_service import (
     login_to_tmdb,
     get_session_id,
 )
-from ..services.movie_service import rate_movie
+from ..services.movie_service import rate_movie, watchlist_movie
 
 GENRE_IDS = {
     "action": 28,
@@ -51,7 +53,6 @@ def set_up_routes(app, login_manager: LoginManager):
         return handle_movie_route(
             POPULAR_MOVIES_URL,
             "Popular Movies",
-            RATED_MOVIES_URL,
             get_session_id(),
         )
 
@@ -60,7 +61,6 @@ def set_up_routes(app, login_manager: LoginManager):
         return handle_movie_route(
             COOKING_MOVIES_URL,
             "Popular Cooking Movies",
-            RATED_MOVIES_URL,
             get_session_id(),
         )
 
@@ -85,7 +85,6 @@ def set_up_routes(app, login_manager: LoginManager):
         return handle_movie_route(
             GENRE_SEARCH_URL,
             f"Popular {genre.capitalize()} Movies",
-            RATED_MOVIES_URL,
             get_session_id(),
             genres=genre_id,
         )
@@ -122,16 +121,19 @@ def set_up_routes(app, login_manager: LoginManager):
         redirected to the homepage.
         """
         request_token = request.args.get("request_token")
-        next_page = request.args.get("next")
+        title = request.args.get("title", "")
+        search = request.args.get("search", "")
+        next_page = request.args.get("next", "")
         user_session = create_session(request_token, API_HEADERS, API_KEY)
         session_id = user_session.get("session_id")
         if session_id is not None:
             user = User(session_id)
             login_user(user, remember=True)
 
-        if not next_page:
-            next_page = url_for("home")
-        return redirect(next_page)
+        if next_page:
+            next_page = next_page + "?title=" + title + "&search=" + search
+            return redirect(next_page)
+        return redirect("/")
 
     @login_manager.user_loader
     def load_user(session_id) -> User:
@@ -161,13 +163,33 @@ def set_up_routes(app, login_manager: LoginManager):
             print(f"error rating movie: {e}")
             return jsonify(success=False, error=str(e))
 
+    @app.route("/watchlist_movie/", methods=["POST"])
+    @login_required
+    def watchlist():
+        data = request.get_json()
+        movie_id = data.get("movie_id", "")
+        watchlist = data.get("watchlist", "")
+        print(data)
+
+        try:
+            watchlist_movie(
+                movie_id,
+                watchlist,
+                get_session_id(),
+                API_HEADERS,
+                API_ACCESS_TOKEN,
+            )
+            return jsonify(success=True)
+        except Exception as e:
+            print(f"error adding movie to watchlist: {e}")
+            return jsonify(success=False, error=str(e))
+
     @app.route("/recommendations")
     @login_required
     def recommended_movies() -> str:
         return handle_movie_route(
             RECOMMENDED_MOVIES_URL,
             "Recommended Movies",
-            RATED_MOVIES_URL,
             get_session_id(),
         )
 
@@ -177,7 +199,6 @@ def set_up_routes(app, login_manager: LoginManager):
         return handle_movie_route(
             RATED_MOVIES_URL,
             "My Ratings",
-            RATED_MOVIES_URL,
             get_session_id(),
         )
 
@@ -210,7 +231,6 @@ def set_up_routes(app, login_manager: LoginManager):
         return handle_movie_route(
             SEARCH_URL,
             f'Results for "{query}"',
-            RATED_MOVIES_URL,
             get_session_id(),
             query=query,
         )
@@ -220,7 +240,6 @@ def set_up_routes(app, login_manager: LoginManager):
         return handle_movie_route(
             IN_THEATERS_URL,
             "In Theaters",
-            RATED_MOVIES_URL,
             get_session_id(),
         )
 
@@ -229,7 +248,6 @@ def set_up_routes(app, login_manager: LoginManager):
         return handle_movie_route(
             TOP_RATED_URL,
             "Top Rated Movies",
-            RATED_MOVIES_URL,
             get_session_id(),
         )
 
@@ -238,8 +256,14 @@ def set_up_routes(app, login_manager: LoginManager):
         return handle_movie_route(
             UPCOMING_URL,
             "Upcoming Movies",
-            RATED_MOVIES_URL,
             get_session_id(),
+        )
+
+    @app.route("/watchlist-movies")
+    @login_required
+    def watchlist_movies():
+        return handle_movie_route(
+            WATCHLIST_URL, "My Watchlist", get_session_id()
         )
 
     @app.route("/similar-movies/<movie_id>/")
@@ -248,7 +272,6 @@ def set_up_routes(app, login_manager: LoginManager):
         return handle_movie_route(
             SIMILAR_TO_MOVIE_ID_URL,
             "Movies Similar to " + movie_title,
-            RATED_MOVIES_URL,
             get_session_id(),
             movie_id=movie_id,
             include_adult="false",

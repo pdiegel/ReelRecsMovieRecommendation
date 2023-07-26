@@ -2,7 +2,7 @@ import requests
 from typing import Any, Dict, List, Union
 import logging
 import json
-
+from ..constants.api_constants import MODIFY_WATCHLIST_URL, ACCOUNT_ID
 
 logging.basicConfig(filename="logs.txt", level=logging.INFO)
 
@@ -94,3 +94,45 @@ api_key={api_key}"
         print(f"Movie {movie_id} rated successfully")
     else:
         print(f"Failed to rate movie: {response.status_code}, {response.text}")
+
+
+def watchlist_movie(
+    movie_id: int,
+    watchlist: str,
+    session_id: str,
+    headers: dict,
+    access_token: str,
+    **kwargs,
+):
+    """Adds a movie to the user's watchlist.
+
+    Args:
+        movie_id (int): Id of the movie to rate.
+        watchlist (str): Boolean value indicating whether to add or remove
+            the movie from the watchlist.
+        session_id (str): Id of the user's session.
+        headers (dict): The headers to send with the request.
+        api_key (str): The API key to use.
+    """
+    url = MODIFY_WATCHLIST_URL.format(
+        session_id=session_id, account_id=ACCOUNT_ID
+    )
+    headers = {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "Authorization": f"Bearer {access_token}",
+    }
+    data = {"watchlist": watchlist, "movie_id": movie_id}
+    response = requests.post(url, headers=headers, data=json.dumps(data))
+    print(url)
+
+    if response.status_code == 201:
+        if watchlist == "false":
+            print(f"Movie {movie_id} removed from watchlist successfully")
+        else:
+            print(f"Movie {movie_id} added to watchlist successfully")
+    else:
+        print(
+            f"Failed to add movie to watchlist: {response.status_code},\
+ {response.text}"
+        )

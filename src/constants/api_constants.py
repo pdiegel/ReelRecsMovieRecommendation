@@ -20,6 +20,10 @@ ACCOUNT_OBJECT_ID = os.getenv("ACCOUNT_OBJECT_ID")
 if not ACCOUNT_OBJECT_ID:
     raise ValueError("ACCOUNT_OBJECT_ID is not set in .env file")
 
+ACCOUNT_ID = os.getenv("ACCOUNT_ID")
+if not ACCOUNT_ID:
+    raise ValueError("ACCOUNT_ID is not set in .env file")
+
 # API ENDPOINTS ========================================================
 API_BASE_URL = "https://api.themoviedb.org/3/"
 API_BASE_URL_V4 = "https://api.themoviedb.org/4/"
@@ -98,4 +102,11 @@ TOP_RATED_URL = generate_api_url("movie/top_rated?page={page}")
 UPCOMING_URL = generate_api_url("movie/upcoming?page={page}")
 SIMILAR_TO_MOVIE_ID_URL = generate_api_url(
     "movie/{movie_id}/recommendations?page={page}"
+)
+WATCHLIST_URL = generate_api_url(
+    "account/{session_id}/movie/watchlist?page={page}", API_BASE_URL_V4
+)
+
+MODIFY_WATCHLIST_URL = generate_api_url(
+    "account/{account_id}/watchlist?session_id={session_id}",
 )

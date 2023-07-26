@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const movies = JSON.parse(document.getElementById('json-data').textContent);
     const ratedMovies = JSON.parse(document.getElementById('rated-movies').textContent);
+    const watchlistMovies = JSON.parse(document.getElementById('watchlist-movies').textContent);
 
     fetchLoggedInStatus()
-        .then(isLoggedIn => displayMovies(movies, isLoggedIn, ratedMovies))
+        .then(isLoggedIn => displayMovies(movies, isLoggedIn, ratedMovies, watchlistMovies))
         .catch(error => console.error('Error with fetch call:', error));
 });
 
@@ -13,10 +14,10 @@ async function fetchLoggedInStatus() {
     return data.logged_in;
 }
 
-function displayMovies(movies, isLoggedIn, ratedMovies) {
+function displayMovies(movies, isLoggedIn, ratedMovies, watchlistMovies) {
     if (Array.isArray(movies)) {
         movies.forEach((movie) => {
-            const movieCard = createMovieCard(movie, isLoggedIn, ratedMovies);
+            const movieCard = createMovieCard(movie, isLoggedIn, ratedMovies, watchlistMovies);
             document.getElementById('movie-list').append(movieCard);
         });
     } else {
@@ -25,7 +26,7 @@ function displayMovies(movies, isLoggedIn, ratedMovies) {
 }
 
 
-function createMovieCard(movie, isLoggedIn, ratedMovies) {
+function createMovieCard(movie, isLoggedIn, ratedMovies, watchlistMovies) {
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie-card');
 
@@ -53,7 +54,7 @@ function createMovieCard(movie, isLoggedIn, ratedMovies) {
     const similarMoviesButton = document.createElement('button');
     similarMoviesButton.classList.add('similar-movies-button');
     similarMoviesButton.textContent = 'Similar Movies';
-    similarMoviesButton.addEventListener('click', similarMovieRedirect.bind(null, movie.id, movie.title)); 
+    similarMoviesButton.addEventListener('click', similarMovieRedirect.bind(null, movie.id, movie.title));
 
     movieInfo.append(movieName, movieStats, movieDescription);
     movieCard.append(moviePoster, movieInfo, similarMoviesButton);
@@ -64,7 +65,11 @@ function createMovieCard(movie, isLoggedIn, ratedMovies) {
     // If the user is logged in, create and append the Rate Movie button
     if (isLoggedIn) {
         const userRating = ratedMovies.find(ratedMovie => ratedMovie.id === movie.id)?.account_rating.value;
+        const watchlist = watchlistMovies.find(watchlistMovie => watchlistMovie.id === movie.id);
+        const inWatchlist = watchlist !== undefined;
         const starContainer = createStarContainer(movie, userRating, movieCard, window.location.pathname);
+       
+        displayWatchlistButton(movie.id, movieCard, inWatchlist);
 
         if (userRating) {
             movieInfo.append(starContainer);
@@ -88,9 +93,9 @@ function createStarContainer(movieData, userRating, movieCard, pathname) {
         star.classList.add('star');
         // 2, 4, 6, 8, 10
         // Subtracting 12 because the stars are in reverse order
-        star.dataset.value = 12 - (i + 1) * 2;  
+        star.dataset.value = 12 - (i + 1) * 2;
         // Unicode character for a star
-        star.innerHTML = '&#9733;';  
+        star.innerHTML = '&#9733;';
 
         // If the user has rated the movie and the rating is greater than 
         // or equal to the star's value, color the star gold
@@ -251,3 +256,54 @@ function removeDeleteRatingButton(movieCard) {
 function similarMovieRedirect(movieId, movieTitle) {
     window.location.href = `/similar-movies/${movieId}/?title=${movieTitle}`;
 }
+
+function displayWatchlistButton(movieId, movieCard, inWatchlist) {
+    const watchlistButton = document.createElement('button');
+    watchlistButton.classList.add('watchlist-button');
+
+    if (inWatchlist) {
+        watchlistButton.textContent = 'Remove from Watchlist';
+        movieCard.append(watchlistButton);
+    } else {
+        watchlistButton.textContent = 'Add to Watchlist';
+        movieCard.append(watchlistButton);
+    };
+
+    watchlistButton.addEventListener('click', function () {
+        modifyWatchlist(movieId, watchlistButton, inWatchlist);
+    })
+
+    return watchlistButton;
+}
+
+async function modifyWatchlist(movieId, watchlistButton, inWatchlist) {
+    let watchlistContents = 'true';
+    if (inWatchlist) {
+        watchlistButton.textContent = 'Add to Watchlist';
+        watchlistContents = 'false';
+    }
+    else {
+        watchlistButton.textContent = 'Remove from Watchlist';
+    }
+
+    fetch('http://127.0.0.1:5000/watchlist_movie/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            movie_id: movieId,
+            watchlist: watchlistContents
+        })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.info('Successfully watchlisted movie:', movieId);
+            } else {
+                console.error('Error watchlisting movie:', data.error);
+            }
+        })
+        .catch(error => console.error('Error with fetch call:', error));
+}
+

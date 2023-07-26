@@ -1,7 +1,11 @@
 from ..services.movie_service import get_aggregate_requests
 from flask import render_template
 from ..app.app_instance import app
-from ..constants.api_constants import API_HEADERS
+from ..constants.api_constants import (
+    API_HEADERS,
+    RATED_MOVIES_URL,
+    WATCHLIST_URL,
+)
 
 
 def fetch_movies(
@@ -33,7 +37,10 @@ def fetch_movies(
 
 
 def render_movies_page(
-    movies: list, title: str = "Popular Movies", rated_movies: list = []
+    movies: list,
+    title: str = "Popular Movies",
+    rated_movies: list = [],
+    watchlist: list = [],
 ) -> str:
     """Renders the index.html template with the provided movie data.
 
@@ -49,7 +56,11 @@ def render_movies_page(
     """
     try:
         return render_template(
-            "index.html", movies=movies, title=title, rated_movies=rated_movies
+            "index.html",
+            movies=movies,
+            title=title,
+            rated_movies=rated_movies,
+            watchlist=watchlist,
         )
     except Exception as e:
         app.logger.error(f"Failed to render template: {e}")
@@ -58,39 +69,9 @@ def render_movies_page(
         )
 
 
-def fetch_rated_movies(
-    user_api_url: str, headers: dict, session_id: str
-) -> list:
-    """Fetches the movies rated by the user if the user is logged in.
-
-    Args:
-        user_api_url (str): The API URL to fetch data from.
-        headers (dict): The headers to include in the request.
-        session_id (str): The session ID of the user.
-
-    Returns:
-        list: The movies rated by the user, or an empty list if the user
-        is not logged in.
-    """
-    if session_id:
-        print("Fetching rated movies")
-        try:
-            rated_movies = get_aggregate_requests(
-                user_api_url, headers, pages=-1, session_id=session_id
-            )
-            app.logger.info("Successfully fetched rated movies")
-            return rated_movies
-        except Exception as e:
-            app.logger.error(
-                f"Failed to get rated movies from {user_api_url}: {e}"
-            )
-    return []
-
-
 def handle_movie_route(
     url: str,
     page_title: str,
-    rated_movies_url: str,
     session_id: str,
     **kwargs,
 ) -> str:
@@ -107,5 +88,10 @@ def handle_movie_route(
         str: The rendered template.
     """
     movies = fetch_movies(url, session_id=session_id, **kwargs)
-    rated_movies = fetch_rated_movies(rated_movies_url, API_HEADERS, session_id)
-    return render_movies_page(movies, page_title, rated_movies)
+    rated_movies = fetch_movies(
+        RATED_MOVIES_URL, API_HEADERS, pages=-1, session_id=session_id
+    )
+    watchlist = fetch_movies(
+        WATCHLIST_URL, session_id=session_id, pages=-1, **kwargs
+    )
+    return render_movies_page(movies, page_title, rated_movies, watchlist)

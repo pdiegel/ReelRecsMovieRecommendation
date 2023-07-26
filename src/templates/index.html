@@ -53,6 +53,8 @@
             <a href="{{ url_for('recommended_movies') }}"
                 class="{{ 'active' if request.path == url_for('recommended_movies') else '' }}">Recommended
                 Movies</a>
+            <a href="{{ url_for('watchlist_movies') }}"
+                class="{{ 'active' if request.path == url_for('watchlist_movies') else '' }}">My Watchlist</a>
             {% endif %}
         </nav>
         <main>
@@ -64,6 +66,8 @@
                             tojson | safe }}</div>
                         <div id="rated-movies" style="display: none;">{{
                             rated_movies | tojson | safe }}</div>
+                        <div id="watchlist-movies" style="display: none;">{{
+                            watchlist | tojson | safe }}</div>
                         <!-- Movie data will be inserted here dynamically -->
                     </div>
                 </div>
