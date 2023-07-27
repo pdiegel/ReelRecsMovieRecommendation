@@ -4570,3 +4570,1558 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\redst\\OneDrive\\Documents\\GitH
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 143-765-647
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:17] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:17] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:18] "[35m[1mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:18] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:18] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:18] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:18] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:38] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:38] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:40] "[35m[1mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:40] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:40] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:47:40] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:19] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:19] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:20] "[35m[1mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:20] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:20] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:20] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:34] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:34] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:36] "[35m[1mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:36] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:36] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:36] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:52] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:52] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:53] "[35m[1mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:53] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:53] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:48:53] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:49:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:49:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:49:13] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:49:13] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:49:14] "[35m[1mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:49:14] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:49:14] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:49:14] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\login_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:52:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:52:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:52:31] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:52:31] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:52:32] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:52:34] "[35m[1mGET /create_session?next=<built-in%20function%20next>&request_token=d5acaa2024e25bd624402575fd71ac2d38394a7a&approved=true HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:52:34] "GET /create_session?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:52:34] "GET /create_session?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:52:34] "GET /create_session?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:52:34] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:54:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:54:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:54:42] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:54:42] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:54:42] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:54:44] "[35m[1mGET /create_session?next=<built-in%20function%20next>&request_token=94053aa052feea3799d652a191eb44eff127279e&approved=true HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:54:44] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:54:44] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:54:44] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:03] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:03] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:04] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:05] "[35m[1mGET /create_session?next=<built-in%20function%20next>&request_token=8b21ba9c072d77e3ced76d401a64cb1aea736896&approved=true HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:05] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:05] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:05] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:48] "[35m[1mGET /create_session?next=<built-in%20function%20next>&request_token=8b21ba9c072d77e3ced76d401a64cb1aea736896&approved=true HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:48] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:48] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:48] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:48] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:55] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:55] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:56] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:58] "[35m[1mGET /create_session?next=<built-in%20function%20next>&request_token=6d8a462e8fe5da00d1491b971fd453f13e736d17&approved=true HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:58] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:58] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:55:58] "[36mGET /create_session?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:56:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:56:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:56:40] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:56:40] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:56:41] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:56:43] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=eeb67ac3f4dfe3ac17d07d6097513d6058ca8019&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:56:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:56:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:56:45] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:56:45] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:02] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:02] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:04] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:05] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=c2c36b1d26d7815dc3510b133e1fea620b119e3f&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:05] "[33mGET /<built-in%20function%20next>?title=&search= HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': ''}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:37] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:37] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:38] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:40] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=77f022816c7a6210fb014478c8ec951e6d6e259a&approved=true HTTP/1.1[0m" 302 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false with parameters {'session_id': '5a9f5b328947d468844097777ec84d7ff5eab0bb'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/popular?page={page}&include_adult=false
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': '5a9f5b328947d468844097777ec84d7ff5eab0bb'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '5a9f5b328947d468844097777ec84d7ff5eab0bb'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:42] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:42] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/now_playing?page={page} with parameters {'session_id': '5a9f5b328947d468844097777ec84d7ff5eab0bb'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/now_playing?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/now_playing?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': '5a9f5b328947d468844097777ec84d7ff5eab0bb'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '5a9f5b328947d468844097777ec84d7ff5eab0bb'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:45] "GET /in-theaters HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:45] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 18:57:45] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:01:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:01:58] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:01:58] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:01:58] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:01:58] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:04:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:04:05] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:04:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:04:05] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '', 'movie_id': '667538', 'include_adult': 'false'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': ''}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '', 'movie_id': '667538', 'include_adult': 'false'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:04:13] "GET /similar-movies/667538/?title=Transformers:%20Rise%20of%20the%20Beasts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:04:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:04:13] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:04:13] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:17:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:17:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:17:33] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:17:33] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:05] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:05] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:18] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:19] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=774c974cbc23e97b3027e96f79f0b870e00cbc2e&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:21] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:19:22] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:21:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:21:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:21:38] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:21:38] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:21:39] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:21:41] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=3061f5dd5ed2284d5221442bdb49319478bf0b8e&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:21:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:21:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:21:44] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:21:44] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:22:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:22:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:22:27] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:22:27] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:22:33] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:22:34] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=3b37100c24ee181307f8598d9454d3bba8164485&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:22:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:22:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:22:37] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:22:37] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:23:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:23:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:23:21] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:23:21] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:28] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:28] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:33] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:34] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=e7ee7acf900b4b3a505b69f7214c675e88c15287&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:36] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:36] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:48] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:24:48] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:25:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:25:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:25:07] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:25:07] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:25:09] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:25:10] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=c70afb9248aef60b7c17a1bb4e67c93c30be40a1&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:25:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:25:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:25:12] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:25:12] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:26:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:26:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:26:32] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:26:32] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:27:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:27:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:27:34] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:27:34] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:28:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:28:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:28:30] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:28:30] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:28:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:28:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:28:52] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:28:52] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:32:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:32:17] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:32:17] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:32:18] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:32:18] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:33:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:33:55] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:33:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:33:55] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:33:58] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:00] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=e9493f31505da02701fe2f61d2264adb0cba3d68&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:00] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:01] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:46] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:46] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:50] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:52] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=3a01600882d2cc58a7741b15c1bb7066c70b2f84&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:52] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:52] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:57] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:57] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:34:58] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:00] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=c33332589b7762d6c09af973f40e4c3d41c5d6a4&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:00] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:00] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:02] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:05] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:07] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:08] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:11] "GET /api/session_id HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:11] "GET /api/token HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:25] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:25] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:26] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:28] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=4df4693640e9ad279aa45b179041ccf27d64332b&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:28] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:28] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:32] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'e220ea9cd6ff130516194542c684852cdd85f17d'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/rated?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'e220ea9cd6ff130516194542c684852cdd85f17d'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'e220ea9cd6ff130516194542c684852cdd85f17d'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:35] "GET /rated-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:35] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:35] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'e220ea9cd6ff130516194542c684852cdd85f17d'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/e220ea9cd6ff130516194542c684852cdd85f17d/movie/watchlist?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': 'e220ea9cd6ff130516194542c684852cdd85f17d'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': 'e220ea9cd6ff130516194542c684852cdd85f17d'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:38] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:38] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:38] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:41] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:35:41] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:35] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:35] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:36] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:38] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=ed59850bb605e3843ded44440d32bf09b06bb75c&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:38] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:38] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:40] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:36:40] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:37:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:37:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:37:04] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:37:04] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:37:06] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:37:08] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=c009dd25203eccc3e6a801376d20ed9d6ae38f02&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:37:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:37:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:37:08] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:37:08] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:38:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:38:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:38:49] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:38:49] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:38:52] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:38:54] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=aadb2cbf60beeeff919fe78cc492e33e9d92a3df&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:38:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:38:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:38:54] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:38:54] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page} with parameters {'session_id': '374f230144cd81e71e2cc7a54b43b5d380c011f2', 'movie_id': '346698', 'include_adult': 'false'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/3movie/{movie_id}/recommendations?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': '374f230144cd81e71e2cc7a54b43b5d380c011f2'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '374f230144cd81e71e2cc7a54b43b5d380c011f2', 'movie_id': '346698', 'include_adult': 'false'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:07] "GET /similar-movies/346698/?title=Barbie HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:07] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:07] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:23] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:23] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:24] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:25] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=e982ce68dbbf4e8924f0ca3e486d36dc3173be8e&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:25] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:25] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:34] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:34] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:55] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:55] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:57] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:59] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=d6b35c32437b3e89353e642b45f633ae525a09a7&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:59] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:39:59] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:18] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:18] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:19] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:21] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=e73daf6b005baf51584c7a2ee2f46bdcbf5b8ba3&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:22] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:23] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:31] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:38] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '66e41026847dad10e28bc139eb2ac84478da394d'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/66e41026847dad10e28bc139eb2ac84478da394d/movie/watchlist?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': '66e41026847dad10e28bc139eb2ac84478da394d'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '66e41026847dad10e28bc139eb2ac84478da394d'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:44] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:44] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:44] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:49] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:40:49] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:00] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:00] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:04] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:05] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=b2d6886606c2646cad7a98e8cb0969f99a0d31e2&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:06] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:06] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:06] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:41:06] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:43:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:43:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:43:46] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:43:46] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:43:47] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:43:49] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=fab657366a359dfd5a7179b908f81b7faa2698e9&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:44:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:44:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:44:03] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:44:03] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:46:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:46:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:46:52] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:46:52] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:47:03] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:47:04] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=63565f947aa920d55268311103090712a593f11f&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:47:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:47:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:47:17] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:47:17] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:47:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:47:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:47:52] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:47:52] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:48:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:48:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:48:56] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:10] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:10] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:24] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '50a407e6324988ea7f3dfe0c281bfdf0de1b0676'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/50a407e6324988ea7f3dfe0c281bfdf0de1b0676/movie/watchlist?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': '50a407e6324988ea7f3dfe0c281bfdf0de1b0676'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '50a407e6324988ea7f3dfe0c281bfdf0de1b0676'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:src.app.app_instance:Failed to render template: Object of type Undefined is not JSON serializable
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:41] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:41] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:54] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:49:54] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:51:18] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:09] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:09] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:10] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:12] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=8994a59200791122dc386548b2a80429a3741fb5&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:24] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:24] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:55:26] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:09] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:09] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:10] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:13] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=2b378a165ecf93f3edc90a93ebd2e444bb246f7f&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:25] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:25] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:29] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '822ac3ee280b33ff1bacccc7103ce441b1a3ebca'}
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=1
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=2
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=3
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=4
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=5
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=6
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=7
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=8
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=9
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=10
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=11
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=12
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=13
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=14
+ERROR:root:Failed to fetch data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: 404 Client Error: Not Found for url: https://api.themoviedb.org/4account/822ac3ee280b33ff1bacccc7103ce441b1a3ebca/movie/watchlist?page=15
+INFO:src.app.app_instance:Successfully fetched data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page} with parameters {'session_id': '822ac3ee280b33ff1bacccc7103ce441b1a3ebca'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/rated?page={page}: Expecting value: line 1 column 1 (char 0)
+INFO:src.app.app_instance:Fetching data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page} with parameters {'session_id': '822ac3ee280b33ff1bacccc7103ce441b1a3ebca'}
+ERROR:src.app.app_instance:Failed to get data from https://api.themoviedb.org/4account/{session_id}/movie/watchlist?page={page}: Expecting value: line 1 column 1 (char 0)
+ERROR:src.app.app_instance:Failed to render template: Object of type Undefined is not JSON serializable
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:34] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:34] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 19:58:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:40] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:40] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:42] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:43] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=9bd24ea0bc96f2f8e039d808bf4f4d55f8edc1db&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:56] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:56] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:57] "[35m[1mGET /watchlist-movies HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:57] "GET /watchlist-movies?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:57] "GET /watchlist-movies?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:57] "GET /watchlist-movies?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:00:57] "[36mGET /watchlist-movies?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:21] "[32mGET /watchlist-movies HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:21] "[32mGET /login?next=http://127.0.0.1:5000/watchlist-movies HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:23] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=b1afdae36fde0d7456cb272e345ae102176d4a39&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:36] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:36] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:41] "[35m[1mGET /watchlist-movies HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:41] "[36mGET /watchlist-movies?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:41] "[36mGET /watchlist-movies?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:41] "[36mGET /watchlist-movies?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:01:41] "[36mGET /watchlist-movies?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:14] "[32mGET /watchlist-movies HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:14] "[32mGET /login?next=http://127.0.0.1:5000/watchlist-movies HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:16] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=7d0bb5d3e34a2afb3646841e40b344085917dfbe&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:30] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:30] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:33] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:33] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:33] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:39] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:44] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:44] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:44] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:47] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:48] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:50] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:50] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:50] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:52] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:52] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:02:52] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:09] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:09] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:24] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:24] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:25] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:27] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:27] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:27] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:29] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:30] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:49] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:49] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:56] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:03:57] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:21] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:21] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:23] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:23] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:44] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:44] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:46] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:46] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:06:49] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:07:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:07:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:07:30] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:07:30] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:07:32] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:07:33] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:07:39] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:07:40] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:11] "GET /static/js/movie_display.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:11] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:17] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:18] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:19] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:20] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:22] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:22] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:22] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:31] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:09:36] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:17:51] "GET /api/session_id HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:17:51] "GET /api/token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:17:52] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:17:53] "GET /api/session_id HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:17:53] "GET /api/token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:17:54] "POST /rate_movie/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:25:50] "[32mGET /watchlist-movies HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:25:50] "[32mGET /login?next=http://127.0.0.1:5000/watchlist-movies HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:25:52] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=ca3d1cc04115c4a89b68dd8877dd4143760596c2&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:05] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:05] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:09] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:09] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:09] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:25] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:25] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:47] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:49] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:49] "POST /watchlist_movie/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:51] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:51] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:26:51] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:09] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:09] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Phili\\Documents\\GitHub\\FlaskMovieRecommender\\src\\services\\movie_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 398-398-789
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:24] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:24] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:27] "[32mGET /login?next=http://127.0.0.1:5000/&search=&title= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:29] "[32mGET /create_session?next=<built-in%20function%20next>&request_token=bdb3671ef787be32715d5e97d38e0e86d24df1a8&approved=true HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:36] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:37] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:39] "GET /watchlist-movies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:39] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:39] "GET /api/logged_in HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:48] "[36mGET /static/js/movie_display.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jul/2023 20:27:48] "GET /api/logged_in HTTP/1.1" 200 -

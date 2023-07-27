@@ -1,23 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
     const movies = JSON.parse(document.getElementById('json-data').textContent);
-    const ratedMovies = JSON.parse(document.getElementById('rated-movies').textContent);
-    const watchlistMovies = JSON.parse(document.getElementById('watchlist-movies').textContent);
+    console.log('movies:', movies);
+
+    const accountStates = JSON.parse(document.getElementById('account-states').textContent);
+    console.log('accountStates:', accountStates);
 
     fetchLoggedInStatus()
-        .then(isLoggedIn => displayMovies(movies, isLoggedIn, ratedMovies, watchlistMovies))
+        .then(isLoggedIn => displayMovies(movies, isLoggedIn, accountStates))
         .catch(error => console.error('Error with fetch call:', error));
 });
 
 async function fetchLoggedInStatus() {
     const response = await fetch('http://127.0.0.1:5000/api/logged_in');
     const data = await response.json();
+    console.log('Logged in:', data);
     return data.logged_in;
 }
 
-function displayMovies(movies, isLoggedIn, ratedMovies, watchlistMovies) {
+function displayMovies(movies, isLoggedIn, accountStates) {
     if (Array.isArray(movies)) {
         movies.forEach((movie) => {
-            const movieCard = createMovieCard(movie, isLoggedIn, ratedMovies, watchlistMovies);
+            const movieCard = createMovieCard(movie, isLoggedIn, accountStates);
             document.getElementById('movie-list').append(movieCard);
         });
     } else {
@@ -26,7 +29,7 @@ function displayMovies(movies, isLoggedIn, ratedMovies, watchlistMovies) {
 }
 
 
-function createMovieCard(movie, isLoggedIn, ratedMovies, watchlistMovies) {
+function createMovieCard(movie, isLoggedIn, accountStates) {
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie-card');
 
@@ -64,11 +67,14 @@ function createMovieCard(movie, isLoggedIn, ratedMovies, watchlistMovies) {
 
     // If the user is logged in, create and append the Rate Movie button
     if (isLoggedIn) {
-        const userRating = ratedMovies.find(ratedMovie => ratedMovie.id === movie.id)?.account_rating.value;
-        const watchlist = watchlistMovies.find(watchlistMovie => watchlistMovie.id === movie.id);
-        const inWatchlist = watchlist !== undefined;
+        const userRating = accountStates.find(ratedMovie => ratedMovie.id === movie.id)?.rated.value;
+        const watchlist = accountStates.find(watchlistMovie => watchlistMovie.id === movie.id)?.watchlist;
+
+        const inWatchlist = watchlist !== false;
         const starContainer = createStarContainer(movie, userRating, movieCard, window.location.pathname);
        
+        
+        
         displayWatchlistButton(movie.id, movieCard, inWatchlist);
 
         if (userRating) {
@@ -261,29 +267,41 @@ function displayWatchlistButton(movieId, movieCard, inWatchlist) {
     const watchlistButton = document.createElement('button');
     watchlistButton.classList.add('watchlist-button');
 
+    // Store the inWatchlist state on the button itself
+    watchlistButton.dataset.inWatchlist = inWatchlist ? 'true' : 'false';
+
     if (inWatchlist) {
         watchlistButton.textContent = 'Remove from Watchlist';
-        movieCard.append(watchlistButton);
     } else {
         watchlistButton.textContent = 'Add to Watchlist';
-        movieCard.append(watchlistButton);
-    };
+    }
 
     watchlistButton.addEventListener('click', function () {
-        modifyWatchlist(movieId, watchlistButton, inWatchlist);
+        modifyWatchlist(movieId, this);
     })
+
+    movieCard.append(watchlistButton);
 
     return watchlistButton;
 }
 
-async function modifyWatchlist(movieId, watchlistButton, inWatchlist) {
-    let watchlistContents = true;
+async function modifyWatchlist(movieId, watchlistButton) {
+    // Get the inWatchlist state directly from the button
+    let inWatchlist = watchlistButton.dataset.inWatchlist === 'true';
+
+    // Toggle the inWatchlist state
+    inWatchlist = !inWatchlist;
+
+    // Update the inWatchlist state on the button
+    watchlistButton.dataset.inWatchlist = inWatchlist ? 'true' : 'false';
+
+    let watchlistContents = inWatchlist;
+
     if (inWatchlist) {
-        watchlistButton.textContent = 'Add to Watchlist';
-        watchlistContents = false;
+        watchlistButton.textContent = 'Remove from Watchlist';
     }
     else {
-        watchlistButton.textContent = 'Remove from Watchlist';
+        watchlistButton.textContent = 'Add to Watchlist';
     }
 
     fetch('http://127.0.0.1:5000/watchlist_movie/', {

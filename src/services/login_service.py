@@ -16,10 +16,8 @@ def login_to_tmdb(headers: str = "", api_key: str = "", next=""):
         return redirect("/error")
     data = response.json()
     request_token = data.get("request_token", "")
-    redirect_url = redirect(
-        TOKEN_AUTH_URL.format(request_token=request_token, next=next),
-    )
-    return redirect_url
+
+    return ""
 
 
 def create_session(

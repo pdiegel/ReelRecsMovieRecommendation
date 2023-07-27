@@ -3,8 +3,55 @@ from typing import Any, Dict, List, Union
 import logging
 import json
 from ..constants.api_constants import MODIFY_WATCHLIST_URL, ACCOUNT_ID
+import tmdbsimple as tmdb
+from flask import render_template
 
 logging.basicConfig(filename="logs.txt", level=logging.INFO)
+
+
+def get_movie_pages(pages, func=None, **kwargs):
+    if pages == -1:
+        response = func(**kwargs)
+        pages = response["total_pages"]
+        print(pages)
+
+    results = []
+    for i in range(1, pages + 1):
+        response = func(page=i, **kwargs)
+        results.extend(response["results"])
+
+    return results
+
+
+def get_account_info_pages(session_id, logged_in, movies):
+    print(f"Logged in: {logged_in}")
+
+    account_states = []
+    for movie in movies:
+        account_states.append(
+            tmdb.Movies(movie.get("id", "")).account_states(
+                session_id=session_id
+            )
+        )
+
+    return account_states
+
+
+def render_movie_template(
+    title, session_id, func, pages=3, logged_in=False, **kwargs
+):
+    movies = get_movie_pages(pages, func, **kwargs)
+    if logged_in:
+        account_states = get_account_info_pages(session_id, logged_in, movies)
+    else:
+        account_states = []
+
+    return render_template(
+        "index.html",
+        movies=movies,
+        title=title,
+        account_states=account_states,
+    )
 
 
 def clean_data(

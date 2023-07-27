@@ -21,8 +21,6 @@ if not ACCOUNT_OBJECT_ID:
     raise ValueError("ACCOUNT_OBJECT_ID is not set in .env file")
 
 ACCOUNT_ID = os.getenv("ACCOUNT_ID")
-if not ACCOUNT_ID:
-    raise ValueError("ACCOUNT_ID is not set in .env file")
 
 # API ENDPOINTS ========================================================
 API_BASE_URL = "https://api.themoviedb.org/3"
