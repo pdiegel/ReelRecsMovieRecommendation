@@ -71,7 +71,6 @@ def render_movies_page(
 
 def handle_movie_route(
     url: str,
-    page_title: str,
     session_id: str,
     **kwargs,
 ) -> str:
@@ -88,10 +87,4 @@ def handle_movie_route(
         str: The rendered template.
     """
     movies = fetch_movies(url, session_id=session_id, **kwargs)
-    rated_movies = fetch_movies(
-        RATED_MOVIES_URL, API_HEADERS, pages=-1, session_id=session_id
-    )
-    watchlist = fetch_movies(
-        WATCHLIST_URL, session_id=session_id, pages=-1, **kwargs
-    )
-    return render_movies_page(movies, page_title, rated_movies, watchlist)
+    return movies

@@ -1,5 +1,5 @@
 import tmdbsimple as tmdb
-from flask import jsonify, redirect, request, session, url_for, render_template
+from flask import jsonify, redirect, request, url_for
 from flask_login import (
     LoginManager,
     current_user,
@@ -10,52 +10,60 @@ from flask_login import (
 
 from ..app.utils import handle_movie_route
 from ..constants.api_constants import (
-    ACCOUNT_OBJECT_ID,
     API_ACCESS_TOKEN,
     API_HEADERS,
     API_KEY,
-    COOKING_MOVIES_URL,
     GENRE_SEARCH_URL,
-    IN_THEATERS_URL,
-    POPULAR_MOVIES_URL,
-    RATED_MOVIES_URL,
     RECOMMENDED_MOVIES_URL,
-    SEARCH_URL,
-    SIMILAR_TO_MOVIE_ID_URL,
-    TOP_RATED_URL,
-    UPCOMING_URL,
-    WATCHLIST_URL,
     TOKEN_AUTH_URL,
 )
-from ..services.login_service import (
-    User,
-    create_session,
-    get_session_id,
-    login_to_tmdb,
-)
-from ..services.movie_service import (
-    rate_movie,
-    watchlist_movie,
-    render_movie_template,
-)
+from ..services.login_service import User, get_session_id
+from ..services.movie_service import rate_movie, render_movie_template
 
 
 def set_up_routes(app, login_manager: LoginManager, account: tmdb.Account):
+    GENRES = {
+        "action": 28,
+        "adventure": 12,
+        "animation": 16,
+        "comedy": 35,
+        "crime": 80,
+        "documentary": 99,
+        "drama": 18,
+        "family": 10751,
+        "fantasy": 14,
+        "history": 36,
+        "horror": 27,
+        "music": 10402,
+        "mystery": 9648,
+        "romance": 10749,
+        "science fiction": 878,
+    }
+
     @app.route("/")
     def home() -> str:
         session_id = get_session_id()
         popular_movies = tmdb.Movies().popular
         logged_in = current_user.is_authenticated
         return render_movie_template(
-            "Popular Movies", session_id, popular_movies, logged_in=logged_in
+            "Popular Movies",
+            account,
+            popular_movies,
+            logged_in=logged_in,
         )
 
     @app.route("/cooking-movies")
     def cooking_movies() -> str:
-        return handle_movie_route(
-            COOKING_MOVIES_URL,
-            "Popular Cooking Movies",
-            get_session_id(),
+        logged_in = current_user.is_authenticated
+        func = tmdb.Discover().movie
+        keywords = "18293|6808|10637"
+        return render_movie_template(
+            "Cooking Movies",
+            account,
+            func,
+            pages=-1,
+            logged_in=logged_in,
+            with_keywords=keywords,
         )
 
     @app.route("/<genre>-movies")
@@ -72,15 +80,18 @@ def set_up_routes(app, login_manager: LoginManager, account: tmdb.Account):
             genre. If the genre is not found, the user is redirected
             to an error page.
         """
-        genre_id = GENRE_IDS.get(genre)
+        logged_in = current_user.is_authenticated
+        func = tmdb.Discover().movie
+        genre_id = GENRES.get(genre)
         if genre_id is None:
             return redirect("/error")
 
-        return handle_movie_route(
-            GENRE_SEARCH_URL,
+        return render_movie_template(
             f"Popular {genre.capitalize()} Movies",
-            get_session_id(),
-            genres=genre_id,
+            account,
+            func,
+            with_genres=genre_id,
+            logged_in=logged_in,
         )
 
     @app.route("/login")
@@ -173,22 +184,44 @@ def set_up_routes(app, login_manager: LoginManager, account: tmdb.Account):
             print(f"error adding movie to watchlist: {e}")
             return jsonify(success=False, error=str(e))
 
+    @app.route("/favorite_movie/", methods=["POST"])
+    @login_required
+    def favorite():
+        data = request.get_json()
+        movie_id = data.get("movie_id", None)
+        favorite = data.get("favorite", True)
+
+        try:
+            account.favorite(
+                media_type="movie", media_id=movie_id, favorite=favorite
+            )
+            return jsonify(success=True)
+        except Exception as e:
+            print(f"error adding movie to favorites: {e}")
+            return jsonify(success=False, error=str(e))
+
     @app.route("/recommendations")
     @login_required
     def recommended_movies() -> str:
-        return handle_movie_route(
-            RECOMMENDED_MOVIES_URL,
+        logged_in = current_user.is_authenticated
+        movies = handle_movie_route(RECOMMENDED_MOVIES_URL, get_session_id())
+        return render_movie_template(
             "Recommended Movies",
-            get_session_id(),
+            account,
+            movies=movies,
+            logged_in=logged_in,
         )
 
     @app.route("/rated-movies")
     @login_required
     def rated() -> str:
-        return handle_movie_route(
-            RATED_MOVIES_URL,
+        logged_in = current_user.is_authenticated
+        func = account.rated_movies
+        return render_movie_template(
             "My Ratings",
-            get_session_id(),
+            account,
+            func,
+            logged_in=logged_in,
         )
 
     @login_manager.unauthorized_handler
@@ -217,57 +250,70 @@ def set_up_routes(app, login_manager: LoginManager, account: tmdb.Account):
     @app.route("/search", methods=["GET"])
     def search() -> str:
         query = request.args.get("query")
-        return handle_movie_route(
-            SEARCH_URL,
-            f'Results for "{query}"',
-            get_session_id(),
+        logged_in = current_user.is_authenticated
+        func = tmdb.Search().movie
+        return render_movie_template(
+            "Results for " + query,
+            account,
+            func,
+            logged_in=logged_in,
             query=query,
         )
 
     @app.route("/in-theaters")
     def in_theaters():
-        return handle_movie_route(
-            IN_THEATERS_URL,
-            "In Theaters",
-            get_session_id(),
+        logged_in = current_user.is_authenticated
+        func = tmdb.Movies().now_playing
+        return render_movie_template(
+            "In Theaters Now",
+            account,
+            func,
+            logged_in=logged_in,
         )
 
     @app.route("/top-rated")
     def top_rated():
-        return handle_movie_route(
-            TOP_RATED_URL,
+        logged_in = current_user.is_authenticated
+        func = tmdb.Movies().top_rated
+        return render_movie_template(
             "Top Rated Movies",
-            get_session_id(),
+            account,
+            func,
+            logged_in=logged_in,
         )
 
     @app.route("/upcoming-movies")
     def upcoming_movies():
-        return handle_movie_route(
-            UPCOMING_URL,
+        logged_in = current_user.is_authenticated
+        func = tmdb.Movies().upcoming
+        return render_movie_template(
             "Upcoming Movies",
-            get_session_id(),
+            account,
+            func,
+            logged_in=logged_in,
         )
 
     @app.route("/watchlist-movies")
     @login_required
     def watchlist_movies():
         logged_in = current_user.is_authenticated
-        watchlist = account.watchlist_movies
+        func = account.watchlist_movies
         return render_movie_template(
             "My Watchlist",
-            get_session_id(),
-            watchlist,
+            account,
+            func,
             pages=-1,
             logged_in=logged_in,
         )
 
     @app.route("/similar-movies/<movie_id>/")
     def similar_movies(movie_id: str) -> str:
+        logged_in = current_user.is_authenticated
         movie_title = request.args.get("title")
-        return handle_movie_route(
-            SIMILAR_TO_MOVIE_ID_URL,
+        func = tmdb.Movies(movie_id).similar_movies
+        return render_movie_template(
             "Movies Similar to " + movie_title,
-            get_session_id(),
-            movie_id=movie_id,
-            include_adult="false",
+            account,
+            func,
+            logged_in=logged_in,
         )

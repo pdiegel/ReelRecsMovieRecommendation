@@ -13,7 +13,6 @@ def get_movie_pages(pages, func=None, **kwargs):
     if pages == -1:
         response = func(**kwargs)
         pages = response["total_pages"]
-        print(pages)
 
     results = []
     for i in range(1, pages + 1):
@@ -23,34 +22,38 @@ def get_movie_pages(pages, func=None, **kwargs):
     return results
 
 
-def get_account_info_pages(session_id, logged_in, movies):
-    print(f"Logged in: {logged_in}")
-
-    account_states = []
-    for movie in movies:
-        account_states.append(
-            tmdb.Movies(movie.get("id", "")).account_states(
-                session_id=session_id
-            )
-        )
-
+def get_account_info_pages(account: tmdb.Account) -> Dict[str, Any]:
+    rated_movies = get_movie_pages(-1, account.rated_movies)
+    watchlist_movies = get_movie_pages(-1, account.watchlist_movies)
+    favorite_movies = get_movie_pages(-1, account.favorite_movies)
+    account_states = {
+        "rated": rated_movies,
+        "watchlist": watchlist_movies,
+        "favorite": favorite_movies,
+    }
     return account_states
 
 
 def render_movie_template(
-    title, session_id, func, pages=3, logged_in=False, **kwargs
+    title, account, func=None, pages=3, logged_in=False, **kwargs
 ):
-    movies = get_movie_pages(pages, func, **kwargs)
-    if logged_in:
-        account_states = get_account_info_pages(session_id, logged_in, movies)
+    if func is not None:
+        movies = get_movie_pages(pages, func, **kwargs)
     else:
-        account_states = []
+        movies = kwargs.get("movies", [])
+
+    if logged_in:
+        account_states = get_account_info_pages(account)
+    else:
+        account_states = {}
 
     return render_template(
         "index.html",
         movies=movies,
         title=title,
-        account_states=account_states,
+        rated_movies=account_states.get("rated", []),
+        watchlist_movies=account_states.get("watchlist", []),
+        favorite_movies=account_states.get("favorite", []),
     )
 
 

@@ -255,10 +255,13 @@ button:hover {
     color: gold;
 }
 
-.delete-rating-button,
-.similar-movies-button {
-    position: absolute;
-    bottom: 10px;
+.card-buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-buttons button{
+    margin: 0 5px;
     background-color: #FFFFFF;
     color: #212121;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -266,24 +269,16 @@ button:hover {
     padding: 5px 10px;
     cursor: pointer;
     transition: color 0.2s ease, background-color 0.2s ease;
-
 }
 
-.similar-movies-button {
-    right: 10px;
-}
-
-.delete-rating-button {
-    right: 130px;
-}
-
-.delete-rating-button:hover,
-.similar-movies-button:hover {
+.card-buttons button:hover{
+    background-color: #6663c0;
     color: #FFFFFF;
 }
 
-.delete-rating-button:hover {
+.card-buttons .delete-rating-button:hover {
     background-color: #e53935;
+    
 }
 
 #authenticated-nav {

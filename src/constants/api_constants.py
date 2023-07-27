@@ -23,8 +23,8 @@ if not ACCOUNT_OBJECT_ID:
 ACCOUNT_ID = os.getenv("ACCOUNT_ID")
 
 # API ENDPOINTS ========================================================
-API_BASE_URL = "https://api.themoviedb.org/3"
-API_BASE_URL_V4 = "https://api.themoviedb.org/4"
+API_BASE_URL = "https://api.themoviedb.org/3/"
+API_BASE_URL_V4 = "https://api.themoviedb.org/4/"
 API_HEADERS = {
     "accept": "application/json",
     "content-type": "application/json",
