@@ -13,7 +13,6 @@ from ..constants.api_constants import (
     API_ACCESS_TOKEN,
     API_HEADERS,
     API_KEY,
-    GENRE_SEARCH_URL,
     RECOMMENDED_MOVIES_URL,
     TOKEN_AUTH_URL,
 )
