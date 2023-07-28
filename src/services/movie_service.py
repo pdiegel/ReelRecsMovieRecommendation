@@ -1,8 +1,9 @@
 import requests
 from typing import Any, Dict, List, Union
 import logging
-import json
-from ..constants.api_constants import MODIFY_WATCHLIST_URL, ACCOUNT_ID
+from ..constants.api_constants import (
+    API_HEADERS,
+)
 import tmdbsimple as tmdb
 from flask import render_template
 
@@ -113,74 +114,29 @@ def get_aggregate_requests(
     return results
 
 
-def rate_movie(
-    movie_id: str,
-    rating: str,
-    session_id: str,
-    headers: dict,
-    api_key: str,
-) -> None:
-    """Rates a movie. The rating value should be between 0.5 and 10.
+def fetch_movies(
+    api_url: str, app, headers: dict = API_HEADERS, pages: int = 15, **kwargs
+) -> list:
+    """Fetches movie data from the API.
 
     Args:
-        movie_id (str): Id of the movie to rate.
-        rating (str): Rating to give the movie.
-        session_id (str): Id of the user's session.
-        headers (dict): The headers to send with the request.
-        api_key (str): The API key to use.
+        api_url (str): The API URL to fetch data from.
+        headers (dict, optional): The headers to include in the request.
+            Defaults to API_HEADERS.
+        pages (int, optional): The number of pages to fetch.
+            Defaults to 15.
+        **kwargs: Additional parameters to include in the request.
+
+    Returns:
+        list: The fetched movie data.
     """
-    url = f"https://api.themoviedb.org/3/movie/{movie_id}/rating?\
-api_key={api_key}"
-    headers = {"Content-Type": "application/json;charset=utf-8"}
-    data = {"value": rating}  # rating value should be between 0.5 and 10.0
-
-    query_params = {"session_id": session_id}
-
-    response = requests.post(
-        url, headers=headers, params=query_params, data=json.dumps(data)
-    )
-
-    if response.status_code == 201:
-        print(f"Movie {movie_id} rated successfully")
-    else:
-        print(f"Failed to rate movie: {response.status_code}, {response.text}")
-
-
-def watchlist_movie(
-    movie_id: int,
-    watchlist: str,
-    session_id: str,
-    headers: dict,
-    access_token: str,
-):
-    """Adds a movie to the user's watchlist.
-
-    Args:
-        movie_id (int): Id of the movie to rate.
-        watchlist (str): Boolean value indicating whether to add or remove
-            the movie from the watchlist.
-        session_id (str): Id of the user's session.
-        headers (dict): The headers to send with the request.
-        api_key (str): The API key to use.
-    """
-    url = MODIFY_WATCHLIST_URL.format(
-        account_id=ACCOUNT_ID, session_id=session_id
-    )
-    headers = {
-        "accept": "application/json",
-        "content-type": "application/json",
-        "Authorization": f"Bearer {access_token}",
-    }
-    data = {"media_type": "movie", "media_id": movie_id, "watchlist": watchlist}
-    response = requests.post(url, headers=headers, data=json.dumps(data))
-    print(url)
-
-    if response.status_code == 200:
-        print(f"Movie {movie_id} removed from watchlist successfully")
-    elif response.status_code == 201:
-        print(f"Movie {movie_id} added to watchlist successfully")
-    else:
-        print(
-            f"Failed to add movie to watchlist: {response.status_code},\
- {response.text}"
+    app.logger.info(f"Fetching data from {api_url} with parameters {kwargs}")
+    try:
+        movie_data = get_aggregate_requests(
+            api_url, headers, pages=pages, **kwargs
         )
+        app.logger.info(f"Successfully fetched data from {api_url}")
+        return movie_data
+    except Exception as e:
+        app.logger.error(f"Failed to get data from {api_url}: {e}")
+        return []
