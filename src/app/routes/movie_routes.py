@@ -179,3 +179,15 @@ def set_up_movie_routes(
             func,
             logged_in=logged_in,
         )
+
+    @app.route("/movie/<movie_id>/")
+    def movie_page(movie_id: str) -> str:
+        logged_in = current_user.is_authenticated
+        func = tmdb.Movies
+        return render_movie_template(
+            "Movie Page",
+            account,
+            func,
+            logged_in=logged_in,
+            movie_id=movie_id,
+        )

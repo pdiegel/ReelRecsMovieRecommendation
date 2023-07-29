@@ -45,6 +45,9 @@ function createMovieCard(movie, isLoggedIn, ratedMovies, favoriteMovies, watchli
     const releaseYear = movie.release_date ? "(" + movie.release_date.slice(0, 4) + ")" : '';
 
     const movieName = document.createElement('h3');
+    const movieLink = document.createElement('a');
+    movieLink.href = "/movie/" + movie.id;
+    movieLink.append(movieName);
     movieName.classList.add('movie-name');
     movieName.textContent = movie.title + " " + releaseYear;
 
@@ -65,7 +68,7 @@ function createMovieCard(movie, isLoggedIn, ratedMovies, favoriteMovies, watchli
     similarMoviesButton.addEventListener('click', similarMovieRedirect.bind(null, movie.id, movie.title));
     cardButtons.append(similarMoviesButton);
 
-    movieInfo.append(movieName, movieStats, movieDescription);
+    movieInfo.append(movieLink, movieStats, movieDescription);
     movieCard.append(moviePoster, movieInfo);
 
     movieCard.dataset.movieId = movie.id;  // Add movie ID as a data attribute for later reference
