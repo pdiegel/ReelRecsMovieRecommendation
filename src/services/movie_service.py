@@ -1,10 +1,61 @@
 import requests
 from typing import Any, Dict, List, Union
 import logging
-import json
-
+from ..constants.api_constants import (
+    API_HEADERS,
+)
+import tmdbsimple as tmdb
+from flask import render_template
 
 logging.basicConfig(filename="logs.txt", level=logging.INFO)
+
+
+def get_movie_pages(pages, func=None, **kwargs):
+    if pages == -1:
+        response = func(**kwargs)
+        pages = response["total_pages"]
+
+    results = []
+    for i in range(1, pages + 1):
+        response = func(page=i, **kwargs)
+        results.extend(response["results"])
+
+    return results
+
+
+def get_account_info_pages(account: tmdb.Account) -> Dict[str, Any]:
+    rated_movies = get_movie_pages(-1, account.rated_movies)
+    watchlist_movies = get_movie_pages(-1, account.watchlist_movies)
+    favorite_movies = get_movie_pages(-1, account.favorite_movies)
+    account_states = {
+        "rated": rated_movies,
+        "watchlist": watchlist_movies,
+        "favorite": favorite_movies,
+    }
+    return account_states
+
+
+def render_movie_template(
+    title, account, func=None, pages=3, logged_in=False, **kwargs
+):
+    if func is not None:
+        movies = get_movie_pages(pages, func, **kwargs)
+    else:
+        movies = kwargs.get("movies", [])
+
+    if logged_in:
+        account_states = get_account_info_pages(account)
+    else:
+        account_states = {}
+
+    return render_template(
+        "index.html",
+        movies=movies,
+        title=title,
+        rated_movies=account_states.get("rated", []),
+        watchlist_movies=account_states.get("watchlist", []),
+        favorite_movies=account_states.get("favorite", []),
+    )
 
 
 def clean_data(
@@ -63,34 +114,29 @@ def get_aggregate_requests(
     return results
 
 
-def rate_movie(
-    movie_id: str,
-    rating: str,
-    session_id: str,
-    headers: dict,
-    api_key: str,
-) -> None:
-    """Rates a movie. The rating value should be between 0.5 and 10.
+def fetch_movies(
+    api_url: str, app, headers: dict = API_HEADERS, pages: int = 15, **kwargs
+) -> list:
+    """Fetches movie data from the API.
 
     Args:
-        movie_id (str): Id of the movie to rate.
-        rating (str): Rating to give the movie.
-        session_id (str): Id of the user's session.
-        headers (dict): The headers to send with the request.
-        api_key (str): The API key to use.
+        api_url (str): The API URL to fetch data from.
+        headers (dict, optional): The headers to include in the request.
+            Defaults to API_HEADERS.
+        pages (int, optional): The number of pages to fetch.
+            Defaults to 15.
+        **kwargs: Additional parameters to include in the request.
+
+    Returns:
+        list: The fetched movie data.
     """
-    url = f"https://api.themoviedb.org/3/movie/{movie_id}/rating?\
-api_key={api_key}"
-    headers = {"Content-Type": "application/json;charset=utf-8"}
-    data = {"value": rating}  # rating value should be between 0.5 and 10.0
-
-    query_params = {"session_id": session_id}
-
-    response = requests.post(
-        url, headers=headers, params=query_params, data=json.dumps(data)
-    )
-
-    if response.status_code == 201:
-        print(f"Movie {movie_id} rated successfully")
-    else:
-        print(f"Failed to rate movie: {response.status_code}, {response.text}")
+    app.logger.info(f"Fetching data from {api_url} with parameters {kwargs}")
+    try:
+        movie_data = get_aggregate_requests(
+            api_url, headers, pages=pages, **kwargs
+        )
+        app.logger.info(f"Successfully fetched data from {api_url}")
+        return movie_data
+    except Exception as e:
+        app.logger.error(f"Failed to get data from {api_url}: {e}")
+        return []

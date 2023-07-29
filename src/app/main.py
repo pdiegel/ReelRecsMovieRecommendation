@@ -1,11 +1,8 @@
 import os
-
-from ..app.app_instance import app, login_manager
-from ..app.routes import set_up_routes
+from ..app.app_instance import app
 
 
 def main():
-    set_up_routes(app, login_manager)
     app.run(debug=is_flask_debug_enabled())
 
 

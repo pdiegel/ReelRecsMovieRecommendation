@@ -1,10 +1,21 @@
 import os
 from datetime import timedelta
 
+import requests
+import tmdbsimple as tmdb
 from flask import Flask
 from flask_login import LoginManager
 
-from ..constants.api_constants import STATIC_FOLDER, TEMPLATES_FOLDER
+from ..constants.api_constants import (
+    API_HEADERS,
+    API_KEY,
+    STATIC_FOLDER,
+    TEMPLATES_FOLDER,
+)
+
+from .routes.auth_routes import set_up_auth_routes
+from .routes.movie_routes import set_up_movie_routes
+from .routes.api_routes import set_up_api_routes
 
 
 def create_app():
@@ -23,6 +34,16 @@ def create_app():
 
     login_manager = LoginManager()
     login_manager.init_app(app)
+
+    tmdb.API_KEY = API_KEY
+    tmdb.REQUESTS_SESSION = requests.Session()
+    tmdb.REQUESTS_SESSION.headers.update(API_HEADERS)
+
+    account = tmdb.Account("")
+
+    set_up_api_routes(app, account)
+    set_up_auth_routes(app, account, login_manager)
+    set_up_movie_routes(app, account)
 
     return app, login_manager
 
