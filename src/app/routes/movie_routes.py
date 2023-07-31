@@ -2,13 +2,13 @@ import tmdbsimple as tmdb
 from flask import redirect, request
 from flask_login import current_user, login_required
 
-from ...constants.api_constants import RECOMMENDED_MOVIES_URL
+from ...constants.api_constants import RECOMMENDED_MOVIES_URL, API_HEADERS
 from ...services.login_service import get_session_id
 from ...services.movie_service import (
-    render_movie_template,
-    fetch_movies,
-    render_movie_details_page,
+    get_pages,
+    render_template_page,
 )
+import requests
 
 GENRES = {
     "action": 28,
@@ -35,13 +35,12 @@ def set_up_movie_routes(
 ):
     @app.route("/")
     def home() -> str:
-        session_id = get_session_id()
-        popular_movies = tmdb.Movies().popular
+        func = tmdb.Movies().popular
         logged_in = current_user.is_authenticated
-        return render_movie_template(
+        return render_template_page(
             "Popular Movies",
             account,
-            popular_movies,
+            func,
             logged_in=logged_in,
         )
 
@@ -50,7 +49,7 @@ def set_up_movie_routes(
         logged_in = current_user.is_authenticated
         func = tmdb.Discover().movie
         keywords = "18293|6808|10637"
-        return render_movie_template(
+        return render_template_page(
             "Cooking Movies",
             account,
             func,
@@ -79,26 +78,28 @@ def set_up_movie_routes(
         if genre_id is None:
             return redirect("/error")
 
-        return render_movie_template(
+        return render_template_page(
             f"Popular {genre.capitalize()} Movies",
             account,
             func,
-            with_genres=genre_id,
             logged_in=logged_in,
+            with_genres=genre_id,
         )
 
     @app.route("/recommendations")
     @login_required
     def recommended_movies() -> str:
         logged_in = current_user.is_authenticated
-        movies = fetch_movies(
-            RECOMMENDED_MOVIES_URL, app, session_id=get_session_id()
-        )
-        return render_movie_template(
+        func = requests.get
+        movies = get_pages(func=func, session_id=get_session_id())
+        return render_template_page(
             "Recommended Movies",
             account,
             movies=movies,
             logged_in=logged_in,
+            url=RECOMMENDED_MOVIES_URL,
+            params={"session_id": get_session_id()},
+            headers=API_HEADERS,
         )
 
     @app.route("/rated-movies")
@@ -106,7 +107,7 @@ def set_up_movie_routes(
     def rated() -> str:
         logged_in = current_user.is_authenticated
         func = account.rated_movies
-        return render_movie_template(
+        return render_template_page(
             "My Ratings",
             account,
             func,
@@ -118,7 +119,7 @@ def set_up_movie_routes(
         query = request.args.get("query")
         logged_in = current_user.is_authenticated
         func = tmdb.Search().movie
-        return render_movie_template(
+        return render_template_page(
             "Results for " + query,
             account,
             func,
@@ -130,7 +131,7 @@ def set_up_movie_routes(
     def in_theaters():
         logged_in = current_user.is_authenticated
         func = tmdb.Movies().now_playing
-        return render_movie_template(
+        return render_template_page(
             "In Theaters Now",
             account,
             func,
@@ -141,7 +142,7 @@ def set_up_movie_routes(
     def top_rated():
         logged_in = current_user.is_authenticated
         func = tmdb.Movies().top_rated
-        return render_movie_template(
+        return render_template_page(
             "Top Rated Movies",
             account,
             func,
@@ -152,7 +153,7 @@ def set_up_movie_routes(
     def upcoming_movies():
         logged_in = current_user.is_authenticated
         func = tmdb.Movies().upcoming
-        return render_movie_template(
+        return render_template_page(
             "Upcoming Movies",
             account,
             func,
@@ -164,7 +165,7 @@ def set_up_movie_routes(
     def watchlist_movies():
         logged_in = current_user.is_authenticated
         func = account.watchlist_movies
-        return render_movie_template(
+        return render_template_page(
             "My Watchlist",
             account,
             func,
@@ -177,7 +178,7 @@ def set_up_movie_routes(
         logged_in = current_user.is_authenticated
         movie_title = request.args.get("title")
         func = tmdb.Movies(movie_id).similar_movies
-        return render_movie_template(
+        return render_template_page(
             "Movies Similar to " + movie_title,
             account,
             func,
@@ -187,4 +188,13 @@ def set_up_movie_routes(
     @app.route("/movie/<movie_id>/")
     def movie_page(movie_id: str) -> str:
         logged_in = current_user.is_authenticated
-        return render_movie_details_page(movie_id, account, logged_in)
+        movies = tmdb.Movies(movie_id).info()
+        print("MOVIES===", movies)
+        return render_template_page(
+            "",
+            account,
+            movies=movies,
+            template_name="movie_details.html",
+            pages=1,
+            logged_in=logged_in,
+        )
