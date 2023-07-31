@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-weight: 300;
+    font-weight: 400;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -205,6 +205,11 @@ h5 {
     flex-direction: column;
 }
 
+.movie-info a{
+    text-decoration: none;
+    color: #212121;
+}
+
 .movie-info h3{
     margin-bottom: 10px;
     font-size: 1.5em;
@@ -220,7 +225,7 @@ h5 {
 }
 
 .movie-details-info h5 {
-    margin-bottom: 10px;
+    margin-bottom: 0;
     font-size: 1em;
 }
 
@@ -325,6 +330,18 @@ button:hover {
 .star:hover,
 .star:hover~.star {
     color: gold;
+}
+
+.movie-details-star-container{
+    margin: 0;
+}
+
+.movie-details-star-container .star{
+    font-size: 45px;
+}
+
+.movie-details-buttons{
+    margin-top: 10px;
 }
 
 .card-buttons, .movie-details-buttons{

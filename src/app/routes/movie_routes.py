@@ -1,5 +1,5 @@
 import tmdbsimple as tmdb
-from flask import redirect, request
+from flask import redirect, request, jsonify
 from flask_login import current_user, login_required
 
 from ...constants.api_constants import RECOMMENDED_MOVIES_URL, API_HEADERS
@@ -189,7 +189,8 @@ def set_up_movie_routes(
     def movie_page(movie_id: str) -> str:
         logged_in = current_user.is_authenticated
         movies = tmdb.Movies(movie_id).info()
-        print("MOVIES===", movies)
+        cast_and_crew = tmdb.Movies(movie_id).credits()
+        print("CAST AND CREW===", cast_and_crew)
         return render_template_page(
             "",
             account,

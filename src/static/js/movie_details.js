@@ -65,8 +65,19 @@ function displayMovieDetails(isLoggedIn, movieDetails, accountStates) {
     // If the user is logged in, create and append the Rate Movie button
     if (isLoggedIn) {
         console.log(accountStates);
+        ratedMovies = accountStates.rated;
+        const userRating = ratedMovies.find(ratedMovie => ratedMovie.id === movie.id)?.rating;
         const inWatchlist = accountStates.watchlist;
         const inFavorites = accountStates.favorite;
+        const starContainer = createStarContainer(movie, userRating, movieCard, window.location.pathname, cardButtons);
+
+        starContainer.classList.add('movie-details-star-container');
+        if (userRating) {
+            movieInfo.append(starContainer);
+            displayDeleteRatingButton(movie.id, movieCard, window.location.pathname, cardButtons, userRating);
+        } else {
+            movieInfo.append(starContainer);
+        }
 
         displayWatchlistButton(movie.id, cardButtons, inWatchlist);
         displayFavoriteButton(movie.id, cardButtons, inFavorites);

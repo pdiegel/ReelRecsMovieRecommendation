@@ -4,7 +4,18 @@ from typing import Any, Callable, Dict, List, Union
 import tmdbsimple as tmdb
 from flask import render_template
 
-logging.basicConfig(filename="logs.txt", level=logging.INFO)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+handler = logging.FileHandler("logs.txt")
+handler.setLevel(logging.INFO)
+
+formatter = logging.Formatter(
+    "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+handler.setFormatter(formatter)
+
+logger.addHandler(handler)
 
 
 def get_pages(
@@ -21,19 +32,23 @@ def get_pages(
     Returns:
         List[Dict[str, Any]]: The aggregated data.
     """
-    if pages == -1:
-        response = func(**kwargs)
-        pages = response["total_pages"]
+    try:
+        if pages == -1:
+            response = func(**kwargs)
+            pages = response.get("total_pages", 1)
 
-    results = []
-    for i in range(1, pages + 1):
-        response = func(page=i, **kwargs)
-        results.extend(clean_data(response["results"]))
+        results = []
+        for i in range(1, pages + 1):
+            response = func(page=i, **kwargs)
+            results.extend(clean_data(response.get("results", [])))
 
-    return results
+        return results
+    except Exception as e:
+        logger.error(f"Error in get_pages: {str(e)}")
+        return []
 
 
-def get_account_info_pages(account: tmdb.Account) -> Dict[str, Any]:
+def get_account_states(account: tmdb.Account) -> Dict[str, Any]:
     """Gets the account states for the user.
 
     Args:
@@ -86,7 +101,7 @@ def render_template_page(
         get_pages(pages, func, **kwargs) if func else kwargs.get("movies", [])
     )
 
-    account_states = get_account_info_pages(account) if logged_in else {}
+    account_states = get_account_states(account) if logged_in else {}
 
     return render_template(
         template_name,
