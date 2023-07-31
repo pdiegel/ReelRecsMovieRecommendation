@@ -11,6 +11,11 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <h3>Main Cast</h3>
+        <div id="movie-cast" style="display: none;">{{
+            movie_cast | tojson | safe }}</div>
+    </div>
 </main>
 <script src="{{ url_for('static', filename='js/movie_details.js') }}"></script>
 {% endblock %}

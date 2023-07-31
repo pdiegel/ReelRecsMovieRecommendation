@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const parsedElements = ['movie-details', 'account-states']
+    const parsedElements = ['movie-details', 'account-states', 'movie-cast']
         .map(id => [id, JSON.parse(document.getElementById(id).textContent)]);
     const parsedData = Object.fromEntries(parsedElements);
-    const { 'movie-details': movieDetails, 'account-states': accountStates } = parsedData;
+    const { 'movie-details': movieDetails, 'account-states': accountStates, 'movie-cast':movieCast } = parsedData;
     console.log(movieDetails);
 
     fetchLoggedInStatus()
-        .then(isLoggedIn => displayMovieDetails(isLoggedIn, movieDetails, accountStates))
+        .then(isLoggedIn => displayMovieDetails(isLoggedIn, movieDetails, accountStates, movieCast))
         .catch(console.error);
 });
 
-function displayMovieDetails(isLoggedIn, movieDetails, accountStates) {
+function displayMovieDetails(isLoggedIn, movieDetails, accountStates, movieCast) {
     const movie = movieDetails;
 
     const movieCard = document.createElement('div');
@@ -87,4 +87,54 @@ function displayMovieDetails(isLoggedIn, movieDetails, accountStates) {
 
     document.getElementById('banner-wrapped').append(movieCard);
     document.getElementById('banner-div').style.backgroundImage = "url('https://image.tmdb.org/t/p/original/" + movie.backdrop_path + "')";
+    displayCastCards(movieCast);
+}
+
+function displayCastCards(movieCast) {
+    const cast = movieCast.cast;
+    console.log(cast);
+
+    const castCard = document.createElement('div');
+    castCard.classList.add('cast-card');
+
+    const castImage = document.createElement('img');
+    castImage.classList.add('cast-image');
+    castImage.src = "https://image.tmdb.org/t/p/original/" + cast.profile_path;
+
+    const castInfo = document.createElement('div');
+    castInfo.classList.add('cast-info');
+
+    const castName = document.createElement('h3');
+    const castLink = document.createElement('a');
+    castLink.href = "/person/" + cast.id;
+    castLink.append(castName);
+    castName.classList.add('cast-name');
+    castName.textContent = cast.name + " - " + cast.character;
+
+    // const movieStats = document.createElement('h5');
+    // movieStats.classList.add('movie-stats');
+    // movieStats.textContent = formatDate(movie.release_date) + " | Rated " + movie.vote_average + " | " + movie.genres.map(genre => genre.name).join(', ');
+
+    // const movieTagline = document.createElement('p');
+    // movieTagline.classList.add('movie-details-tagline');
+    // movieTagline.textContent = movie.tagline;
+
+    // const OverviewText = document.createElement('h4');
+    // OverviewText.textContent = "Overview";
+
+    // const movieDescription = document.createElement('p');
+    // movieDescription.classList.add('movie-description');
+    // movieDescription.textContent = movie.overview;
+
+    // const cardButtons = document.createElement('div');
+    // cardButtons.classList.add('movie-details-buttons');
+
+    // const similarMoviesButton = document.createElement('button');
+    // similarMoviesButton.classList.add('similar-movies-button');
+    // similarMoviesButton.textContent = 'Similar Movies';
+    // similarMoviesButton.addEventListener('click', similarMovieRedirect.bind(null, movie.id, movie.title));
+    // cardButtons.append(similarMoviesButton);
+
+    castInfo.append(castLink);
+    castCard.append(castImage, castInfo);
 }
