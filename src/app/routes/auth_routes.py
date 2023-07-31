@@ -22,7 +22,7 @@ def set_up_auth_routes(app, account: tmdb.Account, login_manager: LoginManager):
         """
         auth = tmdb.Authentication()
         request_token = auth.token_new()["request_token"]
-        redirect_to = request.args.get("next") + url_for("create_user_session")
+        redirect_to = request.host_url + url_for("create_user_session")
         return redirect(
             TOKEN_AUTH_URL.format(
                 request_token=request_token,

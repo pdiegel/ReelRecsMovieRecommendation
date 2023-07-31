@@ -4,7 +4,11 @@ from flask_login import current_user, login_required
 
 from ...constants.api_constants import RECOMMENDED_MOVIES_URL
 from ...services.login_service import get_session_id
-from ...services.movie_service import render_movie_template, fetch_movies
+from ...services.movie_service import (
+    render_movie_template,
+    fetch_movies,
+    render_movie_details_page,
+)
 
 GENRES = {
     "action": 28,
@@ -183,11 +187,4 @@ def set_up_movie_routes(
     @app.route("/movie/<movie_id>/")
     def movie_page(movie_id: str) -> str:
         logged_in = current_user.is_authenticated
-        func = tmdb.Movies
-        return render_movie_template(
-            "Movie Page",
-            account,
-            func,
-            logged_in=logged_in,
-            movie_id=movie_id,
-        )
+        return render_movie_details_page(movie_id, account, logged_in)

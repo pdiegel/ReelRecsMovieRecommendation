@@ -1,8 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    font-weight: 400;
+    font-weight: 300;
     font-family: 'Noto Sans', sans-serif;
+}
+
+a, button{
+    font-weight: 400;
 }
 
 body {
@@ -59,10 +63,6 @@ header nav a:hover,
 
 header nav a:hover {
     box-shadow: 0 0 5px 1px rgba(255, 255, 255, 1);
-}
-
-main {
-    padding: 20px;
 }
 
 main h2 {
@@ -205,9 +205,13 @@ h5 {
     flex-direction: column;
 }
 
-.movie-info h3 {
+.movie-info h3{
     margin-bottom: 10px;
     font-size: 1.5em;
+}
+
+.movie-details-info h3 {
+    font-size: 2.5em;
 }
 
 .movie-info h5 {
@@ -215,8 +219,76 @@ h5 {
     font-size: 1em;
 }
 
+.movie-details-info h5 {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
 .movie-description {
     padding: 0px 30px;
+}
+
+#banner-div{
+    position: relative;
+    width: 100%;
+    background-image: url("");
+    background-size: cover;
+    height: 60vh;
+    color: #FFFFFF;
+}
+
+.overlay{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+}
+
+#banner-wrapped{
+    color: #FFFFFF;
+    height: 100%;
+    margin: 0;
+    text-align: left;
+}
+
+
+.movie-details-card{
+    display: flex;
+    height: 100%;
+} 
+
+.movie-details-card a{
+    color: #FFFFFF;
+    text-decoration: None;
+} 
+
+.movie-details-poster{
+    height: 90%;
+    margin: auto 20px auto 0;
+}
+
+.movie-details-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.movie-details-info p{
+    margin-top: 10px;
+    padding: 0;
+    max-width: 66ch;
+}
+
+.movie-details-info h4{
+    margin-top: 25px;
+    font-size: 1.5em;
+    font-weight: 500;
 }
 
 button {
@@ -255,23 +327,36 @@ button:hover {
     color: gold;
 }
 
-.card-buttons{
+.card-buttons, .movie-details-buttons{
     display: flex;
     justify-content: flex-end;
 }
 
-.card-buttons button{
-    margin: 0 5px;
+.card-buttons button, .movie-details-buttons button{
     background-color: #FFFFFF;
     color: #212121;
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-    padding: 5px 10px;
     cursor: pointer;
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.card-buttons button:hover{
+.card-buttons button:first-child, .movie-details-buttons button:first-child {
+    /* Remove left margin from the first button */
+    margin-left: 0;
+  }
+  
+.card-buttons button:last-child, .movie-details-buttons button:last-child {
+/* Remove right margin from the last button */
+margin-right: 0;
+}
+
+.card-buttons button:not(:first-child), .movie-details-buttons button:not(:first-child) {
+/* Apply 5px left margin to all buttons except the first one */
+margin-left: 10px;
+}
+
+.card-buttons button:hover, .movie-details-buttons button:hover {
     background-color: #6663c0;
     color: #FFFFFF;
 }
@@ -280,6 +365,20 @@ button:hover {
     background-color: #e53935;
     
 }
+
+.card-buttons button{
+    padding: 5px 10px;
+}
+
+.movie-details-buttons button{
+    padding: 10px 15px;
+}
+
+.movie-details-tagline{
+    font-size: 1em;
+    font-style: italic;
+}
+
 
 #authenticated-nav {
     display: flex;

@@ -30,7 +30,7 @@ def set_up_api_routes(app, account: tmdb.Account):
 
         try:
             tmdb.Movies(movie_id).rating(
-                rating=rating, session_id=get_session_id()
+                value=rating, session_id=get_session_id()
             )
             print("successfully rated movie")
             return jsonify(success=True)
