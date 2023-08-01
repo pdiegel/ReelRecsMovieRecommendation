@@ -139,6 +139,7 @@ function createCastCard(castMember) {
 }
 
 function createMediaCarousel(mediaItems) {
+    console.log("Media Items = ", mediaItems)
     const videos = mediaItems.map(item => item.key);
     console.log("Videos = ", videos);
 
@@ -149,7 +150,9 @@ function createMediaCarousel(mediaItems) {
         spinner.style.display = 'none';
     };
 
-    let currentVideo = 0;
+    // Set the first uploaded video in the array as the initial source for the video player
+    let currentVideo = videos.length - 1;
+
     let mediaSource = getMediaSource(videos, currentVideo);
     console.log(mediaSource)
     document.getElementById('videoPlayer').src = mediaSource;
@@ -171,6 +174,6 @@ function createMediaCarousel(mediaItems) {
     });
 }
 
-function getMediaSource(videos, currentVideo){
+function getMediaSource(videos, currentVideo) {
     return "https://www.youtube.com/embed/" + videos[currentVideo];
 }

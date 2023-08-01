@@ -2,179 +2,121 @@ document.addEventListener('DOMContentLoaded', () => {
     const parsedElements = ['person-info', 'person-portraits', 'person-tagged-images', 'person-movie-credits']
         .map(id => [id, JSON.parse(document.getElementById(id).textContent)]);
     const parsedData = Object.fromEntries(parsedElements);
-    const { 'person-info': personInfo, 'person-portraits': personPortraits, 'person-tagged-images': personTaggedImages, 'person-movie-credits': personMovieCredits } = parsedData;
-    console.log(personInfo);
+    const { 'person-info': personDetails, 'person-portraits': personPortraits, 'person-tagged-images': personTaggedImages, 'person-movie-credits': personMovieCredits } = parsedData;
+    console.log(personDetails);
     console.log(personPortraits);
     console.log(personTaggedImages);
     console.log(personMovieCredits);
 
-
-    fetchLoggedInStatus()
-        .then(isLoggedIn => displayMovieDetailPage(isLoggedIn, movieDetails, accountStates, movieCast, mediaItems))
-        .catch(console.error);
+    displayPersonDetailPage(personDetails, personPortraits, personTaggedImages, personMovieCredits);
 });
 
-function displayMovieDetailPage(isLoggedIn, movieDetails, accountStates, movieCast, mediaItems) {
-    createMovieDetails(isLoggedIn, movieDetails, accountStates);
-    movieCast = movieCast.cast;
-    if (Array.isArray(movieCast)) {
-        // Iterate only up to the first ten items
-        for (let i = 0; i < Math.min(movieCast.length, 10); i++) {
-            const castMember = movieCast[i];
-            const castCard = createCastCard(castMember);
-            document.getElementById('main-cast').append(castCard);
-        }
-    } else {
-        console.error('Error fetching cast:', "cast is not an array");
-    }
-
-    mediaItems = mediaItems.results;
-    if (Array.isArray(mediaItems)) {
-        createMediaCarousel(mediaItems);
-    } else {
-        console.error('Error fetching media:', "media is not an array");
-    }
+function displayPersonDetailPage(personDetails, personPortraits, personTaggedImages, personMovieCredits) {
+    createPersonDetails(personDetails, personPortraits, personTaggedImages, personMovieCredits);
 }
 
-function createMovieDetails(isLoggedIn, movieDetails, accountStates) {
-    const movie = movieDetails;
+function createPersonDetails(personDetails, personPortraits, personTaggedImages, personMovieCredits) {
+    const person = personDetails;
+    const portraitPath = "https://image.tmdb.org/t/p/original" + person.profile_path;
 
-    const movieCard = document.createElement('div');
-    movieCard.classList.add('movie-details-card');
+    const personPortrait = document.createElement('img');
+    personPortrait.classList.add('person-portrait');
+    personPortrait.src = portraitPath;
 
-    const moviePoster = document.createElement('img');
-    moviePoster.classList.add('movie-details-poster');
-    moviePoster.src = "https://image.tmdb.org/t/p/original/" + movie.poster_path;
+    const personInfo = document.createElement('div');
+    personInfo.classList.add('person-info');
 
-    const movieInfo = document.createElement('div');
-    movieInfo.classList.add('movie-details-info');
+    const personName = document.createElement('h2');
+    personName.textContent = person.name;
 
-    const releaseYear = movie.release_date ? "(" + movie.release_date.slice(0, 4) + ")" : '';
+    const biographyHeader = document.createElement('h3');
+    biographyHeader.textContent = "Biography";
 
-    const movieName = document.createElement('h3');
+    const biographyText = person.biography.replace(/\n/g, '<br>');
+
+    const personBiography = document.createElement('p');
+    personBiography.innerHTML = biographyText;
+
+    personInfo.append(personName, biographyHeader, personBiography);
+
+    document.getElementById('person-banner-wrapped').append(personPortrait, personInfo);
+    createPersonImages(personPortraits);
+    createPersonTaggedImages(personTaggedImages);
+    createPersonMovieCredits(personMovieCredits);
+}
+
+function createPersonImages(personPortraits) {
+    personPortraits = personPortraits.profiles;
+
+    const portraitContainer = document.createElement('div');
+    portraitContainer.classList.add('person-portraits');
+
+    if (Array.isArray(personPortraits)) {
+        personPortraits.forEach(portrait => {
+            let portraitPath = "https://image.tmdb.org/t/p/original" + portrait.file_path;
+            let portraitImage = document.createElement('img');
+            portraitImage.classList.add('person-image');
+            portraitImage.src = portraitPath;
+            portraitContainer.append(portraitImage);
+        });
+    }
+    document.getElementById('person-images').append(portraitContainer);
+}
+
+function createPersonTaggedImages(personTaggedImages) {
+    personTaggedImages = personTaggedImages.results;
+    console.log("personTaggedImages: ", personTaggedImages)
+
+    const taggedImagesContainer = document.createElement('div');
+    taggedImagesContainer.classList.add('person-tagged-images');
+
+    if (Array.isArray(personTaggedImages)) {
+        personTaggedImages.forEach(image => {
+            let taggedImagePath = "https://image.tmdb.org/t/p/original" + image.file_path;
+            let taggedImage = document.createElement('img');
+            taggedImage.classList.add('person-tagged-image');
+            taggedImage.src = taggedImagePath;
+            taggedImagesContainer.append(taggedImage);
+        });
+    }
+    document.getElementById('person-tagged-images-div').append(taggedImagesContainer);
+
+}
+
+function createPersonMovieCredits(personMovieCredits) {
+    personMovieCredits = personMovieCredits.cast;
+    console.log("personMovieCredits: ", personMovieCredits)
+
+    const movieCreditContainer = document.createElement('div');
+    movieCreditContainer.classList.add('person-movie-credit-container');
+
+    if (Array.isArray(personMovieCredits)) {
+        personMovieCredits.forEach(movieCredit => {
+            if (createMovieCreditDiv(movieCredit) == null) {
+                return;
+            }
+            movieCreditContainer.append(createMovieCreditDiv(movieCredit));
+        });
+    }
+    document.getElementById('person-movie-credit-div').append(movieCreditContainer);
+}
+
+function createMovieCreditDiv(movieCredit) {
+    const movie = document.createElement('div');
+    movie.classList.add('person-movie-credit');
     const movieLink = document.createElement('a');
-    movieLink.href = "/movie/" + movie.id;
-    movieLink.append(movieName);
-    movieName.classList.add('movie-name');
-    movieName.textContent = movie.title + " " + releaseYear;
+    const moviePoster = document.createElement('img');
+    const movieName = document.createElement('h5');
+    moviePoster.classList.add('person-movie-credit-poster');
+    movieName.textContent = movieCredit.title;
 
-    const movieStats = document.createElement('h5');
-    movieStats.classList.add('movie-stats');
-    movieStats.textContent = formatDate(movie.release_date) + " | Rated " + movie.vote_average + " | " + movie.genres.map(genre => genre.name).join(', ');
-
-    const movieTagline = document.createElement('p');
-    movieTagline.classList.add('movie-details-tagline');
-    movieTagline.textContent = movie.tagline;
-
-    const OverviewText = document.createElement('h4');
-    OverviewText.textContent = "Overview";
-
-    const movieDescription = document.createElement('p');
-    movieDescription.classList.add('movie-description');
-    movieDescription.textContent = movie.overview;
-
-    const cardButtons = document.createElement('div');
-    cardButtons.classList.add('movie-details-buttons');
-
-    const similarMoviesButton = document.createElement('button');
-    similarMoviesButton.classList.add('similar-movies-button');
-    similarMoviesButton.textContent = 'Similar Movies';
-    similarMoviesButton.addEventListener('click', similarMovieRedirect.bind(null, movie.id, movie.title));
-    cardButtons.append(similarMoviesButton);
-
-    movieInfo.append(movieLink, movieStats);
-    movieCard.append(moviePoster, movieInfo);
-
-    movieCard.dataset.movieId = movie.id;  // Add movie ID as a data attribute for later reference
-    movieCard.id = 'movie-card-' + movie.id;  // Add unique ID to each movie card
-
-    // If the user is logged in, create and append the Rate Movie button
-    if (isLoggedIn) {
-        console.log(accountStates);
-        ratedMovies = accountStates.rated;
-        const userRating = ratedMovies.find(ratedMovie => ratedMovie.id === movie.id)?.rating;
-        const inWatchlist = accountStates.watchlist;
-        const inFavorites = accountStates.favorite;
-        const starContainer = createStarContainer(movie, userRating, movieCard, window.location.pathname, cardButtons);
-
-        starContainer.classList.add('movie-details-star-container');
-        if (userRating) {
-            movieInfo.append(starContainer);
-            displayDeleteRatingButton(movie.id, movieCard, window.location.pathname, cardButtons, userRating);
-        } else {
-            movieInfo.append(starContainer);
-        }
-
-        displayWatchlistButton(movie.id, cardButtons, inWatchlist);
-        displayFavoriteButton(movie.id, cardButtons, inFavorites);
+    if (movieCredit.poster_path == null) {
+        return;
     }
 
-    movieInfo.append(cardButtons, movieTagline, OverviewText, movieDescription);
-
-    document.getElementById('banner-wrapped').append(movieCard);
-    document.getElementById('banner-div').style.backgroundImage = "url('https://image.tmdb.org/t/p/original/" + movie.backdrop_path + "')";
-}
-
-function createCastCard(castMember) {
-    const castCard = document.createElement('div');
-    castCard.classList.add('cast-card');
-
-    const castImage = document.createElement('img');
-    castImage.classList.add('cast-image');
-    if (castMember.profile_path == null) {
-        castImage.src = "https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png";
-    }
-    else { castImage.src = "https://image.tmdb.org/t/p/original/" + castMember.profile_path; }
-
-
-    const castInfo = document.createElement('div');
-    castInfo.classList.add('cast-info');
-
-    const castName = document.createElement('h4');
-    const castLink = document.createElement('a');
-    castLink.href = "/person/" + castMember.id;
-    castLink.append(castName);
-    castName.classList.add('cast-name');
-    castName.textContent = castMember.name + " - " + castMember.character;
-
-    castInfo.append(castLink);
-    castCard.append(castImage, castInfo);
-    return castCard;
-}
-
-function createMediaCarousel(mediaItems) {
-    const videos = mediaItems.map(item => item.key);
-    console.log("Videos = ", videos);
-
-    let player = document.getElementById('videoPlayer');
-    let spinner = document.getElementById('loadingSpinner');
-
-    player.onload = function () {
-        spinner.style.display = 'none';
-    };
-
-    let currentVideo = 0;
-    let mediaSource = getMediaSource(videos, currentVideo);
-    console.log(mediaSource)
-    document.getElementById('videoPlayer').src = mediaSource;
-
-    document.getElementById('previousVideoButton').addEventListener('click', function () {
-        currentVideo--;
-        if (currentVideo < 0) currentVideo = videos.length - 1;
-        mediaSource = getMediaSource(videos, currentVideo);
-        document.getElementById('videoPlayer').src = mediaSource;
-        spinner.style.display = 'block';
-    });
-
-    document.getElementById('nextVideoButton').addEventListener('click', function () {
-        currentVideo++;
-        if (currentVideo >= videos.length) currentVideo = 0;
-        mediaSource = getMediaSource(videos, currentVideo);
-        document.getElementById('videoPlayer').src = mediaSource;
-        spinner.style.display = 'block';
-    });
-}
-
-function getMediaSource(videos, currentVideo) {
-    return "https://www.youtube.com/embed/" + videos[currentVideo];
+    moviePoster.src = "https://image.tmdb.org/t/p/w150_and_h225_bestv2" + movieCredit.poster_path;
+    movieLink.href = "/movie/" + movieCredit.id;
+    movieLink.append(moviePoster);
+    movie.append(movieLink, movieName);
+    return movie;
 }

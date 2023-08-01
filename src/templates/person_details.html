@@ -2,16 +2,27 @@
 {% block content %}
 <main>
     <div id="person-banner-div">
-            <div class="container" id="banner-wrapped">
-                <div id="person-info" style="display: none;">{{
-                    person_info | tojson | safe }}</div>
-                <div id="person-portraits" style="display: none;">{{
-                    person_portraits | tojson | safe }}</div>
-                <div id="person-tagged-images" style="display: none;">{{
-                    person_tagged_images | tojson | safe }}</div>
-                <div id="person-movie-credits" style="display: none;">{{
-                    person_movie_credits | tojson | safe }}</div>
-            </div>
+        <div class="container" id="person-banner-wrapped">
+            <div id="person-info" style="display: none;">{{
+                person_info | tojson | safe }}</div>
+            <div id="person-portraits" style="display: none;">{{
+                person_portraits | tojson | safe }}</div>
+            <div id="person-tagged-images" style="display: none;">{{
+                person_tagged_images | tojson | safe }}</div>
+            <div id="person-movie-credits" style="display: none;">{{
+                person_movie_credits | tojson | safe }}</div>
+        </div>
+
+        <div class="container" id="person-movie-credit-div">
+            <h3>Movies Starred In</h3>
+        </div>
+        <div class="container" id="person-images">
+            <h3>Portraits</h3>
+        </div>
+        <div class="container" id="person-tagged-images-div">
+            <h3>Tagged Images</h3>
+        </div>
+
     </div>
 </main>
 <script src="{{ url_for('static', filename='js/person_details.js') }}"></script>
