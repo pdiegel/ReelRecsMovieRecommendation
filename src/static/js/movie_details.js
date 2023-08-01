@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const parsedElements = ['movie-details', 'account-states', 'movie-cast', 'media-items']
         .map(id => [id, JSON.parse(document.getElementById(id).textContent)]);
     const parsedData = Object.fromEntries(parsedElements);
-    const { 'movie-details': movieDetails, 'account-states': accountStates, 'movie-cast':movieCast, 'media-items': mediaItems } = parsedData;
+    const { 'movie-details': movieDetails, 'account-states': accountStates, 'movie-cast': movieCast, 'media-items': mediaItems } = parsedData;
     console.log(movieDetails);
 
     fetchLoggedInStatus()
@@ -26,11 +26,7 @@ function displayMovieDetailPage(isLoggedIn, movieDetails, accountStates, movieCa
 
     mediaItems = mediaItems.results;
     if (Array.isArray(mediaItems)) {
-        // Iterate only up to the first ten items
-        mediaItems.forEach((mediaItem) => {
-            const mediaCard = createMediaCard(mediaItem);
-            document.getElementById('media-cards').append(mediaCard);
-        });
+        createMediaCarousel(mediaItems);
     } else {
         console.error('Error fetching media:', "media is not an array");
     }
@@ -109,7 +105,7 @@ function createMovieDetails(isLoggedIn, movieDetails, accountStates) {
         displayFavoriteButton(movie.id, cardButtons, inFavorites);
     }
 
-    movieInfo.append(cardButtons, movieTagline, OverviewText, movieDescription);    
+    movieInfo.append(cardButtons, movieTagline, OverviewText, movieDescription);
 
     document.getElementById('banner-wrapped').append(movieCard);
     document.getElementById('banner-div').style.backgroundImage = "url('https://image.tmdb.org/t/p/original/" + movie.backdrop_path + "')";
@@ -122,9 +118,10 @@ function createCastCard(castMember) {
     const castImage = document.createElement('img');
     castImage.classList.add('cast-image');
     if (castMember.profile_path == null) {
-        castImage.src = "https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png";}
-    else {castImage.src = "https://image.tmdb.org/t/p/original/" + castMember.profile_path;}
-    
+        castImage.src = "https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png";
+    }
+    else { castImage.src = "https://image.tmdb.org/t/p/original/" + castMember.profile_path; }
+
 
     const castInfo = document.createElement('div');
     castInfo.classList.add('cast-info');
@@ -141,27 +138,30 @@ function createCastCard(castMember) {
     return castCard;
 }
 
-function createMediaCard(mediaItem) {
-    const mediaLink = "https://www.youtube.com/embed/" + mediaItem.key
-    console.log(mediaItem);
+function createMediaCarousel(mediaItems) {
+    const videos = mediaItems.map(item => item.key);
+    console.log("Videos = ", videos);
 
-    const mediaCard = document.createElement('div');
-    mediaCard.classList.add('media-card');
+    let currentVideo = 0;
+    let mediaSource = getMediaSource(videos, currentVideo);
+    console.log(mediaSource)
+    document.getElementById('videoPlayer').src = mediaSource;
 
-    const mediaVideo = document.createElement('iframe');
-    mediaVideo.classList.add('media-video');
-    mediaVideo.src = mediaLink;
-    mediaVideo.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    mediaVideo.allowFullscreen = true;
-    mediaVideo.frameborder = 0;
+    document.getElementById('previousVideoButton').addEventListener('click', function () {
+        currentVideo--;
+        if (currentVideo < 0) currentVideo = videos.length - 1;
+        mediaSource = getMediaSource(videos, currentVideo);
+        document.getElementById('videoPlayer').src = mediaSource;
+    });
 
-    // Adjust the width and height of the media card and media video
-    mediaCard.style.width = "31%";
-    mediaCard.style.height = "200px";
-    mediaVideo.style.width = "100%";
-    mediaVideo.style.height = "100%";
+    document.getElementById('nextVideoButton').addEventListener('click', function () {
+        currentVideo++;
+        if (currentVideo >= videos.length) currentVideo = 0;
+        mediaSource = getMediaSource(videos, currentVideo);
+        document.getElementById('videoPlayer').src = mediaSource;
+    });
+}
 
-    mediaCard.append(mediaVideo);
-    return mediaCard;
-
+function getMediaSource(videos, currentVideo){
+    return "https://www.youtube.com/embed/" + videos[currentVideo];
 }
