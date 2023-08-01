@@ -289,7 +289,6 @@ h5 {
 .movie-details-info p {
     margin-top: 10px;
     padding: 0;
-    max-width: 66ch;
 }
 
 .movie-details-info h4 {
@@ -342,10 +341,11 @@ h5 {
 .cast-image {
     max-width: 100%;
     height: auto;
-    
+
 }
 
-.cast-image, #videoPlayer {
+.cast-image,
+#videoPlayer {
     border-radius: 5px;
 }
 
@@ -368,15 +368,24 @@ h5 {
 }
 
 .container .cast-view {
-    margin-top: 50px; 
+    margin-top: 50px;
+}
+
+.main-cast-container h3,
+.media-view h3,
+.main-cast-container h4 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #454463;
 }
 
 .main-cast-container h3,
 .media-view h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    text-align: center;
-    color: #454463;
+    font-size: 2.25em;
+}
+
+.main-cast-container h4 {
+    font-size: 1.25em;
 }
 
 .media-view {
@@ -416,7 +425,7 @@ button:hover {
 }
 
 .star:hover,
-.star:hover~.star {
+.star:hover ~ .star {
     color: gold;
 }
 
@@ -499,11 +508,13 @@ button:hover {
     margin-top: 35px;
 }
 
-#videoPlayer {
+#videoPlayer,
+.iframe-container {
     width: 100%;
 }
 
-#previousVideoButton, #nextVideoButton{
+#previousVideoButton,
+#nextVideoButton {
     background-color: #FFFFFF;
     color: #212121;
     font-size: 1.25em;
@@ -512,11 +523,134 @@ button:hover {
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-#previousVideoButton:hover, #nextVideoButton:hover{
+#previousVideoButton:hover,
+#nextVideoButton:hover {
     background-color: #4b4a54;
     color: #FFFFFF;
 }
 
+.iframe-container {
+    position: relative;
+    display: inline-block;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    /* Center the spinner */
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.person-portrait {
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.person-info,
+.person-movie-credit-container {
+    color: #212121;
+}
+
+.person-info {
+    margin-left: 50px;
+}
+
+.person-info h2,
+.person-info h3 {
+    text-align: left;
+}
+
+.person-info h2 {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+.person-info h3,
+#person-images h3,
+#person-tagged-images-div h3,
+#person-movie-credit-div h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.person-info p,
+.person-movie-credit-container p {
+    font-size: 1.25em;
+}
+
+#person-banner-wrapped {
+    display: flex;
+    justify-content: center;
+}
+
+#person-images,
+#person-tagged-images-div,
+#person-movie-credit-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.person-portraits,
+.person-tagged-images,
+.person-movie-credit-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.person-image,
+.person-tagged-image {
+    max-width: 20%;
+    margin: 20px;
+}
+
+.person-movie-credit {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%;
+    margin: 20px 0 40px 0;
+}
+
+.person-movie-credit a {
+    height: 80%;
+}
+
+.person-movie-credit a img {
+    height: 100%;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+.person-movie-credit a img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+.person-movie-credit h5 {
+    font-size: 1em;
+    margin-top: 10px;
+}
 
 #authenticated-nav {
     display: flex;

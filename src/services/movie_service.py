@@ -113,6 +113,10 @@ def render_template_page(
         account_states=account_states,
         movie_cast=kwargs.get("movie_cast", []),
         media_items=kwargs.get("media_items", []),
+        person_info=kwargs.get("person_info", []),
+        person_portraits=kwargs.get("person_portraits", []),
+        person_tagged_images=kwargs.get("person_tagged_images", []),
+        person_movie_credits=kwargs.get("person_movie_credits", []),
     )
 
 

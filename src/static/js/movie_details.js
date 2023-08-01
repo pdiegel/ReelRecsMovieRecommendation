@@ -126,7 +126,7 @@ function createCastCard(castMember) {
     const castInfo = document.createElement('div');
     castInfo.classList.add('cast-info');
 
-    const castName = document.createElement('h3');
+    const castName = document.createElement('h4');
     const castLink = document.createElement('a');
     castLink.href = "/person/" + castMember.id;
     castLink.append(castName);
@@ -139,10 +139,20 @@ function createCastCard(castMember) {
 }
 
 function createMediaCarousel(mediaItems) {
+    console.log("Media Items = ", mediaItems)
     const videos = mediaItems.map(item => item.key);
     console.log("Videos = ", videos);
 
-    let currentVideo = 0;
+    let player = document.getElementById('videoPlayer');
+    let spinner = document.getElementById('loadingSpinner');
+
+    player.onload = function () {
+        spinner.style.display = 'none';
+    };
+
+    // Set the first uploaded video in the array as the initial source for the video player
+    let currentVideo = videos.length - 1;
+
     let mediaSource = getMediaSource(videos, currentVideo);
     console.log(mediaSource)
     document.getElementById('videoPlayer').src = mediaSource;
@@ -152,6 +162,7 @@ function createMediaCarousel(mediaItems) {
         if (currentVideo < 0) currentVideo = videos.length - 1;
         mediaSource = getMediaSource(videos, currentVideo);
         document.getElementById('videoPlayer').src = mediaSource;
+        spinner.style.display = 'block';
     });
 
     document.getElementById('nextVideoButton').addEventListener('click', function () {
@@ -159,9 +170,10 @@ function createMediaCarousel(mediaItems) {
         if (currentVideo >= videos.length) currentVideo = 0;
         mediaSource = getMediaSource(videos, currentVideo);
         document.getElementById('videoPlayer').src = mediaSource;
+        spinner.style.display = 'block';
     });
 }
 
-function getMediaSource(videos, currentVideo){
+function getMediaSource(videos, currentVideo) {
     return "https://www.youtube.com/embed/" + videos[currentVideo];
 }

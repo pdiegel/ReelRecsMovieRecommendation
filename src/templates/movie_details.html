@@ -26,10 +26,14 @@
         <div class="container" id="media">
             <h3>Media</h3>
             <div class="video-slider">
-                <iframe id="videoPlayer" height="700"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <div class="iframe-container">
+                    <iframe id="videoPlayer" height="700"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                    <div id="loadingSpinner" class="spinner"></div>
+                </div>
                 <div class="video-slider-buttons">
                     <button id="previousVideoButton">Previous Video</button>
                     <button id="nextVideoButton">Next Video</button>
