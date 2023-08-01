@@ -136,30 +136,6 @@ function createCastCard(castMember) {
     castName.classList.add('cast-name');
     castName.textContent = castMember.name + " - " + castMember.character;
 
-    // const movieStats = document.createElement('h5');
-    // movieStats.classList.add('movie-stats');
-    // movieStats.textContent = formatDate(movie.release_date) + " | Rated " + movie.vote_average + " | " + movie.genres.map(genre => genre.name).join(', ');
-
-    // const movieTagline = document.createElement('p');
-    // movieTagline.classList.add('movie-details-tagline');
-    // movieTagline.textContent = movie.tagline;
-
-    // const OverviewText = document.createElement('h4');
-    // OverviewText.textContent = "Overview";
-
-    // const movieDescription = document.createElement('p');
-    // movieDescription.classList.add('movie-description');
-    // movieDescription.textContent = movie.overview;
-
-    // const cardButtons = document.createElement('div');
-    // cardButtons.classList.add('movie-details-buttons');
-
-    // const similarMoviesButton = document.createElement('button');
-    // similarMoviesButton.classList.add('similar-movies-button');
-    // similarMoviesButton.textContent = 'Similar Movies';
-    // similarMoviesButton.addEventListener('click', similarMovieRedirect.bind(null, movie.id, movie.title));
-    // cardButtons.append(similarMoviesButton);
-
     castInfo.append(castLink);
     castCard.append(castImage, castInfo);
     return castCard;
