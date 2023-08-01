@@ -100,7 +100,6 @@ def render_template_page(
     movies = (
         get_pages(pages, func, **kwargs) if func else kwargs.get("movies", [])
     )
-    movie_cast = kwargs.get("movie_cast", [])
 
     account_states = get_account_states(account) if logged_in else {}
 
@@ -112,7 +111,8 @@ def render_template_page(
         watchlist_movies=account_states.get("watchlist", []),
         favorite_movies=account_states.get("favorite", []),
         account_states=account_states,
-        movie_cast=movie_cast,
+        movie_cast=kwargs.get("movie_cast", []),
+        media_items=kwargs.get("media_items", []),
     )
 
 

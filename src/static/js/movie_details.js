@@ -1,16 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const parsedElements = ['movie-details', 'account-states', 'movie-cast']
+    const parsedElements = ['movie-details', 'account-states', 'movie-cast', 'media-items']
         .map(id => [id, JSON.parse(document.getElementById(id).textContent)]);
     const parsedData = Object.fromEntries(parsedElements);
-    const { 'movie-details': movieDetails, 'account-states': accountStates, 'movie-cast':movieCast } = parsedData;
+    const { 'movie-details': movieDetails, 'account-states': accountStates, 'movie-cast':movieCast, 'media-items': mediaItems } = parsedData;
     console.log(movieDetails);
 
     fetchLoggedInStatus()
-        .then(isLoggedIn => displayMovieDetails(isLoggedIn, movieDetails, accountStates, movieCast))
+        .then(isLoggedIn => displayMovieDetailPage(isLoggedIn, movieDetails, accountStates, movieCast, mediaItems))
         .catch(console.error);
 });
 
-function displayMovieDetails(isLoggedIn, movieDetails, accountStates, movieCast) {
+function displayMovieDetailPage(isLoggedIn, movieDetails, accountStates, movieCast, mediaItems) {
+    createMovieDetails(isLoggedIn, movieDetails, accountStates);
+    movieCast = movieCast.cast;
+    if (Array.isArray(movieCast)) {
+        // Iterate only up to the first ten items
+        for (let i = 0; i < Math.min(movieCast.length, 10); i++) {
+            const castMember = movieCast[i];
+            const castCard = createCastCard(castMember);
+            document.getElementById('main-cast').append(castCard);
+        }
+    } else {
+        console.error('Error fetching cast:', "cast is not an array");
+    }
+
+    mediaItems = mediaItems.results;
+    if (Array.isArray(mediaItems)) {
+        // Iterate only up to the first ten items
+        mediaItems.forEach((mediaItem) => {
+            const mediaCard = createMediaCard(mediaItem);
+            document.getElementById('media-cards').append(mediaCard);
+        });
+    } else {
+        console.error('Error fetching media:', "media is not an array");
+    }
+}
+
+function createMovieDetails(isLoggedIn, movieDetails, accountStates) {
     const movie = movieDetails;
 
     const movieCard = document.createElement('div');
@@ -87,29 +113,28 @@ function displayMovieDetails(isLoggedIn, movieDetails, accountStates, movieCast)
 
     document.getElementById('banner-wrapped').append(movieCard);
     document.getElementById('banner-div').style.backgroundImage = "url('https://image.tmdb.org/t/p/original/" + movie.backdrop_path + "')";
-    displayCastCards(movieCast);
 }
 
-function displayCastCards(movieCast) {
-    const cast = movieCast.cast;
-    console.log(cast);
-
+function createCastCard(castMember) {
     const castCard = document.createElement('div');
     castCard.classList.add('cast-card');
 
     const castImage = document.createElement('img');
     castImage.classList.add('cast-image');
-    castImage.src = "https://image.tmdb.org/t/p/original/" + cast.profile_path;
+    if (castMember.profile_path == null) {
+        castImage.src = "https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png";}
+    else {castImage.src = "https://image.tmdb.org/t/p/original/" + castMember.profile_path;}
+    
 
     const castInfo = document.createElement('div');
     castInfo.classList.add('cast-info');
 
     const castName = document.createElement('h3');
     const castLink = document.createElement('a');
-    castLink.href = "/person/" + cast.id;
+    castLink.href = "/person/" + castMember.id;
     castLink.append(castName);
     castName.classList.add('cast-name');
-    castName.textContent = cast.name + " - " + cast.character;
+    castName.textContent = castMember.name + " - " + castMember.character;
 
     // const movieStats = document.createElement('h5');
     // movieStats.classList.add('movie-stats');
@@ -137,4 +162,30 @@ function displayCastCards(movieCast) {
 
     castInfo.append(castLink);
     castCard.append(castImage, castInfo);
+    return castCard;
+}
+
+function createMediaCard(mediaItem) {
+    const mediaLink = "https://www.youtube.com/embed/" + mediaItem.key
+    console.log(mediaItem);
+
+    const mediaCard = document.createElement('div');
+    mediaCard.classList.add('media-card');
+
+    const mediaVideo = document.createElement('iframe');
+    mediaVideo.classList.add('media-video');
+    mediaVideo.src = mediaLink;
+    mediaVideo.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    mediaVideo.allowFullscreen = true;
+    mediaVideo.frameborder = 0;
+
+    // Adjust the width and height of the media card and media video
+    mediaCard.style.width = "31%";
+    mediaCard.style.height = "200px";
+    mediaVideo.style.width = "100%";
+    mediaVideo.style.height = "100%";
+
+    mediaCard.append(mediaVideo);
+    return mediaCard;
+
 }

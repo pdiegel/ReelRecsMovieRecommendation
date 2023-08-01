@@ -191,6 +191,7 @@ def set_up_movie_routes(
         movie = tmdb.Movies(movie_id)
         movies = movie.info()
         cast = movie.credits()
+        media = movie.videos()
         return render_template_page(
             "",
             account,
@@ -199,4 +200,5 @@ def set_up_movie_routes(
             pages=1,
             logged_in=logged_in,
             movie_cast=cast,
+            media_items=media,
         )

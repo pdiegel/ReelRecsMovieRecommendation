@@ -11,10 +11,26 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <h3>Main Cast</h3>
-        <div id="movie-cast" style="display: none;">{{
-            movie_cast | tojson | safe }}</div>
+    <div class="container cast-view">
+        <div class="main-cast-container">
+            <h3>Main Cast</h3>
+            <div id="main-cast">
+                <!-- Your cast member cards will be dynamically added here -->
+                <div id="movie-cast" style="display: none;">{{ movie_cast |
+                    tojson | safe }}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="media-view">
+        <div class="container" id="media">
+            <h3>Media</h3>
+            <div id="media-items" style="display: none;">{{ media_items | tojson
+                | safe }}</div>
+            <div id="media-cards">
+                <!-- Your media item cards will be dynamically added here -->
+            </div>
+        </div>
     </div>
 </main>
 <script src="{{ url_for('static', filename='js/movie_details.js') }}"></script>
