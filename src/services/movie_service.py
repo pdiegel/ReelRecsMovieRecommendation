@@ -111,6 +111,8 @@ def render_template_page(
         watchlist_movies=account_states.get("watchlist", []),
         favorite_movies=account_states.get("favorite", []),
         account_states=account_states,
+        movie_cast=kwargs.get("movie_cast", []),
+        media_items=kwargs.get("media_items", []),
     )
 
 

@@ -188,9 +188,10 @@ def set_up_movie_routes(
     @app.route("/movie/<movie_id>/")
     def movie_page(movie_id: str) -> str:
         logged_in = current_user.is_authenticated
-        movies = tmdb.Movies(movie_id).info()
-        cast_and_crew = tmdb.Movies(movie_id).credits()
-        print("CAST AND CREW===", cast_and_crew)
+        movie = tmdb.Movies(movie_id)
+        movies = movie.info()
+        cast = movie.credits()
+        media = movie.videos()
         return render_template_page(
             "",
             account,
@@ -198,4 +199,6 @@ def set_up_movie_routes(
             template_name="movie_details.html",
             pages=1,
             logged_in=logged_in,
+            movie_cast=cast,
+            media_items=media,
         )
