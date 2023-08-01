@@ -342,10 +342,11 @@ h5 {
 .cast-image {
     max-width: 100%;
     height: auto;
-    
+
 }
 
-.cast-image, #videoPlayer {
+.cast-image,
+#videoPlayer {
     border-radius: 5px;
 }
 
@@ -368,15 +369,24 @@ h5 {
 }
 
 .container .cast-view {
-    margin-top: 50px; 
+    margin-top: 50px;
+}
+
+.main-cast-container h3,
+.media-view h3,
+.main-cast-container h4 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #454463;
 }
 
 .main-cast-container h3,
 .media-view h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    text-align: center;
-    color: #454463;
+    font-size: 2.25em;
+}
+
+.main-cast-container h4 {
+    font-size: 1.25em;
 }
 
 .media-view {
@@ -499,11 +509,13 @@ button:hover {
     margin-top: 35px;
 }
 
-#videoPlayer {
+#videoPlayer,
+.iframe-container {
     width: 100%;
 }
 
-#previousVideoButton, #nextVideoButton{
+#previousVideoButton,
+#nextVideoButton {
     background-color: #FFFFFF;
     color: #212121;
     font-size: 1.25em;
@@ -512,9 +524,39 @@ button:hover {
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-#previousVideoButton:hover, #nextVideoButton:hover{
+#previousVideoButton:hover,
+#nextVideoButton:hover {
     background-color: #4b4a54;
     color: #FFFFFF;
+}
+
+.iframe-container {
+    position: relative;
+    display: inline-block;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    /* Center the spinner */
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 

@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const parsedElements = ['movie-details', 'account-states', 'movie-cast', 'media-items']
+    const parsedElements = ['person-info', 'person-portraits', 'person-tagged-images', 'person-movie-credits']
         .map(id => [id, JSON.parse(document.getElementById(id).textContent)]);
     const parsedData = Object.fromEntries(parsedElements);
-    const { 'movie-details': movieDetails, 'account-states': accountStates, 'movie-cast': movieCast, 'media-items': mediaItems } = parsedData;
-    console.log(movieDetails);
+    const { 'person-info': personInfo, 'person-portraits': personPortraits, 'person-tagged-images': personTaggedImages, 'person-movie-credits': personMovieCredits } = parsedData;
+    console.log(personInfo);
+    console.log(personPortraits);
+    console.log(personTaggedImages);
+    console.log(personMovieCredits);
+
 
     fetchLoggedInStatus()
         .then(isLoggedIn => displayMovieDetailPage(isLoggedIn, movieDetails, accountStates, movieCast, mediaItems))
@@ -171,6 +175,6 @@ function createMediaCarousel(mediaItems) {
     });
 }
 
-function getMediaSource(videos, currentVideo){
+function getMediaSource(videos, currentVideo) {
     return "https://www.youtube.com/embed/" + videos[currentVideo];
 }

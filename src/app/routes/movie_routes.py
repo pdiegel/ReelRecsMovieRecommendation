@@ -202,3 +202,24 @@ def set_up_movie_routes(
             movie_cast=cast,
             media_items=media,
         )
+
+    @app.route("/person/<person_id>/")
+    def person_page(person_id: str) -> str:
+        logged_in = current_user.is_authenticated
+        person = tmdb.People(person_id)
+        info = person.info()
+        portraits = person.images()
+        tagged_images = person.tagged_images()
+        movie_credits = person.movie_credits()
+
+        return render_template_page(
+            "",
+            account,
+            template_name="person_details.html",
+            pages=1,
+            logged_in=logged_in,
+            person_info=info,
+            person_portraits=portraits,
+            person_tagged_images=tagged_images,
+            person_movie_credits=movie_credits,
+        )
