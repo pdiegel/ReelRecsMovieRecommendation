@@ -342,6 +342,11 @@ h5 {
 .cast-image {
     max-width: 100%;
     height: auto;
+    
+}
+
+.cast-image, #videoPlayer {
+    border-radius: 5px;
 }
 
 .cast-info h3 {
@@ -359,16 +364,10 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
 }
 
-#media-cards{
-    margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.container.cast-view {
+.container .cast-view {
     margin-top: 50px; 
 }
 
@@ -384,43 +383,6 @@ h5 {
     background-color: #6663c0;
     color: #FFFFFF;
 }
-
-/* Ensure media cards are displayed in a row with space between them */
-.media-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-/* Style each media card */
-.media-card {
-    width: 300px;
-    height: 400px;
-    margin: 10px; /* Add margin to create space between media cards */
-    background-position: center;
-    background-size: cover;
-    border-radius: 5px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Ensure media video fills the media card container */
-.media-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video maintains its aspect ratio and fills the container */
-    border-radius: 5px; /* Apply the same border-radius as the media card */
-}
-
-/* Style the content inside each media card */
-.media-card-content {
-    padding: 10px;
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-
 
 button {
     color: #FFFFFF;
@@ -526,6 +488,33 @@ button:hover {
 .movie-details-tagline {
     font-size: 1em;
     font-style: italic;
+}
+
+.video-slider {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    margin-top: 35px;
+}
+
+#videoPlayer {
+    width: 100%;
+}
+
+#previousVideoButton, #nextVideoButton{
+    background-color: #FFFFFF;
+    color: #212121;
+    font-size: 1.25em;
+    padding: 15px;
+    margin: 20px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+#previousVideoButton:hover, #nextVideoButton:hover{
+    background-color: #4b4a54;
+    color: #FFFFFF;
 }
 
 

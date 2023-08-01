@@ -25,11 +25,18 @@
     <div class="media-view">
         <div class="container" id="media">
             <h3>Media</h3>
+            <div class="video-slider">
+                <iframe id="videoPlayer" height="700"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="video-slider-buttons">
+                    <button id="previousVideoButton">Previous Video</button>
+                    <button id="nextVideoButton">Next Video</button>
+                </div>
+            </div>
             <div id="media-items" style="display: none;">{{ media_items | tojson
                 | safe }}</div>
-            <div id="media-cards">
-                <!-- Your media item cards will be dynamically added here -->
-            </div>
         </div>
     </div>
 </main>
