@@ -1,5 +1,5 @@
 import os
-from ..app.app_instance import app
+from .flask_app import app
 
 
 def main():

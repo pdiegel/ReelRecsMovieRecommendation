@@ -1,5 +1,5 @@
 import tmdbsimple as tmdb
-from flask import redirect, request, jsonify
+from flask import redirect, request
 from flask_login import current_user, login_required
 
 from ...constants.api_constants import RECOMMENDED_MOVIES_URL, API_HEADERS

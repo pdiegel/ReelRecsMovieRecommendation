@@ -6,23 +6,19 @@ import tmdbsimple as tmdb
 from flask import Flask
 from flask_login import LoginManager
 
-from ..constants.api_constants import (
+from src.constants.api_constants import (
     API_HEADERS,
     API_KEY,
-    STATIC_FOLDER,
-    TEMPLATES_FOLDER,
 )
 
-from .routes.auth_routes import set_up_auth_routes
-from .routes.movie_routes import set_up_movie_routes
-from .routes.api_routes import set_up_api_routes
+from src.app.routes.auth_routes import set_up_auth_routes
+from src.app.routes.movie_routes import set_up_movie_routes
+from src.app.routes.api_routes import set_up_api_routes
 
 
 def create_app():
     app = Flask(
         __name__,
-        template_folder=TEMPLATES_FOLDER,
-        static_folder=STATIC_FOLDER,
     )
     app.secret_key = os.urandom(24)
     app.config["REMEMBER_COOKIE_DURATION"] = timedelta(days=14)

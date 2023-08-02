@@ -6,7 +6,7 @@ const fetchJSON = async url => {
     return await response.json();
 };
 
-const fetchLoggedInStatus = () => fetchJSON('http://127.0.0.1:5000/api/logged_in')
+const fetchLoggedInStatus = () => fetchJSON('/api/logged_in')
     .then(data => data.logged_in);
 
 function formatDate(movie_release_date) {
@@ -56,7 +56,7 @@ async function modifyWatchlist(movieId, watchlistButton) {
     watchlistButton.dataset.inWatchlist = inWatchlist ? 'true' : 'false';
     watchlistButton.textContent = inWatchlist ? 'Drop from Watchlist' : 'Add to Watchlist';
 
-    let payload = {movie_id: movieId, watchlist: inWatchlist}
+    let payload = { movie_id: movieId, watchlist: inWatchlist }
 
     flask_post_request("watchlist_movie/", payload)
         .then(data => {
@@ -87,7 +87,7 @@ async function modifyFavorites(movieId, favoritesButton) {
     favoritesButton.dataset.inFavorites = inFavorites ? 'true' : 'false';
     favoritesButton.textContent = inFavorites ? 'Unfavorite' : 'Favorite';
 
-    let payload = {movie_id: movieId, favorite: inFavorites}
+    let payload = { movie_id: movieId, favorite: inFavorites }
 
     flask_post_request("favorite_movie/", payload)
         .then(data => {
@@ -100,7 +100,7 @@ async function modifyFavorites(movieId, favoritesButton) {
         .catch(console.error);
 }
 
-const flask_post_request = (endpoint, payload) => fetch(`http://127.0.0.1:5000/${endpoint}`, {
+const flask_post_request = (endpoint, payload) => fetch(`/${endpoint}`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -156,7 +156,7 @@ function rateMovie(event, movieData, movieCard, pathname, cardButtons) {
     const movieId = movieData.id;
     const rating = (clickedStarIndex + 1) * 2;
 
-    fetch('http://127.0.0.1:5000/rate_movie/', {
+    fetch('/rate_movie/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -190,10 +190,10 @@ function displayDeleteRatingButton(movieId, movieCard, pathname, cardButtons) {
     }
 }
 
-const getSessionId = () => fetchJSON('http://127.0.0.1:5000/api/session_id')
+const getSessionId = () => fetchJSON('/api/session_id')
     .then(data => data.session_id || Promise.reject('Error fetching session ID: session ID is empty'));
 
-const getAuth = () => fetchJSON('http://127.0.0.1:5000/api/token')
+const getAuth = () => fetchJSON('/api/token')
     .then(data => data.access_token || Promise.reject('Error fetching access token: access token is empty'));
 
 async function deleteRating(movieId, movieCard) {

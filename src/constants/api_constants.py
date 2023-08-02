@@ -2,8 +2,6 @@ from dotenv import load_dotenv
 import os
 
 # PATHS ================================================================
-STATIC_FOLDER = os.path.abspath("./src/static")
-TEMPLATES_FOLDER = os.path.abspath("./src/templates")
 
 # ENVIRONMENT VARIABLES ================================================
 load_dotenv()
