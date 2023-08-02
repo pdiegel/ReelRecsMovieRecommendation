@@ -87,13 +87,3 @@ function createMovieCard(movie, isLoggedIn, ratedMovies, favoriteMovies, watchli
 
     return movieCard;
 }
-
-
-
-
-
-
-
-
-
-
