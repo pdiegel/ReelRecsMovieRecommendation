@@ -1,6 +1,7 @@
 import logging
 from typing import Any, Callable, Dict, List, Union
 
+import requests
 import tmdbsimple as tmdb
 from flask import render_template
 
@@ -18,33 +19,37 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 
-def get_pages(
+def aggregate_pages(
     pages: int,
     func: Callable = None,
     **kwargs,
 ) -> List[Dict[str, Any]]:
-    """Fetches data from an API endpoint that supports pagination.
-
-    Args:
-        pages (int): Number of pages to fetch.
-        func (Callable, optional): Function to call. Defaults to None.
-
-    Returns:
-        List[Dict[str, Any]]: The aggregated data.
-    """
+    """Fetches data from an API endpoint that supports pagination and
+    aggregates the results."""
     try:
         if pages == -1:
             response = func(**kwargs)
-            pages = response.get("total_pages", 1)
+            pages = get_total_pages(response)
+
+        url = kwargs.get("url")
+        session_id = kwargs.get("session_id")
+        headers = kwargs.get("headers")
+
+        kwargs.pop("url", None)
+        kwargs.pop("session_id", None)
+        kwargs.pop("headers", None)
 
         results = []
         for i in range(1, pages + 1):
-            response = func(page=i, **kwargs)
-            results.extend(clean_data(response.get("results", [])))
+            page_data = get_page_data(
+                i, func, url, session_id, headers, **kwargs
+            )
+            results.extend(page_data)
 
         return results
+
     except Exception as e:
-        logger.error(f"Error in get_pages: {str(e)}")
+        logger.error(f"Error in aggregate_pages: {str(e)}")
         return []
 
 
@@ -65,7 +70,7 @@ def get_account_states(account: tmdb.Account) -> Dict[str, Any]:
     keys = ["rated", "watchlist", "favorite"]
 
     account_states = {
-        key: get_pages(-1, method) for key, method in zip(keys, methods)
+        key: aggregate_pages(-1, method) for key, method in zip(keys, methods)
     }
 
     return account_states
@@ -98,7 +103,9 @@ def render_template_page(
         str: The rendered template.
     """
     movies = (
-        get_pages(pages, func, **kwargs) if func else kwargs.get("movies", [])
+        aggregate_pages(pages, func, **kwargs)
+        if func
+        else kwargs.get("movies", [])
     )
 
     account_states = get_account_states(account) if logged_in else {}
@@ -138,3 +145,39 @@ def clean_data(
         return [clean_data(v) for v in data if v is not None]
     else:
         return data
+
+
+def get_total_pages(response: Union[dict, requests.models.Response]) -> int:
+    """Determine the number of pages based on the response."""
+    if isinstance(response, dict):
+        return response.get("total_pages", 1)
+    elif isinstance(response, requests.models.Response):
+        return response.json().get("total_pages", 1)
+    else:
+        return 1
+
+
+def get_page_data(
+    page: int,
+    func: Callable = None,
+    url: str = None,
+    session_id: str = None,
+    headers: Dict[str, str] = None,
+    **kwargs,
+) -> List[Dict[str, Any]]:
+    """Fetches data for one page."""
+    try:
+        if url:
+            request_url = url.format(session_id=session_id, page=page)
+            response = func(request_url, headers=headers)
+        else:
+            response = func(page=page, **kwargs)
+
+        if isinstance(response, dict):
+            return clean_data(response.get("results", []))
+        elif isinstance(response, requests.models.Response):
+            return clean_data(response.json().get("results", []))
+
+    except Exception as e:
+        logger.error(f"Error in get_page_data: {str(e)}")
+        return []

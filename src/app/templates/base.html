@@ -53,7 +53,8 @@
                 class="{{ 'active' if request.path == url_for('recommended_movies') else '' }}">Recommended
                 Movies</a>
             <a href="{{ url_for('watchlist_movies') }}"
-                class="{{ 'active' if request.path == url_for('watchlist_movies') else '' }}">My Watchlist</a>
+                class="{{ 'active' if request.path == url_for('watchlist_movies') else '' }}">My
+                Watchlist</a>
             {% endif %}
         </nav>
         {% block content %}

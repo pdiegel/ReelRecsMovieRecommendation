@@ -53,6 +53,6 @@ TOKEN_AUTH_URL = generate_api_url(
 
 RECOMMENDED_MOVIES_URL = generate_api_url(
     "account/{session_id}/movie/\
-recommendations?page={page}&include_adult=false",
+recommendations?page={page}",
     API_BASE_URL_V4,
 )

@@ -5,7 +5,7 @@ from flask_login import current_user, login_required
 from ...constants.api_constants import RECOMMENDED_MOVIES_URL, API_HEADERS
 from ...services.login_service import get_session_id
 from ...services.movie_service import (
-    get_pages,
+    aggregate_pages,
     render_template_page,
 )
 import requests
@@ -91,15 +91,18 @@ def set_up_movie_routes(
     def recommended_movies() -> str:
         logged_in = current_user.is_authenticated
         func = requests.get
-        movies = get_pages(func=func, session_id=get_session_id())
+        movies = aggregate_pages(
+            pages=5,
+            func=func,
+            url=RECOMMENDED_MOVIES_URL,
+            session_id=get_session_id(),
+            headers=API_HEADERS,
+        )
         return render_template_page(
             "Recommended Movies",
             account,
             movies=movies,
             logged_in=logged_in,
-            url=RECOMMENDED_MOVIES_URL,
-            params={"session_id": get_session_id()},
-            headers=API_HEADERS,
         )
 
     @app.route("/rated-movies")
