@@ -27,7 +27,7 @@ It is also good to have an editor to work with the code like [VSCode](https://co
 
 ``` bash
 # Clone this repository 
-$ git clone <repo-url>  
+$ git clone https://github.com/pdiegel/ReelRecsMovieRecommendation.git
 
 # Access the project folder in the terminal/cmd
 $ cd movie-recommendation-app
